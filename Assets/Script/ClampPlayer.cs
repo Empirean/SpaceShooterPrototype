@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class ClampPlayer : MonoBehaviour
 {
-    Camera cam;
+    // Camera cam;
     float screenHeight;
     float screenWidth;
 
     void Start()
     {
-        cam = Camera.main;
-        screenHeight = cam.orthographicSize;
-        screenWidth = (cam.aspect * (screenHeight * 2f))/2;
+        screenWidth = Utility.screenWidth;
+        screenHeight = Utility.screenHeight;
     }
 
     void Update()

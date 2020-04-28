@@ -62,7 +62,7 @@ public class Weapon : MonoBehaviour
 
             if (barrageCounter == shotsUntilBarrage)
             {
-                barrageCounter = 0;
+                barrageCounter = barrageCounter % shotsUntilBarrage;
                 for (int i = 0; i < layers; i++)
                 {
 
@@ -73,7 +73,6 @@ public class Weapon : MonoBehaviour
             fireCounter = Time.time + mainRateOfFire;
         }
 
-        
     }
     
 

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionTester : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public EnemyMovement enemy;
+
     void Start()
     {
         
@@ -14,10 +16,5 @@ public class CollisionTester : MonoBehaviour
     void Update()
     {
         
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        print("Test");
     }
 }

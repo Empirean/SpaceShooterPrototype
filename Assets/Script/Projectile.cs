@@ -6,10 +6,12 @@ public class Projectile : MonoBehaviour
 {
 
     float speed = 7;
+    float damage = 1;
 
-    public void SetSpeed(float newSpeed)
+    public float Damage
     {
-        speed = newSpeed;
+        get { return damage; }
+        set { damage = value; }
     }
 
     void Start()
@@ -22,6 +24,11 @@ public class Projectile : MonoBehaviour
         Move();
     }
 
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
+    }
+
     void Move()
     {
         transform.Translate(Vector3.up * speed * Time.deltaTime);
@@ -32,6 +39,8 @@ public class Projectile : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
+            Unit unit = other.GetComponent<Unit>();
+            unit.Damage(1);
         }
     }
 }
