@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ClampPlayer : MonoBehaviour
 {
-    // Camera cam;
     float screenHeight;
     float screenWidth;
 

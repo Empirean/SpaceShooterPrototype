@@ -6,9 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(Unit))]
 public class EnemyMovement : MonoBehaviour
 {
-
-    public bool lingers = false;
-
     public enum Directions
     {
         up,
@@ -46,16 +43,16 @@ public class EnemyMovement : MonoBehaviour
         switch (in_direction)
         {
             case Directions.up:
-                velocity = new Vector3(0, unit.GetSpeed(), 0);
+                velocity = new Vector3(0, unit.speed, 0);
                 break;
             case Directions.down:
-                velocity = new Vector3(0, -unit.GetSpeed(), 0);
+                velocity = new Vector3(0, -unit.speed, 0);
                 break;
             case Directions.left:
-                velocity = new Vector3(-unit.GetSpeed(), 0, 0);
+                velocity = new Vector3(-unit.speed, 0, 0);
                 break;
             case Directions.right:
-                velocity = new Vector3(unit.GetSpeed(), 0, 0);
+                velocity = new Vector3(unit.speed, 0, 0);
                 break;
             default:
                 velocity = Vector3.zero;

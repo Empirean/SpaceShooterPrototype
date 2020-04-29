@@ -195,6 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 442404311}
+  - component: {fileID: 442404312}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -216,6 +217,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &442404312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442404310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca66e2b230468a47a364efba780a82b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPad: 1
+  enemy: {fileID: 613572604, guid: 6e24be1f90349da4abb320ec89430b6a, type: 3}
+  waveCount: 1
+  waveDelay: 0.5
+  spawnCount: 1e000000
+  spawnDelay:
+  - 1
+  spawnDirection: 01000000
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +426,7 @@ PrefabInstance:
     - target: {fileID: 4265742648008687599, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4265742648008687594, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
         type: 3}
@@ -466,6 +487,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4265742648008687595, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8d8b95b4fbad7f42a9b5dae45b16162, type: 3}

@@ -8,8 +8,8 @@ public class Unit : MonoBehaviour
 
     public float maxHealth = 10;
     protected float health = 10;
-    protected float speed = 5;
-    protected float armor = 0;
+    public float speed = 5;
+    public float armor = 0;
     protected bool isDead = false;
 
     public Image healthBar;
@@ -36,10 +36,7 @@ public class Unit : MonoBehaviour
         health = in_health;
     }
 
-    public float GetSpeed()
-    {
-        return speed;
-    }
+    
 
     private void OnDeath()
     {
