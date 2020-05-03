@@ -5,21 +5,27 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
+    public Image healthBar;
 
     public float maxHealth = 10;
-    protected float health = 10;
     public float speed = 5;
     public float armor = 0;
+    public float currentHealth;
+
     protected bool isDead = false;
 
-    public Image healthBar;
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
+    }
 
     private void Update()
     {
 
-        healthBar.fillAmount = (float)health / maxHealth;
+        healthBar.fillAmount = (float)currentHealth / maxHealth;
 
-        if (health <= 0.0f && !isDead)
+        if (currentHealth <= 0.0f && !isDead)
         {
             isDead = true;
             OnDeath();
@@ -28,15 +34,13 @@ public class Unit : MonoBehaviour
 
     public void Damage(float in_damage)
     {
-        health -= in_damage;
+        currentHealth -= in_damage;
     }
 
     public void Heal(float in_health)
     {
-        health = in_health;
+        currentHealth = in_health;
     }
-
-    
 
     private void OnDeath()
     {

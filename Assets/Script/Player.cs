@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Unit))]
 [RequireComponent(typeof(PlayerController))]
 public class Player : MonoBehaviour
 {
-
-    public float speed = 7;
-
     PlayerController playerController;
+    Unit unit;
 
     void Start()
     {
         playerController = GetComponent<PlayerController>();
+        unit = GetComponent<Unit>();
     }
 
     void Update()
@@ -23,6 +23,6 @@ public class Player : MonoBehaviour
 
     void Move(Vector3 direction)
     {
-        playerController.Move(direction * speed);
+        playerController.Move(direction * unit.speed);
     }
 }

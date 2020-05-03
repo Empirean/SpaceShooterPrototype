@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class Old_Weapon : MonoBehaviour
 {
     public Projectile projectile;
     public Transform spawnPoint;

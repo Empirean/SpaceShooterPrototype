@@ -196,6 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 442404311}
   - component: {fileID: 442404312}
+  - component: {fileID: 442404313}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -224,7 +225,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442404310}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ca66e2b230468a47a364efba780a82b, type: 3}
   m_Name: 
@@ -237,6 +238,20 @@ MonoBehaviour:
   spawnDelay:
   - 1
   spawnDirection: 01000000
+--- !u!114 &442404313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442404310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd6d8973f323b54cb967d09d6ca253c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unit: {fileID: 0}
+  g: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,11 +438,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4265742648008687599, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4265742648008687594, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -483,15 +493,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4265742648008687596, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
+    - target: {fileID: 4265742648446869786, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: speed
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 4265742648008687595, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
+    - target: {fileID: 4265742648446869786, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
         type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      propertyPath: maxHealth
+      value: 15
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4265742648008687595, guid: b8d8b95b4fbad7f42a9b5dae45b16162, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b8d8b95b4fbad7f42a9b5dae45b16162, type: 3}

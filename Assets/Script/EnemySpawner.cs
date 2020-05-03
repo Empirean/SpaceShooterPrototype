@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    float screenHeight;
+    float screenWidth;
+
     public float spawnPad = 1;
     public EnemyMovement enemy;
 
@@ -14,13 +17,8 @@ public class EnemySpawner : MonoBehaviour
     public List<float> spawnDelay;
     public List<EnemyMovement.Directions> spawnDirection;
 
-
-    private float screenHeight;
-    private float screenWidth;
-
     void Start()
     {
-        
         screenHeight = Utility.screenHeight + spawnPad;
         screenWidth = Utility.screenWidth + spawnPad;
 
