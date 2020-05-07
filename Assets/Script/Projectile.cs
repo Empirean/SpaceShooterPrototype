@@ -11,15 +11,10 @@ public class Projectile : MonoBehaviour
     float currentRange = 0;
     string damageTag = "Enemy";
 
-    void Update()
+    void FixedUpdate()
     {
         Move();
         if (!CheckRange()) Destroy(gameObject);
-    }
-
-    public void setTimedLife(float in_timedLife)
-    {
-        Destroy(gameObject, in_timedLife);
     }
 
     public void SetSpeed(float in_speed)
