@@ -42,9 +42,17 @@ public class Unit : MonoBehaviour
         currentHealth = in_health;
     }
 
+    public void SetHealth(float in_curHealth, float in_maxHealth)
+    {
+        currentHealth = in_curHealth;
+        maxHealth = in_maxHealth;
+    }
+
     private void OnDeath()
     {
         Destroy(gameObject);
     }
+
+
     
 }

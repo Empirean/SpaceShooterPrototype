@@ -231,19 +231,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442404310}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ca66e2b230468a47a364efba780a82b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPad: 1
-  enemy: {fileID: 613572604, guid: 6e24be1f90349da4abb320ec89430b6a, type: 3}
+  enemy: {fileID: 1150580013719022830, guid: 2b6d87e9f29586a4db08141e8cbe425b, type: 3}
   waveCount: 1
   waveDelay: 0.5
-  spawnCount: 1e000000
+  spawnCount: 0a000000
   spawnDelay:
   - 1
-  spawnDirection: 01000000
+  spawnDirection: 02000000
 --- !u!114 &442404313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,8 +256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd6d8973f323b54cb967d09d6ca253c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unit: {fileID: 0}
-  g: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +345,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -444,6 +442,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4265742648008687599, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4265742648008687594, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -482,7 +485,7 @@ PrefabInstance:
     - target: {fileID: 4265742648008687594, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4265742648008687594, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
         type: 3}
@@ -534,7 +537,7 @@ MonoBehaviour:
     type: 3}
   spawnPoint: {fileID: 303417751}
   primaryTurretCount: 2
-  secondaryTurretCount: 2
+  secondaryTurretCount: 3
   primaryRateOfFire: 1
   secondaryRateOfFire: 0.1
   spread: 0

@@ -8,14 +8,14 @@ public class EnemySpawner : MonoBehaviour
     float screenWidth;
 
     public float spawnPad = 1;
-    public EnemyMovement enemy;
+    public Behavior enemy;
 
     public int waveCount;
     public float waveDelay;
 
     public List<int> spawnCount;
     public List<float> spawnDelay;
-    public List<EnemyMovement.Directions> spawnDirection;
+    public List<Old_EnemyMovement.Directions> spawnDirection;
 
     void Start()
     {
@@ -47,28 +47,27 @@ public class EnemySpawner : MonoBehaviour
         
     }
 
-    public void Spawn(Vector3 spawnPoint, EnemyMovement.Directions direction)
+    public void Spawn(Vector3 spawnPoint, Old_EnemyMovement.Directions direction)
     {
-        enemy = Instantiate(enemy, spawnPoint, Quaternion.identity) as EnemyMovement;
-        enemy.direction = direction;
+        enemy = Instantiate(enemy, spawnPoint, Quaternion.identity) as Behavior;
     }
 
-    private Vector3 GetSpawnPoint(EnemyMovement.Directions direction)
+    private Vector3 GetSpawnPoint(Old_EnemyMovement.Directions direction)
     {
         Vector3 v;
 
         switch (direction)
         {
-            case EnemyMovement.Directions.up:
+            case Old_EnemyMovement.Directions.up:
                 v = new Vector3(Random.Range(-Utility.screenWidth,  Utility.screenWidth), -screenHeight, 0);
                 break;
-            case EnemyMovement.Directions.down:
+            case Old_EnemyMovement.Directions.down:
                 v = new Vector3(Random.Range(-Utility.screenWidth,  Utility.screenWidth), screenHeight, 0);
                 break;
-            case EnemyMovement.Directions.left:
+            case Old_EnemyMovement.Directions.left:
                 v = new Vector3(screenWidth, Random.Range( -Utility.screenHeight, Utility.screenHeight),  0);
                 break;
-            case EnemyMovement.Directions.right:
+            case Old_EnemyMovement.Directions.right:
                 v = new Vector3(-screenWidth, Random.Range( -Utility.screenHeight, Utility.screenHeight),  0);
                 break;
             default:

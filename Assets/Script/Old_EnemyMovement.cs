@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Unit))]
-public class EnemyMovement : MonoBehaviour
+public class Old_EnemyMovement : MonoBehaviour
 {
     public enum Directions
     {
@@ -15,28 +15,21 @@ public class EnemyMovement : MonoBehaviour
         none
     }
 
-    public Directions direction;
-    
-    Unit unit;
+    public Unit unit;
+
     float screenHalfheight;
 
     void Start()
     {
-        screenHalfheight = Utility.screenHeight / 2;
         unit = GetComponent<Unit>();
     }
 
-    void Update()
-    {
-        Move(SetVelocity(direction));
-    }
-
-    private void Move(Vector3 velocity)
+    public void Move(Vector3 velocity)
     {
         transform.Translate(velocity * Time.deltaTime);
     }
 
-    private Vector3 SetVelocity(Directions in_direction)
+    public Vector3 MoveToDirection(Directions in_direction)
     {
         Vector3 velocity;
 
