@@ -284,12 +284,13 @@ MonoBehaviour:
   secondaryTurretCount: 2
   primaryRateOfFire: 3
   secondaryRateOfFire: 0.2
-  spread: 360
+  spread: 0
   speed: 3
   offset: 0.2
   damage: 1
   damageTag: Player
   maxRange: 15
+  isInverted: 1
 --- !u!114 &1150580013719022830
 MonoBehaviour:
   m_ObjectHideFlags: 0

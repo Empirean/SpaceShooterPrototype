@@ -8,7 +8,7 @@ public class Behavior : MonoBehaviour
 
     Unit unit;
     Vector3 TargetLocation;
-    GameObject[] player;
+    GameObject player;
     float pauseCounter;
 
 
@@ -36,16 +36,16 @@ public class Behavior : MonoBehaviour
     {
         Vector3 v;
 
-        player = GameObject.FindGameObjectsWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         
 
-        if (player.Length == 0)
+        if (player == null)
         {
             v = new Vector3(Random.Range(-Utility.screenWidth, Utility.screenWidth), transform.position.y, 0);
         }
         else
         {
-            v = new Vector3(player[0].transform.position.x, transform.position.y, 0);
+            v = new Vector3(player.transform.position.x, transform.position.y, 0);
         }
 
         return v;
