@@ -351,7 +351,6 @@ GameObject:
   - component: {fileID: 4265742648008687593}
   - component: {fileID: 4265742648008687598}
   - component: {fileID: 4265742648008687596}
-  - component: {fileID: 4265742648008687595}
   - component: {fileID: 4265742648446869786}
   m_Layer: 0
   m_Name: Player
@@ -415,7 +414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 072d9090360847c4f8b4ff48db8ab5b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
 --- !u!114 &4265742648008687596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,49 +426,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30c42d3ee8cfe5439f9e336d60cfc17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4265742648008687595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4265742648008687599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1688df0173cc1bb4f9eb7c49e9e41ca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
-    type: 3}
-  spawnPoint: {fileID: 4265742648318527396}
-  mainTurretCount: 2
-  secondaryTurretCount: 2
-  shotsUntilBarrage: 12
-  mainRateOfFire: 1.5
-  secondaryRateOfFire: 0.01
-  spread: 0
-  offset: 0.2
-  speed: 10
-  layers: 2
-  startSpread:
-  - 90
-  - -90
-  endSpread:
-  - -90
-  - 90
-  startSpeed:
-  - 15
-  - 15
-  endSpeed:
-  - 15
-  - 15
-  startOffset:
-  - 0
-  - 0
-  endOffset:
-  - 0
-  - 0
-  bulletCount: 0f0000000f000000
 --- !u!114 &4265742648446869786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,6 +442,7 @@ MonoBehaviour:
   maxHealth: 10
   speed: 5
   armor: 0
+  currentHealth: 0
 --- !u!1 &4265742648318527397
 GameObject:
   m_ObjectHideFlags: 0

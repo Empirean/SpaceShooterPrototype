@@ -417,6 +417,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1652356081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3889414535855587167, guid: 2b6d87e9f29586a4db08141e8cbe425b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1901668532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1652356087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652356081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7adf6c76ea3ed43b120f28685ef6d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1652356089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652356081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f226127422ef6c14b9f098a83c1bf431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 6773675714094830871, guid: cdff515c0a3c53946a8857b4dd349b62,
+    type: 3}
+  spawnPoint: {fileID: 1800626000}
+  primaryTurretCount: 1
+  secondaryTurretCount: 1
+  primaryRateOfFire: 1.52
+  secondaryRateOfFire: 0.15
+  spread: 0
+  speed: 3
+  offset: 0.2
+  damage: 1
+  damageTag: Player
+  maxRange: 15
+  isInverted: 1
+  isTracing: 0
+--- !u!4 &1800626000 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3535945205993608731, guid: 2b6d87e9f29586a4db08141e8cbe425b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1901668532}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1901668532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -519,7 +570,9 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8720507059509534431, guid: 2b6d87e9f29586a4db08141e8cbe425b, type: 3}
+    - {fileID: 8461603277653564071, guid: 2b6d87e9f29586a4db08141e8cbe425b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2b6d87e9f29586a4db08141e8cbe425b, type: 3}
 --- !u!1001 &4265742648446869783
 PrefabInstance:
@@ -546,7 +599,7 @@ PrefabInstance:
     - target: {fileID: 4265742648008687594, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -3.62
       objectReference: {fileID: 0}
     - target: {fileID: 4265742648008687594, guid: b8d8b95b4fbad7f42a9b5dae45b16162,
         type: 3}
@@ -604,7 +657,7 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4265742648008687595, guid: b8d8b95b4fbad7f42a9b5dae45b16162, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b8d8b95b4fbad7f42a9b5dae45b16162, type: 3}
 --- !u!1 &4265742648446869785 stripped
 GameObject:
@@ -621,20 +674,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4265742648446869785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1db6772e6350c345b5e27780b37dce1, type: 3}
+  m_Script: {fileID: 11500000, guid: f226127422ef6c14b9f098a83c1bf431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
     type: 3}
   spawnPoint: {fileID: 303417751}
-  primaryTurretCount: 2
-  secondaryTurretCount: 3
+  primaryTurretCount: 3
+  secondaryTurretCount: 2
   primaryRateOfFire: 1
   secondaryRateOfFire: 0.1
-  spread: 0
-  speed: 10
-  offset: 0.2
-  damage: 1
+  spread: 10
+  speed: 7
+  offset: 0.1
+  damage: 0
   damageTag: Enemy
   maxRange: 15
   isInverted: 0

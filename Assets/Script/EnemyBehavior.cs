@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Unit))]
-public class Behavior : MonoBehaviour
+public class EnemyBehavior : MonoBehaviour
 {
 
     Unit unit;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+
     [Header("Objects")]
     public Projectile projectile;
     public Transform spawnPoint;
@@ -21,35 +22,18 @@ public class Weapon : MonoBehaviour
     public string damageTag = "Enemy";
     public float maxRange = 15;
 
+
     [Space]
     [Header("Weapon Modes")]
     public bool isInverted = false;
     public bool isTracing = false;
 
-
     float fireCounter;
 
     public void Shoot(float in_Spread, float in_Offset, float in_Speed)
     {
-        Quaternion t_newRotation = isTracing ? Quaternion.identity : Quaternion.Euler(0, 0, in_Spread);
         Vector3 t_newOffset = spawnPoint.position + new Vector3(in_Offset, 0, 0);
-
-        Projectile bullet = Instantiate(projectile, t_newOffset, t_newRotation) as Projectile;
-
-        if (isTracing)
-        {
-            Vector3 t_playerPos = GetPlayerPosition();
-            bullet.transform.LookAt(t_playerPos);
-
-            if (bullet.transform.position.x == t_playerPos.x)
-            {
-                bullet.transform.Rotate(90f, in_Spread, 0f);
-            }
-            else
-            {
-                bullet.transform.Rotate(90f + in_Spread, 0f, 0f);
-            }
-        }
+        Projectile bullet = Instantiate(projectile, t_newOffset, Quaternion.Euler(0, 0, in_Spread)) as Projectile;
 
         bullet.SetSpeed(in_Speed);
         bullet.SetDamage(damage);
@@ -57,37 +41,61 @@ public class Weapon : MonoBehaviour
         bullet.SetMaxRange(maxRange);
     }
 
+    IEnumerator ShootingController()
+    {
+
+        for (int i = 0; i < secondaryTurretCount; i++)
+        {
+
+            float temp_angle = GetStartingAngle(primaryTurretCount, spread);
+            float temp_offset = GetStartingOffset(primaryTurretCount, offset);
+            
+            temp_angle = isInverted ? temp_angle + 180 : temp_angle;
+            temp_offset = isInverted ? temp_offset * -1 : temp_offset;
+            
+            for (int j = 0; j < primaryTurretCount; j++)
+            {
+                
+                Shoot(temp_angle, temp_offset, speed);
+
+                temp_angle += spread;
+                temp_offset += isInverted ? offset : -offset;
+                
+            }
+
+            yield return new WaitForSeconds(secondaryRateOfFire);
+        }
+
+    }
+
     public void Fire()
     {
         if (Time.time >= fireCounter)
         {
-            StartCoroutine("FireController");
+            StartCoroutine("ShootingController");
 
             fireCounter = Time.time + primaryRateOfFire;
         }
     }
 
-    float GetAngleFromPlayer()
+    bool GetPlayerPosition(ref Vector3 in_position)
     {
+        GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-
-        if (player == null)
+        if (player.Length == 0)
         {
-            return spread;
+            in_position = Vector3.zero;
+            return false;
         }
-
-        return Vector3.Angle(GetPlayerPosition(), transform.position);
+        in_position = player[0].transform.position;
+        return true;
     }
 
-    Vector3 GetPlayerPosition()
+    bool GetPlayerPosition()
     {
-        Vector3 player = GameObject.FindGameObjectWithTag("Player").transform.position;
-        if (player == null)
-        {
-            return Vector3.zero;
-        }
-        return player;
+        Vector3 v = new Vector3();
+
+        return GetPlayerPosition(ref v);
     }
 
     float GetStartingAngle(int in_TurretCount, float in_spread)
@@ -122,31 +130,6 @@ public class Weapon : MonoBehaviour
         }
 
         return in_startOffset;
-    }
-
-    IEnumerator FireController()
-    {
-
-        for (int i = 0; i < secondaryTurretCount; i++)
-        {
-            
-            float temp_angle = GetStartingAngle(primaryTurretCount, spread);
-            float temp_offset =  GetStartingOffset(primaryTurretCount, offset);
-
-            temp_angle = isInverted && !isTracing ? temp_angle + 180 : temp_angle;
-            temp_offset = isInverted ? temp_offset * -1 : temp_offset;
-
-            for (int j = 0; j < primaryTurretCount; j++)
-            {
-
-                Shoot(temp_angle, temp_offset, speed);
-                temp_angle += spread;
-                temp_offset += isInverted ? offset  : -offset;
-            }
-
-            yield return new WaitForSeconds(secondaryRateOfFire);
-        }
-
     }
 
 }
