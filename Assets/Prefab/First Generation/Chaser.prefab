@@ -259,7 +259,7 @@ MonoBehaviour:
   primaryRateOfFire: 1.5
   secondaryRateOfFire: 0.15
   spread: 0
-  speed: 3
+  speed: 5
   offset: 0.2
   damage: 1
   damageTag: Player

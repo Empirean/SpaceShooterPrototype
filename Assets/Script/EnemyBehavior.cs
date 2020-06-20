@@ -108,6 +108,4 @@ public class EnemyBehavior : MonoBehaviour
 
     }
 
-
-
 }

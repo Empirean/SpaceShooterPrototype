@@ -147,7 +147,7 @@ public class SpawnerMaster : MonoBehaviour
         int rnd = Random.Range(0, 2);
 
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
-        Vector3 v = new Vector3(xSpawn, Random.Range(Utility.screenHeight / 2,  Utility.screenHeight), 0);
+        Vector3 v = new Vector3(xSpawn, Random.Range(Utility.screenHeight / 2,  Utility.screenHeight - 1), 0);
 
         Instantiate(chaserType, v, Quaternion.identity);
     }
