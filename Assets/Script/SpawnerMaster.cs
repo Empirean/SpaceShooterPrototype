@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class SpawnerMaster : MonoBehaviour
 {
+    public event Action OnPlayerWin;
+
     [Header("Enemy Prefabs")]
     public Unit berserkerType;
     public Unit chaserType;
@@ -45,12 +48,17 @@ public class SpawnerMaster : MonoBehaviour
 
     IEnumerator SpawnSequence()
     {
+        yield return new WaitForSeconds(3);
 
         for (currentWave = 0; currentWave < waveCount; currentWave++)
         {
             yield return StartCoroutine("SpawnCurrentWave");
         }
 
+        if (OnPlayerWin != null)
+        {
+            OnPlayerWin();
+        }
     }
 
     IEnumerator SpawnCurrentWave()
@@ -134,27 +142,27 @@ public class SpawnerMaster : MonoBehaviour
 
     void SpawnBerserker()
     {
-        int rnd = Random.Range(0, 2);
+        int rnd = UnityEngine.Random.Range(0, 2);
 
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
-        Vector3 v = new Vector3(xSpawn, Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
 
         Instantiate(berserkerType, v, Quaternion.identity);
     }
 
     void SpawnChaser()
     {
-        int rnd = Random.Range(0, 2);
+        int rnd = UnityEngine.Random.Range(0, 2);
 
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
-        Vector3 v = new Vector3(xSpawn, Random.Range(Utility.screenHeight / 2,  Utility.screenHeight - 1), 0);
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2,  Utility.screenHeight - 1), 0);
 
         Instantiate(chaserType, v, Quaternion.identity);
     }
 
     void SpawnPulser()
     {
-        float xSpawn = Random.Range( -Utility.screenWidth, Utility.screenWidth);
+        float xSpawn = UnityEngine.Random.Range( -Utility.screenWidth, Utility.screenWidth);
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
 
         Instantiate(pulserType, v, Quaternion.identity);
@@ -162,7 +170,7 @@ public class SpawnerMaster : MonoBehaviour
 
     void SpawnTrailer()
     {
-        float xSpawn = Random.Range(-Utility.screenWidth, Utility.screenWidth);
+        float xSpawn = UnityEngine.Random.Range(-Utility.screenWidth, Utility.screenWidth);
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
 
         Instantiate(trailerType, v, Quaternion.identity);
