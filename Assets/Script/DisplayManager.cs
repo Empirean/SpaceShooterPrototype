@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameOver : MonoBehaviour
+public class DisplayManager : MonoBehaviour
 {
     public GameObject loseScreen;
     public GameObject winScreen;
+    public GameObject lvlScreen;
 
     Player player;
     SpawnerMaster spawner;
@@ -18,6 +19,8 @@ public class GameOver : MonoBehaviour
 
         spawner = GetComponent<SpawnerMaster>();
         spawner.OnPlayerWin += OnPlayerWin;
+        spawner.OnLevelShow += OnLevelShow;
+        spawner.OnLevelHide += OnLevelHide;
     }
 
     void OnGameOver()
@@ -29,5 +32,15 @@ public class GameOver : MonoBehaviour
     void OnPlayerWin()
     {
         winScreen.SetActive(true);
+    }
+
+    void OnLevelShow()
+    {
+        lvlScreen.SetActive(true);
+    }
+
+    void OnLevelHide()
+    {
+        lvlScreen.SetActive(false);
     }
 }

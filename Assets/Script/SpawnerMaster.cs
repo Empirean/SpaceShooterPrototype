@@ -6,6 +6,8 @@ using System;
 public class SpawnerMaster : MonoBehaviour
 {
     public event Action OnPlayerWin;
+    public event Action OnLevelShow;
+    public event Action OnLevelHide;
 
     [Header("Enemy Prefabs")]
     public Unit berserkerType;
@@ -48,7 +50,19 @@ public class SpawnerMaster : MonoBehaviour
 
     IEnumerator SpawnSequence()
     {
+        if (OnLevelShow != null)
+        {
+            OnLevelShow();
+        }
+
         yield return new WaitForSeconds(3);
+
+        if (OnLevelShow != null)
+        {
+            OnLevelHide();
+        }
+
+        yield return new WaitForSeconds(1);
 
         for (currentWave = 0; currentWave < waveCount; currentWave++)
         {
