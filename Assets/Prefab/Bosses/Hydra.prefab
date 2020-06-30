@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 2283569844949419696}
   - component: {fileID: 4361474479773421050}
   m_Layer: 0
-  m_Name: Berserker 1
+  m_Name: Hydra
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6729929206027269637}
-  maxHealth: 10
+  maxHealth: 30
   speed: 3
   armor: 0
   currentHealth: 0
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a342ad91b1af0b42b079c7a96f9c47c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.25
+  delay: 2.5
   behaviorType: 2
 --- !u!114 &2283569844949419696
 MonoBehaviour:
@@ -401,11 +401,11 @@ MonoBehaviour:
   projectile: {fileID: 6773675714094830871, guid: cdff515c0a3c53946a8857b4dd349b62,
     type: 3}
   spawnPoint: {fileID: 2124971466480858460}
-  primaryTurretCount: 1
-  secondaryTurretCount: 3
-  primaryRateOfFire: 2
+  primaryTurretCount: 8
+  secondaryTurretCount: 1
+  primaryRateOfFire: 0.5
   secondaryRateOfFire: 0.5
-  spread: 0
+  spread: 15
   speed: 3
   offset: 0.2
   damage: 1
@@ -440,7 +440,7 @@ Transform:
   m_GameObject: {fileID: 9083613191743199205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 2039184603325481865}
   m_RootOrder: 0

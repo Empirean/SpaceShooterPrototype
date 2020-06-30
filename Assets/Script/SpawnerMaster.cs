@@ -14,6 +14,7 @@ public class SpawnerMaster : MonoBehaviour
     public Unit chaserType;
     public Unit pulserType;
     public Unit trailerType;
+    public Unit hydraType;
 
     [Space]
     public float nextWaveDelay = 1.5f;
@@ -28,10 +29,12 @@ public class SpawnerMaster : MonoBehaviour
 
     public enum EnemyTypes
     {
+        none,
         berserker,
         chaser,
         pulser,
-        trailer
+        trailer,
+        hydra
     }
 
     [Space]
@@ -41,7 +44,6 @@ public class SpawnerMaster : MonoBehaviour
     public EnemyTypes[] thirdLayerEnemy;
 
     int currentWave;
-
 
     private void Start()
     {
@@ -92,6 +94,9 @@ public class SpawnerMaster : MonoBehaviour
                     break;
                 case EnemyTypes.trailer:
                     SpawnTrailer();
+                    break;
+                case EnemyTypes.hydra:
+                    SpawnHydra();
                     break;
                 default:
                     break;
@@ -162,6 +167,16 @@ public class SpawnerMaster : MonoBehaviour
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
 
         Instantiate(berserkerType, v, Quaternion.identity);
+    }
+
+    void SpawnHydra()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
+
+        Instantiate(hydraType, v, Quaternion.identity);
     }
 
     void SpawnChaser()

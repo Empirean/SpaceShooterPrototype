@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Weapon))]
+[RequireComponent(typeof(BasicWeapon))]
 public class WeaponController : MonoBehaviour
 {
 
-    Weapon weapon;
+    BasicWeapon weapon;
 
     void Start()
     {
-        weapon = GetComponent<Weapon>();
+        weapon = GetComponent<BasicWeapon>();
         
     }
 

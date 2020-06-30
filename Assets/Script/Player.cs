@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (OnPlayerDeath != null)
+        if (OnPlayerDeath != null && unit.currentHealth <= 0)
         {
             OnPlayerDeath();
         }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class BasicWeapon : MonoBehaviour
 {
 
     [Header("Objects")]
@@ -26,7 +26,6 @@ public class Weapon : MonoBehaviour
     [Space]
     [Header("Weapon Modes")]
     public bool isInverted = false;
-    public bool isTracing = false;
 
     float fireCounter;
 
