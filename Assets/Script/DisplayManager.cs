@@ -26,12 +26,14 @@ public class DisplayManager : MonoBehaviour
     void OnGameOver()
     {
         loseScreen.SetActive(true);
+        gameObject.SetActive(false);
 
     }
 
     void OnPlayerWin()
     {
         winScreen.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     void OnLevelShow()

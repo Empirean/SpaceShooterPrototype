@@ -382,10 +382,10 @@ GameObject:
   - component: {fileID: 4398911978933775270}
   - component: {fileID: 4398911978933775269}
   - component: {fileID: 4398911978933775268}
-  - component: {fileID: 4398911978933775266}
-  - component: {fileID: 4398911978933775267}
+  - component: {fileID: -4858891423947756712}
+  - component: {fileID: 1654734040998851503}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -475,7 +475,7 @@ MonoBehaviour:
   speed: 7
   armor: 0
   currentHealth: 0
---- !u!114 &4398911978933775266
+--- !u!114 &-4858891423947756712
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -484,25 +484,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4398911978933775265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f226127422ef6c14b9f098a83c1bf431, type: 3}
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
     type: 3}
   spawnPoint: {fileID: 450049303515480879}
-  primaryTurretCount: 3
-  secondaryTurretCount: 2
-  primaryRateOfFire: 1
-  secondaryRateOfFire: 0.1
-  spread: 10
-  speed: 7
-  offset: 0.1
   damage: 1
   damageTag: Enemy
   maxRange: 15
-  isInverted: 0
-  isTracing: 0
---- !u!114 &4398911978933775267
+--- !u!114 &1654734040998851503
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -511,6 +502,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4398911978933775265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d7adf6c76ea3ed43b120f28685ef6d3, type: 3}
+  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  primaryTurretCount: 3
+  secondaryTurretCount: 2
+  primaryRateOfFire: 1
+  secondaryRateOfFire: 0.1
+  spread: 10
+  speed: 8
+  offset: 0
+  damage: 1
+  damageTag: Enemy
+  maxRange: 15
+  isInverted: 0

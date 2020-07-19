@@ -290,10 +290,12 @@ GameObject:
   - component: {fileID: 7201235000630507851}
   - component: {fileID: 5816129802602218624}
   - component: {fileID: 1951488021247453518}
-  - component: {fileID: 4296244960816804039}
-  - component: {fileID: 130495448211886995}
+  - component: {fileID: 8877253749022017854}
+  - component: {fileID: 9125369686238087964}
+  - component: {fileID: 5780336002608034637}
+  - component: {fileID: 6757865252271829543}
   m_Layer: 0
-  m_Name: Hydra
+  m_Name: Demigod
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -343,8 +345,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6729929206027269637}
-  maxHealth: 110
-  speed: 3
+  maxHealth: 200
+  speed: 0.5
   armor: 0
   currentHealth: 0
 --- !u!114 &7201235000630507851
@@ -373,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a342ad91b1af0b42b079c7a96f9c47c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 2.5
+  delay: 0.1
   behaviorSwitch: 0
   behaviorSwitchDelay: 0
   behaviorType: 2
@@ -398,31 +400,12 @@ MonoBehaviour:
   weaponSwitching: 1
   weaponSwitchDelay: 10
   mainWeapon:
-  - {fileID: 4296244960816804039}
+  - {fileID: 8877253749022017854}
+  - {fileID: 9125369686238087964}
+  - {fileID: 5780336002608034637}
   secondaryWeapon:
-  - {fileID: 130495448211886995}
---- !u!114 &4296244960816804039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8864870526059961215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 7
-  secondaryTurretCount: 3
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 0.5
-  spread: 15
-  speed: 3
-  offset: 0.2
-  maxRange: 15
-  isInverted: 1
---- !u!114 &130495448211886995
+  - {fileID: 6757865252271829543}
+--- !u!114 &8877253749022017854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -434,28 +417,172 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layers: 2
+  layers: 8
   primaryRateOfFire: 3
   secondaryRateOfFire: 0.1
-  bulletCount: 0800000008000000
+  bulletCount: 1e0000001e0000001e0000001e0000001e0000001e0000001e0000001e000000
   startSpread:
-  - 0
-  - 0
+  - 15
+  - 30
+  - 45
+  - 60
+  - -15
+  - -30
+  - -45
+  - -60
   endSpread:
-  - -90
-  - 90
+  - 15
+  - 30
+  - 45
+  - 60
+  - -15
+  - -30
+  - -45
+  - -60
   startSpeed:
-  - 3
-  - 3
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
   endSpeed:
-  - 1
-  - 1
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
   startOffset:
-  - -0.5
-  - 0.5
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   endOffset:
-  - -0.5
-  - 0.5
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  maxRange: 15
+  isInverted: 1
+--- !u!114 &9125369686238087964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864870526059961215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f86e80a7b97ed46b8917cfa1029d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 1
+  primaryRateOfFire: 2
+  secondaryRateOfFire: 0.1
+  speed: 5
+  offset: -0.5
+  isInverted: 1
+--- !u!114 &5780336002608034637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864870526059961215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f86e80a7b97ed46b8917cfa1029d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 1
+  primaryRateOfFire: 2
+  secondaryRateOfFire: 0.1
+  speed: 5
+  offset: 0.5
+  isInverted: 1
+--- !u!114 &6757865252271829543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864870526059961215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers: 8
+  primaryRateOfFire: 0.9
+  secondaryRateOfFire: 0.1
+  bulletCount: 0700000007000000070000000700000007000000070000000700000007000000
+  startSpread:
+  - -180
+  - -135
+  - -90
+  - -45
+  - 0
+  - 45
+  - 90
+  - 135
+  endSpread:
+  - -75
+  - -30
+  - 15
+  - 60
+  - 105
+  - 150
+  - 195
+  - 240
+  startSpeed:
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  endSpeed:
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  startOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   maxRange: 15
   isInverted: 1
 --- !u!1 &9083613191743199205

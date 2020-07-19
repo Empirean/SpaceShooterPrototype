@@ -14,8 +14,6 @@ public class DirectionalWeapon : MonoBehaviour
     public float spread;
     public float speed;
     public float offset;
-    public float damage = 1;
-    public string damageTag = "Enemy";
     public float maxRange = 15;
 
     [Space]
@@ -31,7 +29,7 @@ public class DirectionalWeapon : MonoBehaviour
         fireCounter = Time.time + primaryRateOfFire;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (Time.time >= fireCounter)
         {

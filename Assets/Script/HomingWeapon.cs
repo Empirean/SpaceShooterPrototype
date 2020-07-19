@@ -26,7 +26,7 @@ public class HomingWeapon : MonoBehaviour
         fireCounter = Time.time + primaryRateOfFire;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (Time.time >= fireCounter)
         {

@@ -290,10 +290,12 @@ GameObject:
   - component: {fileID: 7201235000630507851}
   - component: {fileID: 5816129802602218624}
   - component: {fileID: 1951488021247453518}
-  - component: {fileID: 4296244960816804039}
-  - component: {fileID: 130495448211886995}
+  - component: {fileID: 1490615539787864515}
+  - component: {fileID: 4265596232187203651}
+  - component: {fileID: 8816901781075066142}
+  - component: {fileID: 6029016383187807532}
   m_Layer: 0
-  m_Name: Hydra
+  m_Name: Cyclops
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -343,8 +345,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 6729929206027269637}
-  maxHealth: 110
-  speed: 3
+  maxHealth: 120
+  speed: 1
   armor: 0
   currentHealth: 0
 --- !u!114 &7201235000630507851
@@ -373,10 +375,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a342ad91b1af0b42b079c7a96f9c47c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 2.5
+  delay: 0.1
   behaviorSwitch: 0
   behaviorSwitchDelay: 0
-  behaviorType: 2
+  behaviorType: 0
 --- !u!114 &1951488021247453518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,31 +400,12 @@ MonoBehaviour:
   weaponSwitching: 1
   weaponSwitchDelay: 10
   mainWeapon:
-  - {fileID: 4296244960816804039}
+  - {fileID: 8816901781075066142}
+  - {fileID: 6029016383187807532}
   secondaryWeapon:
-  - {fileID: 130495448211886995}
---- !u!114 &4296244960816804039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8864870526059961215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 7
-  secondaryTurretCount: 3
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 0.5
-  spread: 15
-  speed: 3
-  offset: 0.2
-  maxRange: 15
-  isInverted: 1
---- !u!114 &130495448211886995
+  - {fileID: 1490615539787864515}
+  - {fileID: 4265596232187203651}
+--- !u!114 &1490615539787864515
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -435,28 +418,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layers: 2
-  primaryRateOfFire: 3
+  primaryRateOfFire: 5
   secondaryRateOfFire: 0.1
-  bulletCount: 0800000008000000
+  bulletCount: 1e0000001e000000
   startSpread:
-  - 0
-  - 0
+  - 15
+  - -15
   endSpread:
-  - -90
-  - 90
+  - 0
+  - 0
   startSpeed:
-  - 3
-  - 3
+  - 7
+  - 7
   endSpeed:
-  - 1
-  - 1
+  - 7
+  - 7
   startOffset:
-  - -0.5
-  - 0.5
+  - 1.75
+  - -1.75
   endOffset:
-  - -0.5
-  - 0.5
+  - 1.75
+  - -1.75
   maxRange: 15
+  isInverted: 1
+--- !u!114 &4265596232187203651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864870526059961215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 5
+  secondaryTurretCount: 2
+  primaryRateOfFire: 3
+  secondaryRateOfFire: 0.2
+  spread: 15
+  speed: 5
+  offset: 0.2
+  maxRange: 15
+  isInverted: 1
+--- !u!114 &8816901781075066142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864870526059961215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f86e80a7b97ed46b8917cfa1029d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 2
+  primaryRateOfFire: 1.2
+  secondaryRateOfFire: 0.2
+  speed: 4
+  offset: 1.25
+  isInverted: 1
+--- !u!114 &6029016383187807532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864870526059961215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f86e80a7b97ed46b8917cfa1029d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 2
+  primaryRateOfFire: 1.2
+  secondaryRateOfFire: 0.2
+  speed: 4
+  offset: -1.25
   isInverted: 1
 --- !u!1 &9083613191743199205
 GameObject:

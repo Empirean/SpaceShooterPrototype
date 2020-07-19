@@ -142,10 +142,11 @@ GameObject:
   - component: {fileID: 2641837007015002905}
   - component: {fileID: 2641837007015002910}
   - component: {fileID: 2641837007015002911}
-  - component: {fileID: 2641837007015002906}
-  - component: {fileID: 2641837007015002900}
+  - component: {fileID: 4496660118142370845}
+  - component: {fileID: 5758481452627205332}
+  - component: {fileID: -170892796094838352}
   m_Layer: 0
-  m_Name: Berserker
+  m_Name: Chaser
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,7 +181,7 @@ CapsuleCollider:
   m_Enabled: 1
   m_Radius: 0.2535352
   m_Height: 1.0094976
-  m_Direction: 1
+  m_Direction: 0
   m_Center: {x: -0.004715495, y: 0, z: 0}
 --- !u!114 &2641837007015002905
 MonoBehaviour:
@@ -226,8 +227,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.25
-  behaviorType: 2
---- !u!114 &2641837007015002906
+  behaviorSwitch: 1
+  behaviorSwitchDelay: 3
+  behaviorType: 0
+--- !u!114 &4496660118142370845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236,36 +239,63 @@ MonoBehaviour:
   m_GameObject: {fileID: 2641837007015002908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d7adf6c76ea3ed43b120f28685ef6d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2641837007015002900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2641837007015002908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f226127422ef6c14b9f098a83c1bf431, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 6773675714094830871, guid: cdff515c0a3c53946a8857b4dd349b62,
+  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
     type: 3}
   spawnPoint: {fileID: 2641837007133994941}
-  primaryTurretCount: 1
-  secondaryTurretCount: 3
-  primaryRateOfFire: 2
-  secondaryRateOfFire: 0.5
-  spread: 0
-  speed: 3
-  offset: 0.2
   damage: 1
   damageTag: Player
   maxRange: 15
+  weaponSwitching: 1
+  weaponSwitchDelay: 3
+  mainWeapon:
+  - {fileID: 5758481452627205332}
+  secondaryWeapon:
+  - {fileID: -170892796094838352}
+--- !u!114 &5758481452627205332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2641837007015002908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 2
+  secondaryTurretCount: 2
+  primaryRateOfFire: 2
+  secondaryRateOfFire: 0.2
+  spread: 0
+  speed: 3
+  offset: 0.2
+  maxRange: 15
   isInverted: 1
-  isTracing: 0
+--- !u!114 &-170892796094838352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2641837007015002908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 2
+  secondaryTurretCount: 2
+  primaryRateOfFire: 2
+  secondaryRateOfFire: 0.2
+  spread: 15
+  speed: 3
+  offset: 0.2
+  maxRange: 15
+  isInverted: 1
 --- !u!1 &2641837007357982886
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,13 +468,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2641837007903989841}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 2641837007015002907}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!33 &2641837007903989842
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -470,7 +500,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2ceb18f5ba9798c4eae00b7e4ee97e2b, type: 2}
+  - {fileID: 2100000, guid: 049b8a2da7bb1134cb09e56164f7bd72, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

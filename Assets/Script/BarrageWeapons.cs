@@ -21,8 +21,6 @@ public class BarrageWeapons : MonoBehaviour
     public List<float> endOffset;
 
     [Space]
-    public float damage = 1;
-    public string damageTag = "Enemy";
     public float maxRange = 15;
 
     [Space]
@@ -38,7 +36,7 @@ public class BarrageWeapons : MonoBehaviour
         fireCounter = Time.time + primaryRateOfFire;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (Time.time >= fireCounter)
         {

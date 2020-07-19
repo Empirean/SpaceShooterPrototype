@@ -10,10 +10,12 @@ public class EnemyBehavior : MonoBehaviour
     Vector3 TargetLocation;
     GameObject player;
     float pauseCounter;
-
+    float behaviorCounter = 0;
 
     public float delay;
-
+    public bool behaviorSwitch = false;
+    public float behaviorSwitchDelay;
+    
 
     public enum BehaviorTypes
     {
@@ -25,10 +27,26 @@ public class EnemyBehavior : MonoBehaviour
 
     public BehaviorTypes behaviorType;
 
+    
+
     void Start()
     {
         unit = GetComponent<Unit>();
         StartCoroutine("MoveToLocation");
+    }
+
+    void Update()
+    {
+        if (behaviorSwitch)
+        {
+            if (Time.time >= behaviorCounter)
+            {
+                if (behaviorCounter > 0)
+                    behaviorType = behaviorType == BehaviorTypes.Avoiding ? BehaviorTypes.Intercepting : BehaviorTypes.Avoiding;
+
+                behaviorCounter = Time.time + behaviorSwitchDelay;
+            }
+        }
     }
 
 

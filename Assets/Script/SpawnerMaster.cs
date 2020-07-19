@@ -10,11 +10,20 @@ public class SpawnerMaster : MonoBehaviour
     public event Action OnLevelHide;
 
     [Header("Enemy Prefabs")]
-    public Unit berserkerType;
+    public Unit pingerType;
     public Unit chaserType;
     public Unit pulserType;
     public Unit trailerType;
+    public Unit vexerType;
+
+
+    [Space]
+    [Header("Bosses")]
     public Unit hydraType;
+    public Unit cyclopsType;
+    public Unit centaurType;
+    public Unit manticoreType;
+    public Unit demigodType;
 
     [Space]
     public float nextWaveDelay = 1.5f;
@@ -30,11 +39,16 @@ public class SpawnerMaster : MonoBehaviour
     public enum EnemyTypes
     {
         none,
-        berserker,
+        vexer,
         chaser,
         pulser,
         trailer,
-        hydra
+        pinger,
+        hydra,
+        cyclops,
+        centaur,
+        manticore,
+        demigod
     }
 
     [Space]
@@ -81,72 +95,22 @@ public class SpawnerMaster : MonoBehaviour
     {
         for (int i = 0; i < firstLayerCount[currentWave]; i++)
         {
-            switch (firstLayerEnemy[currentWave])
-            {
-                case EnemyTypes.berserker:
-                    SpawnBerserker();
-                    break;
-                case EnemyTypes.chaser:
-                    SpawnChaser();
-                    break;
-                case EnemyTypes.pulser:
-                    SpawnPulser();
-                    break;
-                case EnemyTypes.trailer:
-                    SpawnTrailer();
-                    break;
-                case EnemyTypes.hydra:
-                    SpawnHydra();
-                    break;
-                default:
-                    break;
-            }
 
+            SpawnChooser(firstLayerEnemy[currentWave]);
+            
             yield return new WaitForSeconds(1);
         }
 
         for (int i = 0; i < secondLayerCount[currentWave]; i++)
         {
-            switch (secondLayerEnemy[currentWave])
-            {
-                case EnemyTypes.berserker:
-                    SpawnBerserker();
-                    break;
-                case EnemyTypes.chaser:
-                    SpawnChaser();
-                    break;
-                case EnemyTypes.pulser:
-                    SpawnPulser();
-                    break;
-                case EnemyTypes.trailer:
-                    SpawnTrailer();
-                    break;
-                default:
-                    break;
-            }
+            SpawnChooser(secondLayerEnemy[currentWave]);
 
             yield return new WaitForSeconds(1);
         }
 
         for (int i = 0; i < thirdLayerCount[currentWave]; i++)
         {
-            switch (thirdLayerEnemy[currentWave])
-            {
-                case EnemyTypes.berserker:
-                    SpawnBerserker();
-                    break;
-                case EnemyTypes.chaser:
-                    SpawnChaser();
-                    break;
-                case EnemyTypes.pulser:
-                    SpawnPulser();
-                    break;
-                case EnemyTypes.trailer:
-                    SpawnTrailer();
-                    break;
-                default:
-                    break;
-            }
+            SpawnChooser(thirdLayerEnemy[currentWave]);
 
             yield return new WaitForSeconds(1);
         }
@@ -159,14 +123,43 @@ public class SpawnerMaster : MonoBehaviour
         yield return new WaitForSeconds(nextWaveDelay);
     }
 
-    void SpawnBerserker()
+    void SpawnChooser(EnemyTypes in_type)
     {
-        int rnd = UnityEngine.Random.Range(0, 2);
-
-        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
-        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
-
-        Instantiate(berserkerType, v, Quaternion.identity);
+        switch (in_type)
+        {
+            case EnemyTypes.pinger:
+                SpawnPinger();
+                break;
+            case EnemyTypes.chaser:
+                SpawnChaser();
+                break;
+            case EnemyTypes.pulser:
+                SpawnPulser();
+                break;
+            case EnemyTypes.trailer:
+                SpawnTrailer();
+                break;
+            case EnemyTypes.vexer:
+                SpawnVexer();
+                break;
+            case EnemyTypes.hydra:
+                SpawnHydra();
+                break;
+            case EnemyTypes.cyclops:
+                SpawnCyclops();
+                break;
+            case EnemyTypes.centaur:
+                SpawnCentaur();
+                break;
+            case EnemyTypes.manticore:
+                SpawnManticore();
+                break;
+            case EnemyTypes.demigod:
+                SpawnDemigod();
+                break;
+            default:
+                break;
+        }
     }
 
     void SpawnHydra()
@@ -177,6 +170,68 @@ public class SpawnerMaster : MonoBehaviour
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
 
         Instantiate(hydraType, v, Quaternion.identity);
+    }
+
+    void SpawnCyclops()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, Utility.screenHeight / 2, 0);
+
+        Instantiate(cyclopsType, v, Quaternion.identity);
+    }
+
+    void SpawnCentaur()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 8, Utility.screenHeight - 1), 0);
+
+        Instantiate(centaurType, v, Quaternion.identity);
+    }
+
+    void SpawnManticore()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 8, Utility.screenHeight - 1), 0);
+
+        Instantiate(manticoreType, v, Quaternion.identity);
+    }
+
+    void SpawnDemigod()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 8, Utility.screenHeight - 1), 0);
+
+        Instantiate(demigodType, v, Quaternion.identity);
+    }
+
+    void SpawnPinger()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
+
+        Instantiate(pingerType, v, Quaternion.identity);
+    }
+
+    
+
+    void SpawnVexer()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
+
+        Instantiate(vexerType, v, Quaternion.identity);
     }
 
     void SpawnChaser()

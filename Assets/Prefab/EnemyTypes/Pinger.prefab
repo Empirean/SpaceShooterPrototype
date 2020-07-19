@@ -142,10 +142,10 @@ GameObject:
   - component: {fileID: 2641837007015002905}
   - component: {fileID: 2641837007015002910}
   - component: {fileID: 2641837007015002911}
-  - component: {fileID: 779901777218843170}
-  - component: {fileID: 2168374241349718164}
+  - component: {fileID: 849620948447844184}
+  - component: {fileID: 6097742201898258405}
   m_Layer: 0
-  m_Name: Interceptor
+  m_Name: Pinger
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,8 +226,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.25
-  behaviorType: 0
---- !u!114 &779901777218843170
+  behaviorType: 2
+--- !u!114 &849620948447844184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,7 +245,7 @@ MonoBehaviour:
   damage: 1
   damageTag: Player
   maxRange: 15
---- !u!114 &2168374241349718164
+--- !u!114 &6097742201898258405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,14 +254,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2641837007015002908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f86e80a7b97ed46b8917cfa1029d34, type: 3}
+  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 3
-  primaryRateOfFire: 1
-  secondaryRateOfFire: 0.1
-  speed: 15
+  primaryTurretCount: 1
+  secondaryTurretCount: 2
+  primaryRateOfFire: 2
+  secondaryRateOfFire: 0.5
+  spread: 0
+  speed: 3
   offset: 0
+  damage: 1
+  maxRange: 15
   isInverted: 1
 --- !u!1 &2641837007357982886
 GameObject:
@@ -467,7 +471,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2ceb18f5ba9798c4eae00b7e4ee97e2b, type: 2}
+  - {fileID: 2100000, guid: 049b8a2da7bb1134cb09e56164f7bd72, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
