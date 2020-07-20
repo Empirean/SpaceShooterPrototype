@@ -5,16 +5,25 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
+    [Header("Health Bar")]
     public Image healthBar;
 
+
+    [Space]
+    [Header("Basic Stat")]
     public float maxHealth = 10;
     public float speed = 5;
     public float armor = 0;
     public float currentHealth;
-    // public string 
+
+    [Space]
+    [Header("Collision")]
+    public string damageTag;
+    public float collisionDamage;
 
     protected bool isDead = false;
 
+    float damageCounter;
 
     private void Start()
     {
@@ -56,7 +65,24 @@ public class Unit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+
+        if (other.gameObject.tag == damageTag)
+        {
+            Unit unit = other.GetComponent<Unit>();
+            unit.Damage(collisionDamage);
+            damageCounter = Time.time + Utility.collisionDamageDelay;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+
+        if (other.gameObject.tag == damageTag && Time.time > damageCounter)
+        {
+            Unit unit = other.GetComponent<Unit>();
+            unit.Damage(collisionDamage);
+            damageCounter = Time.time + Utility.collisionDamageDelay;
+        }
     }
 
 }

@@ -132,11 +132,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
-    - target: {fileID: 4398911978933775265, guid: 55c1415af1d7ee746a2c63d073bf8d14,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4398911978933775257, guid: 55c1415af1d7ee746a2c63d073bf8d14,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -192,10 +187,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1654734040998851503, guid: 55c1415af1d7ee746a2c63d073bf8d14,
+    - target: {fileID: 4398911978933775268, guid: 55c1415af1d7ee746a2c63d073bf8d14,
         type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      propertyPath: damageTag
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398911978933775268, guid: 55c1415af1d7ee746a2c63d073bf8d14,
+        type: 3}
+      propertyPath: collisionDamage
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c1415af1d7ee746a2c63d073bf8d14, type: 3}
@@ -384,6 +384,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pulser
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641837007015002905, guid: fcae724fd1d5d2f439a99abcc245d2c1,
+        type: 3}
+      propertyPath: damageTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641837007015002905, guid: fcae724fd1d5d2f439a99abcc245d2c1,
+        type: 3}
+      propertyPath: collisionDamage
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2641837007015002907, guid: fcae724fd1d5d2f439a99abcc245d2c1,
         type: 3}

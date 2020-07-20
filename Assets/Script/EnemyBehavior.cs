@@ -76,9 +76,15 @@ public class EnemyBehavior : MonoBehaviour
     
     IEnumerator MoveToLocation()
     {
+
         Vector3 targetLocation = GetPlayerLocation();
 
-        while(behaviorType == BehaviorTypes.Intercepting)
+        while (behaviorType == BehaviorTypes.None)
+        {
+            yield return new WaitForSeconds(delay);
+        }
+
+        while (behaviorType == BehaviorTypes.Intercepting)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetLocation, unit.speed * Time.deltaTime);
             

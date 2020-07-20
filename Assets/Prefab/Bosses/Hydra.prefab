@@ -1653,6 +1653,8 @@ MonoBehaviour:
   speed: 3
   armor: 0
   currentHealth: 0
+  damageTag: Player
+  collisionDamage: 1
 --- !u!114 &7201235000630507851
 MonoBehaviour:
   m_ObjectHideFlags: 0
