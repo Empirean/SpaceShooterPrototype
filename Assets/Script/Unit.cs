@@ -11,6 +11,7 @@ public class Unit : MonoBehaviour
     public float speed = 5;
     public float armor = 0;
     public float currentHealth;
+    // public string 
 
     protected bool isDead = false;
 
@@ -53,6 +54,9 @@ public class Unit : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
 
-    
 }

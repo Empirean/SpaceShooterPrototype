@@ -70,24 +70,26 @@ public class Weapon : MonoBehaviour
         Vector3 t_newOffset = spawnPoint.position + new Vector3(in_Offset, 0, 0);
         Projectile bullet = Instantiate(projectile, t_newOffset, Quaternion.Euler(0, 0, in_Spread)) as Projectile;
 
-        bullet.SetSpeed(in_Speed);
-        bullet.SetDamage(damage);
-        bullet.SetDamageTag(damageTag);
-        bullet.SetMaxRange(maxRange);
+        SetProjectileProperty(ref bullet, in_Speed);
     }
 
-    public void Shoot(Vector3 in_target, float in_Offset, float in_Speed)
+    public void Shoot(Vector3 in_Target, float in_Offset, float in_Speed)
     {
         Vector3 t_newOffset = spawnPoint.position + new Vector3(in_Offset, 0, 0);
         Projectile bullet = Instantiate(projectile, t_newOffset, Quaternion.identity) as Projectile;
 
-        bullet.transform.LookAt(in_target);
+        bullet.transform.LookAt(in_Target);
         bullet.transform.eulerAngles = new Vector3(bullet.transform.eulerAngles.x + 90, bullet.transform.eulerAngles.y, bullet.transform.eulerAngles.z);
 
-        bullet.SetSpeed(in_Speed);
-        bullet.SetDamage(damage);
-        bullet.SetDamageTag(damageTag);
-        bullet.SetMaxRange(maxRange);
+        SetProjectileProperty(ref bullet, in_Speed);
+    }
+
+    private void SetProjectileProperty(ref Projectile in_Projectile, float in_Speed)
+    {
+        in_Projectile.SetSpeed(in_Speed);
+        in_Projectile.SetDamage(damage);
+        in_Projectile.SetDamageTag(damageTag);
+        in_Projectile.SetMaxRange(maxRange);
     }
 
     public bool GetPlayerPosition(ref Vector3 in_position)
