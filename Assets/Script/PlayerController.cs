@@ -5,9 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(Player))]
 public class PlayerController : MonoBehaviour
 {
+    public float z;
+
     Player player;
 
-    private void Start()
+
+    void Start()
     {
         player = GetComponent<Player>();
     }
@@ -15,6 +18,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Vector3 direction = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0).normalized;
+
         player.Move(direction);
     }
+
 }
