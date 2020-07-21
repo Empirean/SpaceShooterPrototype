@@ -8,6 +8,7 @@ public class DisplayManager : MonoBehaviour
     public GameObject loseScreen;
     public GameObject winScreen;
     public GameObject lvlScreen;
+    public GameObject bossHealth;
 
     Player player;
     SpawnerMaster spawner;
@@ -21,6 +22,18 @@ public class DisplayManager : MonoBehaviour
         spawner.OnPlayerWin += OnPlayerWin;
         spawner.OnLevelShow += OnLevelShow;
         spawner.OnLevelHide += OnLevelHide;
+        spawner.OnBossSpawn += OnBossSpawn;
+        spawner.OnBossDeath += OnBossDeath;
+    }
+
+    void OnBossSpawn()
+    {
+        bossHealth.SetActive(true);
+    }
+
+    void OnBossDeath()
+    {
+        bossHealth.SetActive(false);
     }
 
     void OnGameOver()

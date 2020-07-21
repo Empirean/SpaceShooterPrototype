@@ -8,8 +8,6 @@ public class Background : MonoBehaviour
 
     Renderer rend;
 
-
-
     void Start()
     {
         rend = GetComponent<Renderer>();

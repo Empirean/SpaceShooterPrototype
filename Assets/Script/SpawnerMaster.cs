@@ -8,6 +8,8 @@ public class SpawnerMaster : MonoBehaviour
     public event Action OnPlayerWin;
     public event Action OnLevelShow;
     public event Action OnLevelHide;
+    public event Action OnBossSpawn;
+    public event Action OnBossDeath;
 
     [Header("Enemy Prefabs")]
     public Unit pingerType;
@@ -73,7 +75,7 @@ public class SpawnerMaster : MonoBehaviour
 
         yield return new WaitForSeconds(3);
 
-        if (OnLevelShow != null)
+        if (OnLevelHide != null)
         {
             OnLevelHide();
         }
@@ -169,7 +171,10 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
 
-        Instantiate(hydraType, v, Quaternion.identity);
+        if (OnBossSpawn != null) OnBossSpawn();
+
+        Unit hydra  = Instantiate(hydraType, v, Quaternion.identity);
+        hydra.OnBossDeath += OnBossDestroy;
     }
 
     void SpawnCyclops()
@@ -179,7 +184,10 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight / 2, 0);
 
-        Instantiate(cyclopsType, v, Quaternion.identity);
+        if (OnBossSpawn != null) OnBossSpawn();
+
+        Unit cyclops = Instantiate(cyclopsType, v, Quaternion.identity);
+        cyclops.OnBossDeath += OnBossDestroy;
     }
 
     void SpawnCentaur()
@@ -189,7 +197,10 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 8, Utility.screenHeight - 1), 0);
 
-        Instantiate(centaurType, v, Quaternion.identity);
+        if (OnBossSpawn != null) OnBossSpawn();
+
+        Unit centaur = Instantiate(centaurType, v, Quaternion.identity);
+        centaur.OnBossDeath += OnBossDestroy;
     }
 
     void SpawnManticore()
@@ -199,7 +210,10 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 8, Utility.screenHeight - 1), 0);
 
-        Instantiate(manticoreType, v, Quaternion.identity);
+        if (OnBossSpawn != null) OnBossSpawn();
+
+        Unit manticore = Instantiate(manticoreType, v, Quaternion.identity);
+        manticore.OnBossDeath += OnBossDestroy;
     }
 
     void SpawnDemigod()
@@ -209,7 +223,11 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 8, Utility.screenHeight - 1), 0);
 
-        Instantiate(demigodType, v, Quaternion.identity);
+        if (OnBossSpawn != null) OnBossSpawn();
+
+        Unit demigod = Instantiate(demigodType, v, Quaternion.identity);
+        demigod.OnBossDeath += OnBossDestroy;
+
     }
 
     void SpawnPinger()
@@ -221,8 +239,6 @@ public class SpawnerMaster : MonoBehaviour
 
         Instantiate(pingerType, v, Quaternion.identity);
     }
-
-    
 
     void SpawnVexer()
     {
@@ -264,5 +280,10 @@ public class SpawnerMaster : MonoBehaviour
     {
         GameObject[] g = GameObject.FindGameObjectsWithTag("Enemy");
         return g.Length;
+    }
+
+    void OnBossDestroy()
+    {
+        if (OnBossDeath != null) OnBossDeath();
     }
 }

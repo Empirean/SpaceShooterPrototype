@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using System;
 
 public class Unit : MonoBehaviour
 {
     [Header("Health Bar")]
     public Image healthBar;
-
+    public event Action OnBossDeath;
 
     [Space]
     [Header("Basic Stat")]
@@ -24,9 +25,16 @@ public class Unit : MonoBehaviour
     protected bool isDead = false;
 
     float damageCounter;
+    bool isBoss = false;
 
     private void Start()
     {
+        if (healthBar == null)
+        {
+            healthBar = GameObject.Find("BossCurrentHealth").GetComponent<Image>();
+            isBoss = true;
+        }
+
         currentHealth = maxHealth;
     }
 
@@ -60,6 +68,7 @@ public class Unit : MonoBehaviour
 
     private void OnDeath()
     {
+        if (isBoss) OnBossDeath();
         Destroy(gameObject);
     }
 

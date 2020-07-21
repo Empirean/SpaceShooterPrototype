@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     {
         if (OnPlayerDeath != null && unit.currentHealth <= 0)
         {
-            OnPlayerDeath();
+            if (OnPlayerDeath != null) OnPlayerDeath();
         }
     }
 }
