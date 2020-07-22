@@ -357,9 +357,11 @@ MonoBehaviour:
   primaryRateOfFire: 2
   secondaryRateOfFire: 0.2
   spread: 0
-  speed: 3
+  startSpeed: 3
+  endSpeed: 3
   offset: 0.55
-  maxRange: 15
+  boostDelay: 0
+  initialDelay: 1
   isInverted: 1
 --- !u!114 &-170892796094838352
 MonoBehaviour:
@@ -378,9 +380,11 @@ MonoBehaviour:
   primaryRateOfFire: 2
   secondaryRateOfFire: 0.2
   spread: 15
-  speed: 3
+  startSpeed: 3
+  endSpeed: 3
   offset: 0.55
-  maxRange: 15
+  boostDelay: 0
+  initialDelay: 1
   isInverted: 1
 --- !u!1 &2641837007357982886
 GameObject:

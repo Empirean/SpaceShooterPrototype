@@ -429,6 +429,7 @@ MonoBehaviour:
   layers: 3
   primaryRateOfFire: 1
   secondaryRateOfFire: 0.1
+  initialDelay: 0
   bulletCount: 050000000500000005000000
   startSpread:
   - 0
@@ -438,11 +439,19 @@ MonoBehaviour:
   - 120
   - 240
   - 360
-  startSpeed:
+  startSpeed1:
   - 3
   - 3
   - 3
-  endSpeed:
+  startSpeed2:
+  - 3
+  - 3
+  - 3
+  endSpeed1:
+  - 3
+  - 3
+  - 3
+  endSpeed2:
   - 3
   - 3
   - 3
@@ -454,7 +463,14 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  maxRange: 15
+  startBoostDelay:
+  - 0
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
+  - 0
   isInverted: 0
 --- !u!1 &2641837007357982886
 GameObject:
