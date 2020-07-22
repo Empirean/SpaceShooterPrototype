@@ -5,21 +5,37 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 
-    float speed = 7;
+    float startSpeed;
+    float endSpeed;
     float damage = 1;
     float maxRange = 10;
     float currentRange = 0;
+    float boostDelay = 0;
     string damageTag = "Enemy";
+    float boostCounter;
+
+    private void Start()
+    {
+        boostCounter = Time.time + boostDelay;
+    }
 
     void FixedUpdate()
     {
-        Move();
-        if (!CheckRange()) Destroy(gameObject);
+        if (Time.time > boostCounter)
+        {
+            Move();
+            if (!CheckRange()) Destroy(gameObject);
+        }
     }
 
-    public void SetSpeed(float in_speed)
+    public void SetStartSpeed(float in_speed)
     {
-        speed = in_speed;
+        startSpeed = in_speed;
+    }
+
+    public void SetEndSpeed(float in_speed)
+    {
+        endSpeed = in_speed;
     }
 
     public void SetDamage(float in_damage)
@@ -32,6 +48,12 @@ public class Projectile : MonoBehaviour
         maxRange = in_range;
     }
 
+    public void SetBoostDelay(float in_delay)
+    {
+        boostDelay = in_delay;
+        boostCounter = Time.time + boostDelay;
+    }
+
     public void SetDamageTag(string in_damageTag)
     {
         damageTag = in_damageTag;
@@ -40,14 +62,14 @@ public class Projectile : MonoBehaviour
 
     void Move()
     {
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
+        transform.Translate(Vector3.up * Mathf.Lerp(startSpeed, endSpeed, currentRange/maxRange) * Time.deltaTime);
     }
 
     bool CheckRange()
     {
         if (currentRange < maxRange)
         {
-            currentRange = currentRange + (speed * Time.deltaTime);
+            currentRange = currentRange + (Mathf.Lerp(startSpeed, endSpeed, currentRange / maxRange) * Time.deltaTime);
             return true;
         }
         return false;

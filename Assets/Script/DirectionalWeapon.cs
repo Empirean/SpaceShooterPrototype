@@ -12,8 +12,10 @@ public class DirectionalWeapon : MonoBehaviour
     public float primaryRateOfFire = 1f;
     public float secondaryRateOfFire = 0.1f;
     public float spread;
-    public float speed;
+    public float startSpeed;
+    public float endSpeed;
     public float offset;
+    public float boostDelay;
     public float initialDelay;
 
     [Space]
@@ -54,7 +56,7 @@ public class DirectionalWeapon : MonoBehaviour
             for (int j = 0; j < primaryTurretCount; j++)
             {
 
-                weapon.Shoot(temp_angle, temp_offset, speed);
+                weapon.Shoot(temp_angle, temp_offset, startSpeed, endSpeed, boostDelay);
 
                 temp_angle += spread;
                 temp_offset += isInverted ? offset : -offset;

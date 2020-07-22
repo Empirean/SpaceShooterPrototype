@@ -65,15 +65,15 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public void Shoot(float in_Spread, float in_Offset, float in_Speed)
+    public void Shoot(float in_Spread, float in_Offset, float in_StartSpeed, float in_EndSpeed, float in_BoostDelay)
     {
         Vector3 t_newOffset = spawnPoint.position + new Vector3(in_Offset, 0, 0);
         Projectile bullet = Instantiate(projectile, t_newOffset, Quaternion.Euler(0, 0, in_Spread)) as Projectile;
 
-        SetProjectileProperty(ref bullet, in_Speed);
+        SetProjectileProperty(ref bullet, in_StartSpeed, in_EndSpeed, in_BoostDelay);
     }
 
-    public void Shoot(Vector3 in_Target, float in_Offset, float in_Speed)
+    public void Shoot(Vector3 in_Target, float in_Offset, float in_StartSpeed, float in_EndSpeed, float in_BoostDelay)
     {
         Vector3 t_newOffset = spawnPoint.position + new Vector3(in_Offset, 0, 0);
         Projectile bullet = Instantiate(projectile, t_newOffset, Quaternion.identity) as Projectile;
@@ -81,15 +81,17 @@ public class Weapon : MonoBehaviour
         bullet.transform.LookAt(in_Target);
         bullet.transform.eulerAngles = new Vector3(bullet.transform.eulerAngles.x + 90, bullet.transform.eulerAngles.y, bullet.transform.eulerAngles.z);
 
-        SetProjectileProperty(ref bullet, in_Speed);
+        SetProjectileProperty(ref bullet, in_StartSpeed, in_EndSpeed, in_BoostDelay);
     }
 
-    private void SetProjectileProperty(ref Projectile in_Projectile, float in_Speed)
+    private void SetProjectileProperty(ref Projectile in_Projectile, float in_StartSpeed, float in_EndSpeed, float in_BoostDelay)
     {
-        in_Projectile.SetSpeed(in_Speed);
+        in_Projectile.SetStartSpeed(in_StartSpeed);
+        in_Projectile.SetEndSpeed(in_EndSpeed);
         in_Projectile.SetDamage(damage);
         in_Projectile.SetDamageTag(damageTag);
         in_Projectile.SetMaxRange(maxRange);
+        in_Projectile.SetBoostDelay(in_BoostDelay);
     }
 
     public bool GetPlayerPosition(ref Vector3 in_position)

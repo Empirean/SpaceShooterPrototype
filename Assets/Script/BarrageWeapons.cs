@@ -16,10 +16,14 @@ public class BarrageWeapons : MonoBehaviour
     public List<int> bulletCount;
     public List<float> startSpread;
     public List<float> endSpread;
-    public List<float> startSpeed;
-    public List<float> endSpeed;
+    public List<float> startSpeed1;
+    public List<float> startSpeed2;
+    public List<float> endSpeed1;
+    public List<float> endSpeed2;
     public List<float> startOffset;
     public List<float> endOffset;
+    public List<float> startBoostDelay;
+    public List<float> endBoostDelay;
 
     [Space]
     [Header("Weapon Modes")]
@@ -69,7 +73,9 @@ public class BarrageWeapons : MonoBehaviour
 
             weapon.Shoot(Mathf.Lerp(t_startSpread, t_endSpread, (float) j / bulletCount[i]),
                             Mathf.Lerp(startOffset[i], endOffset[i], (float) j / bulletCount[i]),
-                            Mathf.Lerp(startSpeed[i], endSpeed[i], (float) j / bulletCount[i]));
+                            Mathf.Lerp(startSpeed1[i], startSpeed2[i], (float) j / bulletCount[i]),
+                            Mathf.Lerp(endSpeed1[i], endSpeed2[i], (float) j / bulletCount[i]),
+                            Mathf.Lerp(startBoostDelay[i], endBoostDelay[i], (float)j / bulletCount[i]));
 
             yield return new WaitForSeconds(secondaryRateOfFire);
         }

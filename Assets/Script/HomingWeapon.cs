@@ -10,8 +10,10 @@ public class HomingWeapon : MonoBehaviour
     public int primaryTurretCount = 3;
     public float primaryRateOfFire = 1f;
     public float secondaryRateOfFire = 0.1f;
-    public float speed;
+    public float startSpeed;
+    public float endSpeed;
     public float offset;
+    public float boostDelay;
     public float initialDelay;
 
     [Space]
@@ -45,11 +47,11 @@ public class HomingWeapon : MonoBehaviour
             Vector3 v = new Vector3();
             if ( weapon.GetPlayerPosition(ref v))
             {
-                weapon.Shoot(v, offset, speed);
+                weapon.Shoot(v, offset, startSpeed, endSpeed, boostDelay);
             }
             else
             {
-                weapon.Shoot(isInverted == true ? 180 : 0, offset, speed);
+                weapon.Shoot(isInverted == true ? 180 : 0, offset, startSpeed, endSpeed, boostDelay);
             }
 
             
