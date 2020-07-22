@@ -9912,7 +9912,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game
+  m_text: void
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5673fbc80b7d7c247b31002f8e18a8ad, type: 2}
   m_sharedMaterial: {fileID: 5288333367975448601, guid: 5673fbc80b7d7c247b31002f8e18a8ad,
@@ -10068,7 +10068,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Space
+  m_text: chaos
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5673fbc80b7d7c247b31002f8e18a8ad, type: 2}
   m_sharedMaterial: {fileID: 5288333367975448601, guid: 5673fbc80b7d7c247b31002f8e18a8ad,

@@ -26,6 +26,7 @@ public class Unit : MonoBehaviour
 
     float damageCounter;
     bool isBoss = false;
+    Color originalColor;
 
     private void Start()
     {
@@ -35,13 +36,22 @@ public class Unit : MonoBehaviour
             isBoss = true;
         }
 
+        originalColor = healthBar.color;
         currentHealth = maxHealth;
     }
 
     private void Update()
     {
 
-        healthBar.fillAmount = (float)currentHealth / maxHealth;
+        healthBar.fillAmount = (float) currentHealth / maxHealth;
+
+        if (healthBar.fillAmount == 1.0f)
+            healthBar.color = Color.yellow;
+        else if (healthBar.fillAmount <= 0.45f)
+            healthBar.color = Color.red;
+        else
+            healthBar.color = Color.green;
+
 
         if (currentHealth <= 0.0f && !isDead)
         {
