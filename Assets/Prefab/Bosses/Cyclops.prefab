@@ -1519,6 +1519,7 @@ MonoBehaviour:
   layers: 2
   primaryRateOfFire: 5
   secondaryRateOfFire: 0.1
+  initialDelay: 1
   bulletCount: 1e0000001e000000
   startSpread:
   - 15
@@ -1526,10 +1527,16 @@ MonoBehaviour:
   endSpread:
   - 0
   - 0
-  startSpeed:
+  startSpeed1:
   - 7
   - 7
-  endSpeed:
+  startSpeed2:
+  - 7
+  - 7
+  endSpeed1:
+  - 7
+  - 7
+  endSpeed2:
   - 7
   - 7
   startOffset:
@@ -1538,7 +1545,12 @@ MonoBehaviour:
   endOffset:
   - 1.25
   - -1.25
-  maxRange: 15
+  startBoostDelay:
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
   isInverted: 1
 --- !u!114 &4265596232187203651
 MonoBehaviour:
@@ -1557,9 +1569,11 @@ MonoBehaviour:
   primaryRateOfFire: 3
   secondaryRateOfFire: 0.2
   spread: 15
-  speed: 5
+  startSpeed: 5
+  endSpeed: 5
   offset: 0.2
-  maxRange: 15
+  boostDelay: 0
+  initialDelay: 1
   isInverted: 1
 --- !u!114 &8816901781075066142
 MonoBehaviour:
@@ -1576,8 +1590,11 @@ MonoBehaviour:
   primaryTurretCount: 2
   primaryRateOfFire: 1.2
   secondaryRateOfFire: 0.2
-  speed: 4
+  startSpeed: 3
+  endSpeed: 5
   offset: 1.25
+  boostDelay: 0
+  initialDelay: 1
   isInverted: 1
 --- !u!114 &6029016383187807532
 MonoBehaviour:
@@ -1594,8 +1611,11 @@ MonoBehaviour:
   primaryTurretCount: 2
   primaryRateOfFire: 1.2
   secondaryRateOfFire: 0.2
-  speed: 4
+  startSpeed: 3
+  endSpeed: 5
   offset: -1.25
+  boostDelay: 0
+  initialDelay: 1
   isInverted: 1
 --- !u!1 &8939331228825601246
 GameObject:

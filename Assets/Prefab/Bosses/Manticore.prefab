@@ -1143,9 +1143,11 @@ MonoBehaviour:
   primaryRateOfFire: 3
   secondaryRateOfFire: 0.1
   spread: 30
-  speed: 5
+  startSpeed: 1
+  endSpeed: 1
   offset: 0
-  maxRange: 15
+  boostDelay: 0
+  initialDelay: 1
   isInverted: 1
 --- !u!114 &2957308207838109531
 MonoBehaviour:
@@ -1164,9 +1166,11 @@ MonoBehaviour:
   primaryRateOfFire: 3
   secondaryRateOfFire: 0.1
   spread: 30
-  speed: 4
+  startSpeed: 2
+  endSpeed: 2
   offset: 0
-  maxRange: 15
+  boostDelay: 0
+  initialDelay: 1
   isInverted: 1
 --- !u!114 &3031915409646284242
 MonoBehaviour:
@@ -1185,9 +1189,11 @@ MonoBehaviour:
   primaryRateOfFire: 3
   secondaryRateOfFire: 0.1
   spread: 30
-  speed: 3
+  startSpeed: 3
+  endSpeed: 3
   offset: 0
-  maxRange: 15
+  boostDelay: 0
+  initialDelay: 1
   isInverted: 1
 --- !u!114 &9084001942702191920
 MonoBehaviour:
@@ -1206,9 +1212,11 @@ MonoBehaviour:
   primaryRateOfFire: 3
   secondaryRateOfFire: 0.1
   spread: 30
-  speed: 2
+  startSpeed: 4
+  endSpeed: 4
   offset: 0
-  maxRange: 15
+  boostDelay: 0
+  initialDelay: 1
   isInverted: 1
 --- !u!114 &6965422852834492692
 MonoBehaviour:
@@ -1227,9 +1235,11 @@ MonoBehaviour:
   primaryRateOfFire: 3
   secondaryRateOfFire: 0.1
   spread: 30
-  speed: 1
+  startSpeed: 5
+  endSpeed: 5
   offset: 0
-  maxRange: 15
+  boostDelay: 0
+  initialDelay: 1
   isInverted: 1
 --- !u!114 &5879447517135897262
 MonoBehaviour:
@@ -1246,6 +1256,7 @@ MonoBehaviour:
   layers: 2
   primaryRateOfFire: 1
   secondaryRateOfFire: 0.01
+  initialDelay: 1
   bulletCount: 0800000008000000
   startSpread:
   - 90
@@ -1253,10 +1264,16 @@ MonoBehaviour:
   endSpread:
   - -90
   - 90
-  startSpeed:
+  startSpeed1:
   - 3
   - 3
-  endSpeed:
+  startSpeed2:
+  - 3
+  - 3
+  endSpeed1:
+  - 3
+  - 3
+  endSpeed2:
   - 3
   - 3
   startOffset:
@@ -1265,7 +1282,12 @@ MonoBehaviour:
   endOffset:
   - 1
   - -1
-  maxRange: 15
+  startBoostDelay:
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
   isInverted: 1
 --- !u!1 &9015213870462710796
 GameObject:

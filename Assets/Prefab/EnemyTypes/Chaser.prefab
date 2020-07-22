@@ -361,7 +361,7 @@ MonoBehaviour:
   endSpeed: 3
   offset: 0.55
   boostDelay: 0
-  initialDelay: 1
+  initialDelay: 2
   isInverted: 1
 --- !u!114 &-170892796094838352
 MonoBehaviour:
@@ -384,7 +384,7 @@ MonoBehaviour:
   endSpeed: 3
   offset: 0.55
   boostDelay: 0
-  initialDelay: 1
+  initialDelay: 2
   isInverted: 1
 --- !u!1 &2641837007357982886
 GameObject:

@@ -1415,6 +1415,7 @@ MonoBehaviour:
   layers: 8
   primaryRateOfFire: 3
   secondaryRateOfFire: 0.1
+  initialDelay: 1
   bulletCount: 1e0000001e0000001e0000001e0000001e0000001e0000001e0000001e000000
   startSpread:
   - 15
@@ -1434,7 +1435,7 @@ MonoBehaviour:
   - -30
   - -45
   - -60
-  startSpeed:
+  startSpeed1:
   - 7
   - 7
   - 7
@@ -1443,7 +1444,25 @@ MonoBehaviour:
   - 7
   - 7
   - 7
-  endSpeed:
+  startSpeed2:
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  endSpeed1:
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  endSpeed2:
   - 7
   - 7
   - 7
@@ -1470,7 +1489,24 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  maxRange: 15
+  startBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   isInverted: 1
 --- !u!114 &9125369686238087964
 MonoBehaviour:
@@ -1487,8 +1523,11 @@ MonoBehaviour:
   primaryTurretCount: 1
   primaryRateOfFire: 2
   secondaryRateOfFire: 0.1
-  speed: 5
+  startSpeed: 5
+  endSpeed: 5
   offset: -0.5
+  boostDelay: 0
+  initialDelay: 1
   isInverted: 1
 --- !u!114 &5780336002608034637
 MonoBehaviour:
@@ -1505,8 +1544,11 @@ MonoBehaviour:
   primaryTurretCount: 1
   primaryRateOfFire: 2
   secondaryRateOfFire: 0.1
-  speed: 5
+  startSpeed: 5
+  endSpeed: 5
   offset: 0.5
+  boostDelay: 0
+  initialDelay: 1
   isInverted: 1
 --- !u!114 &6757865252271829543
 MonoBehaviour:
@@ -1523,6 +1565,7 @@ MonoBehaviour:
   layers: 8
   primaryRateOfFire: 0.9
   secondaryRateOfFire: 0.1
+  initialDelay: 1
   bulletCount: 0700000007000000070000000700000007000000070000000700000007000000
   startSpread:
   - -180
@@ -1542,16 +1585,7 @@ MonoBehaviour:
   - 150
   - 195
   - 240
-  startSpeed:
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  endSpeed:
+  startSpeed1:
   - 3
   - 3
   - 3
@@ -1560,6 +1594,33 @@ MonoBehaviour:
   - 3
   - 3
   - 3
+  startSpeed2:
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  endSpeed1:
+  - 9
+  - 9
+  - 9
+  - 9
+  - 9
+  - 9
+  - 9
+  - 9
+  endSpeed2:
+  - 9
+  - 9
+  - 9
+  - 9
+  - 9
+  - 9
+  - 9
+  - 9
   startOffset:
   - 0
   - 0
@@ -1578,5 +1639,22 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  maxRange: 15
+  startBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   isInverted: 1

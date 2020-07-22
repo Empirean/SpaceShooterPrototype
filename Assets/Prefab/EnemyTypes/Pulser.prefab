@@ -429,7 +429,7 @@ MonoBehaviour:
   layers: 3
   primaryRateOfFire: 1
   secondaryRateOfFire: 0.1
-  initialDelay: 0
+  initialDelay: 1
   bulletCount: 050000000500000005000000
   startSpread:
   - 0
