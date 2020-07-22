@@ -480,7 +480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 450049303601150187}
-  maxHealth: 15
+  maxHealth: 10
   speed: 7
   armor: 0
   currentHealth: 0
@@ -527,7 +527,6 @@ MonoBehaviour:
   spread: 10
   speed: 8
   offset: 0
-  maxRange: 15
   isInverted: 0
 --- !u!1 &4612449384801766968
 GameObject:

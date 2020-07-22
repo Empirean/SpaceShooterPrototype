@@ -370,9 +370,9 @@ GameObject:
   - component: {fileID: 4398911978933775269}
   - component: {fileID: 4398911978933775268}
   - component: {fileID: -4858891423947756712}
-  - component: {fileID: 1654734040998851503}
+  - component: {fileID: 90783338708005106}
   m_Layer: 0
-  m_Name: PlayerShip
+  m_Name: PlayerShip 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -508,7 +508,7 @@ MonoBehaviour:
   weaponSwitchDelay: 0
   mainWeapon: []
   secondaryWeapon: []
---- !u!114 &1654734040998851503
+--- !u!114 &90783338708005106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -517,17 +517,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 4398911978933775265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e5edda8ebe957a438a2315fb66bfd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 3
-  secondaryTurretCount: 2
+  layers: 1
   primaryRateOfFire: 1
   secondaryRateOfFire: 0.1
-  spread: 10
-  speed: 8
-  offset: 0
-  maxRange: 15
+  bulletCount: 0a000000
+  startSpread:
+  - 0
+  endSpread:
+  - 0
+  startSpeed:
+  - 0
+  endSpeed:
+  - 0
+  startOffset:
+  - 0
+  endOffset:
+  - 0
   isInverted: 0
 --- !u!1 &4612449384801766968
 GameObject:

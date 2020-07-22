@@ -45,12 +45,12 @@ public class Unit : MonoBehaviour
 
         healthBar.fillAmount = (float) currentHealth / maxHealth;
 
-        if (healthBar.fillAmount == 1.0f)
-            healthBar.color = Color.yellow;
-        else if (healthBar.fillAmount <= 0.45f)
-            healthBar.color = Color.red;
-        else
+        if (healthBar.fillAmount >= 0.7f)
             healthBar.color = Color.green;
+        else if (healthBar.fillAmount >= 0.30f && healthBar.fillAmount <= 0.69f)
+            healthBar.color = Color.yellow;
+        else
+            healthBar.color = Color.red; 
 
 
         if (currentHealth <= 0.0f && !isDead)

@@ -10,6 +10,7 @@ public class BarrageWeapons : MonoBehaviour
     public int layers = 2;
     public float primaryRateOfFire = 1f;
     public float secondaryRateOfFire = 0.1f;
+    public float initialDelay;
 
     [Space]
     public List<int> bulletCount;
@@ -21,9 +22,6 @@ public class BarrageWeapons : MonoBehaviour
     public List<float> endOffset;
 
     [Space]
-    public float maxRange = 15;
-
-    [Space]
     [Header("Weapon Modes")]
     public bool isInverted = false;
 
@@ -33,7 +31,7 @@ public class BarrageWeapons : MonoBehaviour
     void Start()
     {
         weapon = GetComponent<Weapon>();
-        fireCounter = Time.time + primaryRateOfFire;
+        fireCounter = Time.time + initialDelay;
     }
 
     void Update()
@@ -64,7 +62,12 @@ public class BarrageWeapons : MonoBehaviour
 
         for (int j = 0; j < bulletCount[i]; j++)
         {
-            weapon.Shoot(Mathf.Lerp(isInverted == true ? startSpread[i] + 180: startSpread[i], isInverted == true ? endSpread[i] + 180 : endSpread[i], (float) j / bulletCount[i]),
+
+            float t_startSpread = isInverted ? startSpread[i] + 180 : startSpread[i];
+            float t_endSpread = isInverted ? endSpread[i] + 180 : endSpread[i];
+
+
+            weapon.Shoot(Mathf.Lerp(t_startSpread, t_endSpread, (float) j / bulletCount[i]),
                             Mathf.Lerp(startOffset[i], endOffset[i], (float) j / bulletCount[i]),
                             Mathf.Lerp(startSpeed[i], endSpeed[i], (float) j / bulletCount[i]));
 

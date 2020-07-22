@@ -12,6 +12,7 @@ public class HomingWeapon : MonoBehaviour
     public float secondaryRateOfFire = 0.1f;
     public float speed;
     public float offset;
+    public float initialDelay;
 
     [Space]
     [Header("Weapon Modes")]
@@ -23,7 +24,7 @@ public class HomingWeapon : MonoBehaviour
     void Start()
     {
         weapon = GetComponent<Weapon>();
-        fireCounter = Time.time + primaryRateOfFire;
+        fireCounter = Time.time + initialDelay;
     }
 
     void Update()

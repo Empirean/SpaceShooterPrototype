@@ -14,7 +14,7 @@ public class DirectionalWeapon : MonoBehaviour
     public float spread;
     public float speed;
     public float offset;
-    public float maxRange = 15;
+    public float initialDelay;
 
     [Space]
     [Header("Weapon Modes")]
@@ -26,7 +26,7 @@ public class DirectionalWeapon : MonoBehaviour
     void Start()
     {
         weapon = GetComponent<Weapon>();
-        fireCounter = Time.time + primaryRateOfFire;
+        fireCounter = Time.time + initialDelay;
     }
 
     void Update()
