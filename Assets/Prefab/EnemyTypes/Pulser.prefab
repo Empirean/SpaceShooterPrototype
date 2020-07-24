@@ -410,10 +410,6 @@ MonoBehaviour:
   damage: 1
   damageTag: Player
   maxRange: 15
-  weaponSwitching: 0
-  weaponSwitchDelay: 0
-  mainWeapon: []
-  secondaryWeapon: []
 --- !u!114 &-7525237950133909188
 MonoBehaviour:
   m_ObjectHideFlags: 0

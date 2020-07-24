@@ -61,9 +61,10 @@ public class PingpongWeapon : MonoBehaviour
     IEnumerator PingpongCoroutine(object[] param)
     {
         int i = (int)param[0];
+        int rem = bulletCount[i] % 2;
         int halfBulletCount = bulletCount[i] / 2;
 
-        for (int j = 0; j < halfBulletCount; j++)
+        for (int j = 0; j < halfBulletCount + rem; j++)
         {
 
             float t_startSpread = isInverted ? startSpread[i] + 180 : startSpread[i];
@@ -81,16 +82,16 @@ public class PingpongWeapon : MonoBehaviour
             float t_startBoostDelay = startBoostDelay[i];
             float t_endBoostDelay = endBoostDelay[i];
 
-            weapon.Shoot(Mathf.Lerp(t_startSpread, t_endSpread, (float)j / bulletCount[i]), 
-                         Mathf.Lerp(t_startOffset, t_endOffset, (float)j / bulletCount[i]), 
-                         Mathf.Lerp(t_startSpeed1, t_startSpeed2, (float)j / bulletCount[i]),
-                         Mathf.Lerp(t_endSpeed1, t_endSpeed2, (float)j / bulletCount[i]),
-                         Mathf.Lerp(t_startBoostDelay, t_endBoostDelay, (float)j / bulletCount[i]));
+            weapon.Shoot(Mathf.Lerp(t_startSpread, t_endSpread, (float)j / halfBulletCount), 
+                         Mathf.Lerp(t_startOffset, t_endOffset, (float)j / halfBulletCount), 
+                         Mathf.Lerp(t_startSpeed1, t_startSpeed2, (float)j / halfBulletCount),
+                         Mathf.Lerp(t_endSpeed1, t_endSpeed2, (float)j / halfBulletCount),
+                         Mathf.Lerp(t_startBoostDelay, t_endBoostDelay, (float)j / halfBulletCount));
             
             yield return new WaitForSeconds(secondaryRateOfFire);
         }
-        
-        for (int k = halfBulletCount + 1; k <= bulletCount[i]; k++)
+
+        for (int k = 0 + rem; k < halfBulletCount + rem; k++)
         {
             float t_startSpread = isInverted ? endSpread[i] + 180 : endSpread[i];
             float t_endSpread = isInverted ? startSpread[i] + 180 : startSpread[i]; 
@@ -106,16 +107,17 @@ public class PingpongWeapon : MonoBehaviour
 
             float t_startBoostDelay = endBoostDelay[i];
             float t_endBoostDelay = startBoostDelay[i];
-
-            weapon.Shoot(Mathf.Lerp(t_startSpread, t_endSpread, (float)k / bulletCount[i]),
-                         Mathf.Lerp(t_startOffset, t_endOffset, (float)k / bulletCount[i]),
-                         Mathf.Lerp(t_startSpeed1, t_startSpeed2, (float)k / bulletCount[i]),
-                         Mathf.Lerp(t_endSpeed1, t_endSpeed2, (float)k / bulletCount[i]),
-                         Mathf.Lerp(t_startBoostDelay, t_endBoostDelay, (float)k / bulletCount[i]));
-
+            
+            weapon.Shoot(Mathf.Lerp(t_startSpread, t_endSpread, (float)k / halfBulletCount),
+                         Mathf.Lerp(t_startOffset, t_endOffset, (float)k / halfBulletCount),
+                         Mathf.Lerp(t_startSpeed1, t_startSpeed2, (float)k / halfBulletCount),
+                         Mathf.Lerp(t_endSpeed1, t_endSpeed2, (float)k / halfBulletCount),
+                         Mathf.Lerp(t_startBoostDelay, t_endBoostDelay, (float)k / halfBulletCount));
+            
             yield return new WaitForSeconds(secondaryRateOfFire);
         }
- 
+
+
     }
 
 }

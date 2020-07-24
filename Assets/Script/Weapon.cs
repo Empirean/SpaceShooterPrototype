@@ -14,60 +14,10 @@ public class Weapon : MonoBehaviour
     public string damageTag = "Enemy";
     public float maxRange = 15;
 
-    [Space]
-    [Header("Weapon Switching")]
-    public bool weaponSwitching = false;
-    public float weaponSwitchDelay;
-    public List<MonoBehaviour> mainWeapon;
-    public List<MonoBehaviour> secondaryWeapon;
-
-    float weaponSwitchCounter;
-    int currentWeapon = 0;
-
-    private void Update()
-    {
-        if (weaponSwitching)
-        {
-            if (Time.time >= weaponSwitchCounter)
-            {
-
-                if (currentWeapon == 0)
-                {
-                    enablePrimaryWeapon(true);
-                    enableSecondaryWeapon(false);
-                    currentWeapon = 1;
-                }
-                else
-                {
-                    enablePrimaryWeapon(false);
-                    enableSecondaryWeapon(true);
-                    currentWeapon = 0;
-                }
-
-                weaponSwitchCounter = Time.time + weaponSwitchDelay;
-            }
-        }
-    }
-
-    void enablePrimaryWeapon(bool in_mode)
-    {
-        foreach (MonoBehaviour item in mainWeapon)
-        {
-            item.enabled = in_mode;
-        }
-    }
-    
-    void enableSecondaryWeapon(bool in_mode)
-    {
-        foreach (MonoBehaviour item in secondaryWeapon)
-        {
-            item.enabled = in_mode;
-        }
-    }
-
     public void Shoot(float in_Spread, float in_Offset, float in_StartSpeed, float in_EndSpeed, float in_BoostDelay)
     {
         Vector3 t_newOffset = spawnPoint.position + new Vector3(in_Offset, 0, 0);
+
         Projectile bullet = Instantiate(projectile, t_newOffset, Quaternion.Euler(0, 0, in_Spread)) as Projectile;
 
         SetProjectileProperty(ref bullet, in_StartSpeed, in_EndSpeed, in_BoostDelay);

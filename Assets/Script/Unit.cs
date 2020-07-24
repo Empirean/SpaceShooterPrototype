@@ -78,7 +78,13 @@ public class Unit : MonoBehaviour
 
     private void OnDeath()
     {
-        if (isBoss) OnBossDeath();
+        if (isBoss)
+        {
+            if (OnBossDeath != null)
+            {
+                OnBossDeath();
+            }
+        }
         Destroy(gameObject);
     }
 

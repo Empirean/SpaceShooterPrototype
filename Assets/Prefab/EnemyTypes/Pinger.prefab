@@ -333,13 +333,9 @@ MonoBehaviour:
   projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
     type: 3}
   spawnPoint: {fileID: 2641837007133994941}
-  damage: 3
+  damage: 1
   damageTag: Player
   maxRange: 15
-  weaponSwitching: 0
-  weaponSwitchDelay: 0
-  mainWeapon: []
-  secondaryWeapon: []
 --- !u!114 &6097742201898258405
 MonoBehaviour:
   m_ObjectHideFlags: 0
