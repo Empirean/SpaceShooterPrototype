@@ -1426,9 +1426,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.74068743
-  m_Height: 4.0129213
+  m_Height: 3.7554374
   m_Direction: 0
-  m_Center: {x: 0, y: 0.024423659, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7466792812589667057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1474,10 +1474,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a342ad91b1af0b42b079c7a96f9c47c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.1
+  primaryBehaviorDelay: 0
+  secondaryBehaviorDelay: 0
+  primaryBehaviorDuration: 0
+  secondaryBehaviorDuration: 0
   behaviorSwitch: 0
-  behaviorSwitchDelay: 0
-  behaviorType: 0
+  permanentSwitch: 0
+  primaryBehavior: 0
+  secondaryBehavior: 0
 --- !u!114 &1951488021247453518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1496,14 +1500,6 @@ MonoBehaviour:
   damage: 1
   damageTag: Player
   maxRange: 15
-  weaponSwitching: 1
-  weaponSwitchDelay: 10
-  mainWeapon:
-  - {fileID: 8816901781075066142}
-  - {fileID: 6029016383187807532}
-  secondaryWeapon:
-  - {fileID: 1490615539787864515}
-  - {fileID: 4265596232187203651}
 --- !u!114 &1490615539787864515
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,11 +11,17 @@ public class EnemyBehavior : MonoBehaviour
     GameObject player;
     float pauseCounter;
     float behaviorCounter = 0;
+    float behaviorSwitchDelay;
+    float delay;
+    BehaviorTypes currentBehavior;
 
-    public float delay;
-    public bool behaviorSwitch = false;
-    public float behaviorSwitchDelay;
+    public float primaryBehaviorDelay;
+    public float secondaryBehaviorDelay;
+    public float primaryBehaviorDuration;
+    public float secondaryBehaviorDuration;
     
+    public bool behaviorSwitch = false;
+    public bool permanentSwitch = false;
 
     public enum BehaviorTypes
     {
@@ -25,12 +31,16 @@ public class EnemyBehavior : MonoBehaviour
         None
     }
 
-    public BehaviorTypes behaviorType;
-
+    public BehaviorTypes primaryBehavior;
+    public BehaviorTypes secondaryBehavior;
     
 
     void Start()
     {
+        behaviorSwitchDelay = Time.time + primaryBehaviorDuration;
+        currentBehavior = primaryBehavior;
+        delay = primaryBehaviorDelay;
+
         unit = GetComponent<Unit>();
         StartCoroutine("MoveToLocation");
     }
@@ -39,12 +49,27 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (behaviorSwitch)
         {
-            if (Time.time >= behaviorCounter)
+            if (Time.time >= behaviorSwitchDelay && behaviorCounter != -1)
             {
-                if (behaviorCounter > 0)
-                    behaviorType = behaviorType == BehaviorTypes.Avoiding ? BehaviorTypes.Intercepting : BehaviorTypes.Avoiding;
+                if (behaviorCounter == 0)
+                {
+                    currentBehavior = secondaryBehavior;
+                    behaviorSwitchDelay = Time.time + secondaryBehaviorDuration;
+                    delay = secondaryBehaviorDelay;
+                    behaviorCounter = 1;
 
-                behaviorCounter = Time.time + behaviorSwitchDelay;
+                    if (permanentSwitch)
+                    {
+                        behaviorCounter = -1;
+                    }
+                }
+                else
+                {
+                    currentBehavior = primaryBehavior;
+                    behaviorSwitchDelay = Time.time + primaryBehaviorDuration;
+                    delay = primaryBehaviorDelay;
+                    behaviorCounter = 0;
+                }
             }
         }
     }
@@ -79,12 +104,15 @@ public class EnemyBehavior : MonoBehaviour
 
         Vector3 targetLocation = GetPlayerLocation();
 
-        while (behaviorType == BehaviorTypes.None)
+        while (currentBehavior == BehaviorTypes.None)
         {
+            targetLocation = new Vector3(0, Utility.screenHeight / 2,0);
+            transform.position = Vector3.MoveTowards(transform.position, targetLocation, unit.speed * Time.deltaTime);
+
             yield return new WaitForSeconds(delay);
         }
 
-        while (behaviorType == BehaviorTypes.Intercepting)
+        while (currentBehavior == BehaviorTypes.Intercepting)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetLocation, unit.speed * Time.deltaTime);
             
@@ -97,7 +125,7 @@ public class EnemyBehavior : MonoBehaviour
             yield return null;
         }
 
-        while(behaviorType == BehaviorTypes.Passing)
+        while(currentBehavior == BehaviorTypes.Passing)
         {
             if (Time.time < pauseCounter || delay == 0)
             {
@@ -115,7 +143,7 @@ public class EnemyBehavior : MonoBehaviour
 
         targetLocation = GetRandomLocation();
 
-        while (behaviorType == BehaviorTypes.Avoiding)
+        while (currentBehavior == BehaviorTypes.Avoiding)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetLocation, unit.speed * Time.deltaTime);
 

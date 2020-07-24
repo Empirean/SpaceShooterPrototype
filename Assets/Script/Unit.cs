@@ -47,9 +47,9 @@ public class Unit : MonoBehaviour
 
         if (healthBar.fillAmount >= 0.7f)
             healthBar.color = Color.green;
-        else if (healthBar.fillAmount >= 0.30f && healthBar.fillAmount <= 0.69f)
+        else if (healthBar.fillAmount >= 0.30f && healthBar.fillAmount < 0.7f)
             healthBar.color = Color.yellow;
-        else
+        else if (healthBar.fillAmount < 0.30f)
             healthBar.color = Color.red; 
 
 
