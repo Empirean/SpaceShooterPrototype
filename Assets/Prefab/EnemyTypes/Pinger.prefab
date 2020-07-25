@@ -305,10 +305,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a342ad91b1af0b42b079c7a96f9c47c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.25
+  primaryBehaviorDelay: 0.5
+  secondaryBehaviorDelay: 0
+  primaryBehaviorDuration: 0
+  secondaryBehaviorDuration: 0
   behaviorSwitch: 0
-  behaviorSwitchDelay: 0
-  behaviorType: 2
+  permanentSwitch: 0
+  primaryBehavior: 2
+  secondaryBehavior: 0
 --- !u!114 &849620948447844184
 MonoBehaviour:
   m_ObjectHideFlags: 0

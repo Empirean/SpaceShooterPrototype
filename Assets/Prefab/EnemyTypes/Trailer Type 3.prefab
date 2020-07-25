@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 5723828977713360172}
   - component: {fileID: 5723828977713360171}
   m_Layer: 0
-  m_Name: Trailer
+  m_Name: Trailer Type 3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 5723828977551418503}
   maxHealth: 5
-  speed: 2
+  speed: 3
   armor: 0
   currentHealth: 0
   damageTag: Player
@@ -757,14 +757,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a342ad91b1af0b42b079c7a96f9c47c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryBehaviorDelay: 0
+  primaryBehaviorDelay: 1
   secondaryBehaviorDelay: 0
-  primaryBehaviorDuration: 0
+  primaryBehaviorDuration: 1
   secondaryBehaviorDuration: 0
-  behaviorSwitch: 0
-  permanentSwitch: 0
-  primaryBehavior: 1
-  secondaryBehavior: 0
+  behaviorSwitch: 1
+  permanentSwitch: 1
+  primaryBehavior: 2
+  secondaryBehavior: 1
 --- !u!114 &5723828977713360172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -795,17 +795,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 2
-  secondaryTurretCount: 1
-  primaryRateOfFire: 1
-  secondaryRateOfFire: 0.1
-  spread: 60
+  primaryTurretCount: 18
+  secondaryTurretCount: 2
+  primaryRateOfFire: 10
+  secondaryRateOfFire: 1.5
+  spread: 20
   startSpeed: 3
   endSpeed: 3
-  offset: 0.7
+  offset: 0
   boostDelay: 0
-  initialDelay: 0
-  isInverted: 0
+  initialDelay: 1
+  isInverted: 1
 --- !u!1 &5723828978285960140
 GameObject:
   m_ObjectHideFlags: 0

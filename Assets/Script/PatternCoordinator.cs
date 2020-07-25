@@ -33,7 +33,7 @@ public class PatternCoordinator : MonoBehaviour
         {
             patternCycleCounter = Time.time + patternCycleDelay[patternCurrentIndex];
             EnableGroup(patternCurrentIndex);
-            patternCurrentIndex = (patternCurrentIndex + 1) % patternCount;
+            patternCurrentIndex = (patternCurrentIndex + 1) % (patternIndex[patternIndex.Count - 1] + 1);
             
         }
     }
