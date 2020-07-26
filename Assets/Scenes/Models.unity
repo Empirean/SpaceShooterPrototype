@@ -132,11 +132,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
-    - target: {fileID: 4398911978933775265, guid: 55c1415af1d7ee746a2c63d073bf8d14,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4398911978933775257, guid: 55c1415af1d7ee746a2c63d073bf8d14,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -190,11 +185,6 @@ PrefabInstance:
     - target: {fileID: 4398911978933775257, guid: 55c1415af1d7ee746a2c63d073bf8d14,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1654734040998851503, guid: 55c1415af1d7ee746a2c63d073bf8d14,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -593,7 +583,7 @@ MonoBehaviour:
   demigodType: {fileID: 0}
   nextWaveDelay: 1.5
   waveCount: 1
-  firstLayerCount: 0a000000
+  firstLayerCount: 00000000
   secondLayerCount: 00000000
   thirdLayerCount: 00000000
   firstLayerEnemy: 06000000

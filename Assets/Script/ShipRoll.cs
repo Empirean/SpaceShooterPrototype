@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class ShipRoll : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public float maxRotation;
+    public float turnSpeed;
+
+    void FixedUpdate()
     {
-        
+        transform.rotation = Quaternion.Euler(0f, Mathf.Lerp(0, -Input.GetAxis("Horizontal") * maxRotation, Time.deltaTime * turnSpeed), 0f);
     }
 }

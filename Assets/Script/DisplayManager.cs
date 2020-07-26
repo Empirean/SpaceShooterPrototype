@@ -35,6 +35,7 @@ public class DisplayManager : MonoBehaviour
     void OnBossDeath()
     {
         bossHealth.SetActive(false);
+        player.GetComponent<Unit>().isDestructible = false;
     }
 
     void OnGameOver()
@@ -59,7 +60,7 @@ public class DisplayManager : MonoBehaviour
 
     void OnLevelShow()
     {
-            lvlScreen.SetActive(true);
+        lvlScreen.SetActive(true);
     }
 
     void OnLevelHide()

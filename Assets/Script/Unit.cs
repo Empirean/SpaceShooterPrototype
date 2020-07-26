@@ -16,6 +16,7 @@ public class Unit : MonoBehaviour
     public float speed = 5;
     public float armor = 0;
     public float currentHealth;
+    public bool isDestructible = true;
 
     [Space]
     [Header("Collision")]
@@ -62,7 +63,7 @@ public class Unit : MonoBehaviour
 
     public void Damage(float in_damage)
     {
-        currentHealth -= in_damage;
+        if (isDestructible) currentHealth -= in_damage;
     }
 
     public void Heal(float in_health)
