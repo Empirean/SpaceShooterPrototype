@@ -41,11 +41,12 @@ public class HomingWeapon : MonoBehaviour
 
     IEnumerator HomingController()
     {
-
+        Vector3 v = new Vector3();
+        bool isPlayer = weapon.GetPlayerPosition(ref v);
         for (int i = 0; i < primaryTurretCount; i++)
         {
-            Vector3 v = new Vector3();
-            if ( weapon.GetPlayerPosition(ref v))
+            
+            if (isPlayer)
             {
                 weapon.Shoot(v, offset, startSpeed, endSpeed, boostDelay);
             }

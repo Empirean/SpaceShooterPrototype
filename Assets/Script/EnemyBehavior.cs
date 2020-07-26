@@ -28,7 +28,8 @@ public class EnemyBehavior : MonoBehaviour
         Intercepting,
         Passing,
         Avoiding,
-        None
+        None,
+        Immobile
     }
 
     public BehaviorTypes primaryBehavior;
@@ -88,7 +89,7 @@ public class EnemyBehavior : MonoBehaviour
         }
         else
         {
-            v = new Vector3(player.transform.position.x, transform.position.y, 0);
+            v = new Vector3(player.transform.position.x, Random.Range(Utility.screenHeight, Utility.screenHeight / 2), 0);
         }
 
         return v;
@@ -154,6 +155,12 @@ public class EnemyBehavior : MonoBehaviour
             }
 
             yield return null;
+        }
+
+        while (currentBehavior == BehaviorTypes.Immobile)
+        {
+            yield return new WaitForSeconds(delay);
+
         }
 
         StartCoroutine("MoveToLocation");

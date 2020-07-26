@@ -340,9 +340,7 @@ GameObject:
   - component: {fileID: 2641837007015002910}
   - component: {fileID: 2641837007015002911}
   - component: {fileID: 4496660118142370845}
-  - component: {fileID: 2776794033286815052}
-  - component: {fileID: 5758481452627205332}
-  - component: {fileID: -170892796094838352}
+  - component: {fileID: 4673442045400111255}
   m_Layer: 0
   m_Name: Chaser
   m_TagString: Enemy
@@ -395,7 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2641837007870954886}
   maxHealth: 10
-  speed: 3
+  speed: 2
   armor: 0
   currentHealth: 0
   damageTag: Player
@@ -427,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   primaryBehaviorDelay: 0
-  secondaryBehaviorDelay: 0.5
+  secondaryBehaviorDelay: 2
   primaryBehaviorDuration: 5
   secondaryBehaviorDuration: 5
   behaviorSwitch: 1
@@ -452,7 +450,7 @@ MonoBehaviour:
   damage: 1
   damageTag: Player
   maxRange: 15
---- !u!114 &2776794033286815052
+--- !u!114 &4673442045400111255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -461,62 +459,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2641837007015002908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ff9765c34d89ce4c8459707ca280153, type: 3}
+  m_Script: {fileID: 11500000, guid: 89f86e80a7b97ed46b8917cfa1029d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patternInitialDelay: 0
-  patternCount: 2
-  patternGroup:
-  - {fileID: 5758481452627205332}
-  - {fileID: -170892796094838352}
-  patternIndex: 0000000001000000
-  patternCycleDelay:
-  - 5
-  - 5
---- !u!114 &5758481452627205332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2641837007015002908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 2
-  secondaryTurretCount: 2
+  primaryTurretCount: 5
   primaryRateOfFire: 2
-  secondaryRateOfFire: 0.2
-  spread: 0
+  secondaryRateOfFire: 0.1
   startSpeed: 3
-  endSpeed: 3
-  offset: 0.55
-  boostDelay: 0
-  initialDelay: 2
-  isInverted: 1
---- !u!114 &-170892796094838352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2641837007015002908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 2
-  secondaryTurretCount: 2
-  primaryRateOfFire: 2
-  secondaryRateOfFire: 0.2
-  spread: 15
-  startSpeed: 3
-  endSpeed: 3
-  offset: 0.55
-  boostDelay: 0
+  endSpeed: 15
+  offset: 0
+  boostDelay: 0.3
   initialDelay: 2
   isInverted: 1
 --- !u!1 &2641837007357982886

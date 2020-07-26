@@ -17,6 +17,7 @@ public class SpawnerMaster : MonoBehaviour
     public Unit pulserType;
     public Unit trailerType;
     public Unit vexerType;
+    public Unit dividerType;
 
 
     [Space]
@@ -46,6 +47,7 @@ public class SpawnerMaster : MonoBehaviour
         pulser,
         trailer,
         pinger,
+        divider,
         hydra,
         cyclops,
         centaur,
@@ -158,6 +160,9 @@ public class SpawnerMaster : MonoBehaviour
                 break;
             case EnemyTypes.demigod:
                 SpawnDemigod();
+                break;
+            case EnemyTypes.divider:
+                SpawnDivider();
                 break;
             default:
                 break;
@@ -274,6 +279,14 @@ public class SpawnerMaster : MonoBehaviour
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
 
         Instantiate(trailerType, v, Quaternion.identity);
+    }
+
+    void SpawnDivider()
+    {
+        float xSpawn = UnityEngine.Random.Range(-Utility.screenWidth /2 , Utility.screenWidth /2);
+        Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
+
+        Instantiate(dividerType, v, Quaternion.identity);
     }
 
     int CurrentEnemyCount()

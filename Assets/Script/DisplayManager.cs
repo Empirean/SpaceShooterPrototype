@@ -12,6 +12,7 @@ public class DisplayManager : MonoBehaviour
 
     Player player;
     SpawnerMaster spawner;
+    bool isGameOver = false;
 
     private void Start()
     {
@@ -38,20 +39,27 @@ public class DisplayManager : MonoBehaviour
 
     void OnGameOver()
     {
-        loseScreen.SetActive(true);
-        gameObject.SetActive(false);
+        if (!isGameOver)
+        {
 
+            loseScreen.SetActive(true);
+            isGameOver = true;
+        }
     }
 
     void OnPlayerWin()
     {
-        winScreen.SetActive(true);
-        gameObject.SetActive(false);
+        if (!isGameOver)
+        {
+            winScreen.SetActive(true);
+            isGameOver = true;
+        }
+
     }
 
     void OnLevelShow()
     {
-        lvlScreen.SetActive(true);
+            lvlScreen.SetActive(true);
     }
 
     void OnLevelHide()

@@ -343,11 +343,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 1
+  primaryTurretCount: 3
   secondaryTurretCount: 2
   primaryRateOfFire: 2
   secondaryRateOfFire: 0.5
-  spread: 0
+  spread: 30
   startSpeed: 3
   endSpeed: 3
   offset: 0
