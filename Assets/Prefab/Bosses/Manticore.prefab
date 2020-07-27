@@ -1104,9 +1104,9 @@ MonoBehaviour:
     type: 3}
   spawnPoint: {fileID: 2124971466480858460}
   initialDelay: 1
-  spawnRate: 5
+  spawnRate: 7
   nextSpawnInterval: 1
-  numberOfSpawn: 3
+  numberOfSpawn: 2
 --- !u!1 &8423877156546684766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,6 +1254,7 @@ MonoBehaviour:
   speed: 1
   armor: 0
   currentHealth: 0
+  isDestructible: 1
   damageTag: Player
   collisionDamage: 1
 --- !u!114 &7201235000630507851
