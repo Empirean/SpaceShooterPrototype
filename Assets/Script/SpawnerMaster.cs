@@ -18,6 +18,9 @@ public class SpawnerMaster : MonoBehaviour
     public Unit trailerType;
     public Unit vexerType;
     public Unit dividerType;
+    public Unit breakerType;
+    public Unit emitterType;
+    public Unit defenderType;
 
 
     [Space]
@@ -48,6 +51,9 @@ public class SpawnerMaster : MonoBehaviour
         trailer,
         pinger,
         divider,
+        breaker,
+        emitter,
+        defender,
         hydra,
         cyclops,
         centaur,
@@ -164,6 +170,15 @@ public class SpawnerMaster : MonoBehaviour
             case EnemyTypes.divider:
                 SpawnDivider();
                 break;
+            case EnemyTypes.breaker:
+                SpawnBreaker();
+                break;
+            case EnemyTypes.emitter:
+                SpawnEmitter();
+                break;
+            case EnemyTypes.defender:
+                SpawnDefender();
+                break;
             default:
                 break;
         }
@@ -245,6 +260,16 @@ public class SpawnerMaster : MonoBehaviour
         Instantiate(pingerType, v, Quaternion.identity);
     }
 
+    void SpawnBreaker()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
+
+        Instantiate(breakerType, v, Quaternion.identity);
+    }
+
     void SpawnVexer()
     {
         int rnd = UnityEngine.Random.Range(0, 2);
@@ -265,9 +290,19 @@ public class SpawnerMaster : MonoBehaviour
         Instantiate(chaserType, v, Quaternion.identity);
     }
 
+    void SpawnEmitter()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight - 1), 0);
+
+        Instantiate(emitterType, v, Quaternion.identity);
+    }
+
     void SpawnPulser()
     {
-        float xSpawn = UnityEngine.Random.Range( -Utility.screenWidth, Utility.screenWidth);
+        float xSpawn = UnityEngine.Random.Range( -Utility.screenWidth / 2, Utility.screenWidth / 2);
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
 
         Instantiate(pulserType, v, Quaternion.identity);
@@ -287,6 +322,14 @@ public class SpawnerMaster : MonoBehaviour
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
 
         Instantiate(dividerType, v, Quaternion.identity);
+    }
+
+    void SpawnDefender()
+    {
+        float xSpawn = UnityEngine.Random.Range(-Utility.screenWidth / 2, Utility.screenWidth / 2);
+        Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
+
+        Instantiate(defenderType, v, Quaternion.identity);
     }
 
     int CurrentEnemyCount()

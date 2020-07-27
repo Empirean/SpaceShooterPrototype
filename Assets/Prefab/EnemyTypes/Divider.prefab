@@ -243,6 +243,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8158438279762698115}
+  - component: {fileID: 8070600590563492182}
   m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
@@ -275,6 +276,25 @@ Transform:
   m_Father: {fileID: 5723828977713360177}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8070600590563492182
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2185535472398697813}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f5500a4b28ad71479758fc4350ab3f1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2495338411164448594
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,10 +807,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.31309938
-  m_Height: 1.1008515
-  m_Direction: 0
-  m_Center: {x: -0.0038485527, y: 0, z: 0}
+  m_Radius: 0.21056736
+  m_Height: 1.0014067
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.0379591, z: 0}
 --- !u!114 &5723828977713360175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -808,6 +828,7 @@ MonoBehaviour:
   speed: 2
   armor: 0
   currentHealth: 0
+  isDestructible: 1
   damageTag: Player
   collisionDamage: 1
 --- !u!114 &5723828977713360174

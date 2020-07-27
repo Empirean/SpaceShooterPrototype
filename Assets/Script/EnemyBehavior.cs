@@ -29,7 +29,8 @@ public class EnemyBehavior : MonoBehaviour
         Passing,
         Avoiding,
         None,
-        Immobile
+        Immobile,
+        Escaping
     }
 
     public BehaviorTypes primaryBehavior;
@@ -160,6 +161,23 @@ public class EnemyBehavior : MonoBehaviour
         while (currentBehavior == BehaviorTypes.Immobile)
         {
             yield return new WaitForSeconds(delay);
+
+        }
+
+        while (currentBehavior == BehaviorTypes.Escaping)
+        {
+            if (Time.time < pauseCounter || delay == 0)
+            {
+                transform.Translate((Vector3.up * unit.speed) * Time.deltaTime);
+            }
+            else
+            {
+                yield return new WaitForSeconds(delay);
+                pauseCounter = Time.time + delay;
+
+            }
+
+            yield return null;
 
         }
 

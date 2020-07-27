@@ -532,12 +532,12 @@ MonoBehaviour:
     type: 3}
   nextWaveDelay: 1.5
   waveCount: 4
-  firstLayerCount: 03000000030000000300000001000000
-  secondLayerCount: 02000000010000000200000000000000
-  thirdLayerCount: 04000000030000000200000000000000
-  firstLayerEnemy: 0400000007000000090000000a000000
-  secondLayerEnemy: 09000000060000000300000000000000
-  thirdLayerEnemy: 05000000020000000700000000000000
+  firstLayerCount: 06000000030000000500000001000000
+  secondLayerCount: 02000000020000000300000000000000
+  thirdLayerCount: 03000000040000000200000000000000
+  firstLayerEnemy: 0700000009000000040000000a000000
+  secondLayerEnemy: 06000000030000000800000000000000
+  thirdLayerEnemy: 08000000010000000200000000000000
 --- !u!1 &500093007
 GameObject:
   m_ObjectHideFlags: 0
@@ -12086,7 +12086,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5673fbc80b7d7c247b31002f8e18a8ad, type: 2}
   m_sharedMaterial: {fileID: 5288333367975448601, guid: 5673fbc80b7d7c247b31002f8e18a8ad,
