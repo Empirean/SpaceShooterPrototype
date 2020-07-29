@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+[RequireComponent(typeof(PowerUpSpawner))]
 public class SpawnerMaster : MonoBehaviour
 {
     public event Action OnPlayerWin;
@@ -69,8 +70,11 @@ public class SpawnerMaster : MonoBehaviour
 
     int currentWave;
 
+    PowerUpSpawner powerUpSpawner;
+
     private void Start()
     {
+        powerUpSpawner = GetComponent<PowerUpSpawner>();
         StartCoroutine("SpawnSequence");
     }
 
@@ -93,6 +97,8 @@ public class SpawnerMaster : MonoBehaviour
         for (currentWave = 0; currentWave < waveCount; currentWave++)
         {
             yield return StartCoroutine("SpawnCurrentWave");
+
+            powerUpSpawner.SpawnRandomPowerup();
         }
 
         if (OnPlayerWin != null)
@@ -111,12 +117,14 @@ public class SpawnerMaster : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
 
+
         for (int i = 0; i < secondLayerCount[currentWave]; i++)
         {
             SpawnChooser(secondLayerEnemy[currentWave]);
 
             yield return new WaitForSeconds(1);
         }
+
 
         for (int i = 0; i < thirdLayerCount[currentWave]; i++)
         {

@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 442404311}
   - component: {fileID: 442404313}
   - component: {fileID: 442404312}
+  - component: {fileID: 442404314}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -432,12 +433,32 @@ MonoBehaviour:
     type: 3}
   nextWaveDelay: 1.5
   waveCount: 4
-  firstLayerCount: 05000000050000000600000000000000
+  firstLayerCount: 05000000050000000600000001000000
   secondLayerCount: 05000000050000000700000000000000
   thirdLayerCount: 05000000030000000200000000000000
-  firstLayerEnemy: 02000000050000000200000000000000
+  firstLayerEnemy: 0200000005000000020000000e000000
   secondLayerEnemy: 08000000070000000700000000000000
   thirdLayerEnemy: 07000000010000000800000000000000
+--- !u!114 &442404314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442404310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349a706298b88e94aa30be84c011dd69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretUpgrade: {fileID: 616199987997411602, guid: 62a8eaa84e3c25d4ea01d9d0cf395dc2,
+    type: 3}
+  orbiterUpgrade: {fileID: 616199987997411602, guid: d157fa2fb9b8f7943988afd3f05b44bc,
+    type: 3}
+  missleUpgrade: {fileID: 616199987997411602, guid: 84f95a47e3718bd4296ea99063cd6e0c,
+    type: 3}
+  healUpgrade: {fileID: 616199987997411602, guid: 7820d227dc8f72c41b659710cb5fe2f0,
+    type: 3}
 --- !u!1 &500093007
 GameObject:
   m_ObjectHideFlags: 0

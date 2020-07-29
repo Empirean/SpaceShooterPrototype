@@ -90,28 +90,4 @@ public class Player : MonoBehaviour
         misslecount = Mathf.Clamp(misslecount + 1, 0, maxMissleUpgrade - 1);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            SpawnOrbiters();
-        }
-
-        if (Input.GetKeyUp(KeyCode.Alpha1))
-        {
-            Heal();
-        }
-
-        if (Input.GetKeyUp(KeyCode.Alpha2))
-        {
-            WeaponUpgrade();
-        }
-
-        if (Input.GetKeyUp(KeyCode.Alpha3))
-        {
-            MissleUpgrade();
-        }
-    }
-
-
 }

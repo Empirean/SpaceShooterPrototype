@@ -5,10 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Player))]
 public class PlayerController : MonoBehaviour
 {
-    public float z;
-
     Player player;
-
 
     void Start()
     {

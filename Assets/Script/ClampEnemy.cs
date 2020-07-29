@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Unit))]
 public class ClampEnemy : MonoBehaviour
 {
     float screenWidth;
     float screenHeight;
-    Unit unit;
 
     public float heightPad;
     public float widthPad;
@@ -16,8 +14,6 @@ public class ClampEnemy : MonoBehaviour
     {
         screenWidth = Utility.screenWidth + widthPad;
         screenHeight = Utility.screenHeight + heightPad;
-
-        unit = GetComponent<Unit>();
     }
 
     void Update()
