@@ -532,10 +532,10 @@ MonoBehaviour:
     type: 3}
   nextWaveDelay: 1.5
   waveCount: 4
-  firstLayerCount: 04000000050000000300000001000000
+  firstLayerCount: 04000000050000000300000000000000
   secondLayerCount: 04000000030000000200000000000000
   thirdLayerCount: 02000000020000000400000000000000
-  firstLayerEnemy: 0800000002000000090000000d000000
+  firstLayerEnemy: 08000000020000000900000000000000
   secondLayerEnemy: 07000000060000000800000000000000
   thirdLayerEnemy: 08000000080000000500000000000000
 --- !u!1 &500093007
@@ -2594,7 +2594,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 200
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -7347,7 +7347,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 200
     size3D: 0
     rotation3D: 0
     gravityModifier:

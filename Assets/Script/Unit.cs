@@ -68,7 +68,7 @@ public class Unit : MonoBehaviour
 
     public void Heal(float in_health)
     {
-        currentHealth = in_health;
+        currentHealth = Mathf.Clamp(currentHealth + in_health, 0, maxHealth);
     }
 
     public void SetHealth(float in_curHealth, float in_maxHealth)

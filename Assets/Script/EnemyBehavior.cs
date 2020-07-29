@@ -176,7 +176,7 @@ public class EnemyBehavior : MonoBehaviour
                 pauseCounter = Time.time + delay;
 
             }
-
+            
             yield return null;
 
         }

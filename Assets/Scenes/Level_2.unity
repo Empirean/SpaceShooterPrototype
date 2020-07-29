@@ -535,7 +535,7 @@ MonoBehaviour:
   firstLayerCount: 03000000030000000300000001000000
   secondLayerCount: 02000000030000000100000000000000
   thirdLayerCount: 03000000030000000200000000000000
-  firstLayerEnemy: 0400000004000000040000000a000000
+  firstLayerEnemy: 0400000004000000040000000b000000
   secondLayerEnemy: 05000000050000000300000000000000
   thirdLayerEnemy: 04000000040000000100000000000000
 --- !u!1 &500093007
@@ -2594,7 +2594,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 200
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -7347,7 +7347,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 200
     size3D: 0
     rotation3D: 0
     gravityModifier:

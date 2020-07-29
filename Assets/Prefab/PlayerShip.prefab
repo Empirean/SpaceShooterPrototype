@@ -257,7 +257,7 @@ RectTransform:
   m_Children:
   - {fileID: 450049304101340295}
   m_Father: {fileID: 4398911978933775257}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -432,6 +432,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &2297745444233548606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4860719165105393701}
+  m_Layer: 0
+  m_Name: OrbiterSlot2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4860719165105393701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2297745444233548606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.188, y: -0.879, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4398911978933775257}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2342481408976202363
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +774,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &3676582760993490306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5519681460028890374}
+  m_Layer: 0
+  m_Name: OrbiterSlot1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5519681460028890374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3676582760993490306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.188, y: -0.879, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4398911978933775257}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3811703706058210407
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +919,10 @@ Transform:
   m_Children:
   - {fileID: 3366788841346874317}
   - {fileID: 450049303515480879}
+  - {fileID: 2410826628791588687}
   - {fileID: 450049304767306861}
+  - {fileID: 5519681460028890374}
+  - {fileID: 4860719165105393701}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -918,6 +981,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 072d9090360847c4f8b4ff48db8ab5b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxOrbiters: 2
+  orbiterType: {fileID: 4398911978933775257, guid: ac6bfeb019d5cc642aceacd1c9247aea,
+    type: 3}
+  orbiterSlots:
+  - {fileID: 5519681460028890374}
+  - {fileID: 4860719165105393701}
+  healAmount: 5
+  dirWeapon: {fileID: 1654734040998851503}
+  maxWeaponUpgrade: 3
+  primaryTurretUpgrade: 020000000300000004000000
+  secondaryTurretUpgrade: 020000000200000002000000
+  offsetUpgrade:
+  - 0.4
+  - 0
+  - 0
+  spreadUpgrade:
+  - 0
+  - 5
+  - 5
+  misWeapon: {fileID: 7007762985741243233}
+  maxMissleUpgrade: 2
+  missleUpgrade: 0100000002000000
 --- !u!114 &4398911978933775269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,7 +1047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+  projectile: {fileID: 72809522625094595, guid: 4f9e262b82af0854cb6c4f70fc597c81,
     type: 3}
   spawnPoint: {fileID: 450049303515480879}
   damage: 1
@@ -980,14 +1065,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 3
-  secondaryTurretCount: 2
+  primaryTurretCount: 1
+  secondaryTurretCount: 3
   primaryRateOfFire: 1
   secondaryRateOfFire: 0.1
-  spread: 10
+  spread: 0
   startSpeed: 7
   endSpeed: 7
-  offset: 0
+  offset: 0.4
   boostDelay: 0
   initialDelay: 1
   isInverted: 0
@@ -1537,6 +1622,79 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &6294747651467747918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2410826628791588687}
+  - component: {fileID: 3277125960116318473}
+  - component: {fileID: 7007762985741243233}
+  m_Layer: 0
+  m_Name: MissleSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2410826628791588687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6294747651467747918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4398911978933775257}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3277125960116318473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6294747651467747918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 784cd029697e58a44a1fb2b2b50e9a89,
+    type: 3}
+  spawnPoint: {fileID: 450049303515480879}
+  damage: 3
+  damageTag: Enemy
+  maxRange: 15
+--- !u!114 &7007762985741243233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6294747651467747918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 0
+  secondaryTurretCount: 1
+  primaryRateOfFire: 5
+  secondaryRateOfFire: 0.1
+  spread: 0
+  startSpeed: 1
+  endSpeed: 20
+  offset: 0.4
+  boostDelay: 0.2
+  initialDelay: 5
+  isInverted: 0
 --- !u!1 &7485257606126994068
 GameObject:
   m_ObjectHideFlags: 0

@@ -1106,7 +1106,7 @@ MonoBehaviour:
   initialDelay: 1
   spawnRate: 7
   nextSpawnInterval: 1
-  numberOfSpawn: 2
+  numberOfSpawn: 3
 --- !u!1 &8423877156546684766
 GameObject:
   m_ObjectHideFlags: 0
