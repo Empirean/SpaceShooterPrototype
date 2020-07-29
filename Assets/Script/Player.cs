@@ -34,15 +34,36 @@ public class Player : MonoBehaviour
 
     Unit unit;
 
-    int orbiterCount;
-    int upgradeCount = 0;
-    int misslecount = 0;
+    int orbiterCount = 0;
+    int turretCount = 0;
+    int missleCount = 0;
 
 
     
     void Start()
     {
         unit = GetComponent<Unit>();
+        LoadPlayerUpgrades();
+    }
+
+    void LoadPlayerUpgrades()
+    {
+        unit.SetHealth(PlayerPrefs.GetFloat(Utility.keyPlayerHealth, unit.maxHealth), unit.maxHealth);
+
+        for (int i = 0; i < PlayerPrefs.GetInt(Utility.keyTurretLevel,0); i++)
+        {
+            WeaponUpgrade();
+        }
+
+        for (int i = 0; i < PlayerPrefs.GetInt(Utility.keyMissleLevel, 0); i++)
+        {
+            MissleUpgrade();
+        }
+
+        for (int i = 0; i < PlayerPrefs.GetInt(Utility.keyOrbiterLevel, 0); i++)
+        {
+            SpawnOrbiters();
+        }
     }
 
     public void Move(Vector3 velocity)
@@ -75,19 +96,46 @@ public class Player : MonoBehaviour
 
     public void WeaponUpgrade()
     {
-        dirWeapon.primaryTurretCount = primaryTurretUpgrade[upgradeCount];
-        dirWeapon.secondaryTurretCount = secondaryTurretUpgrade[upgradeCount];
-        dirWeapon.offset = offsetUpgrade[upgradeCount];
-        dirWeapon.spread = spreadUpgrade[upgradeCount];
+        if (turretCount < maxWeaponUpgrade)
+        {
+            dirWeapon.primaryTurretCount = primaryTurretUpgrade[turretCount];
+            dirWeapon.secondaryTurretCount = secondaryTurretUpgrade[turretCount];
+            dirWeapon.offset = offsetUpgrade[turretCount];
+            dirWeapon.spread = spreadUpgrade[turretCount];
 
-        upgradeCount = Mathf.Clamp(upgradeCount + 1, 0, maxWeaponUpgrade - 1);
+            turretCount = Mathf.Clamp(turretCount + 1, 0, maxWeaponUpgrade);
+
+        }
     }
 
     public void MissleUpgrade()
     {
-        misWeapon.primaryTurretCount = missleUpgrade[misslecount];
+        if (missleCount < maxMissleUpgrade)
+        {
+            misWeapon.primaryTurretCount = missleUpgrade[missleCount];
 
-        misslecount = Mathf.Clamp(misslecount + 1, 0, maxMissleUpgrade - 1);
+            missleCount = Mathf.Clamp(missleCount + 1, 0, maxMissleUpgrade);
+        }
+    }
+
+    public float GetPlayerHealth()
+    {
+        return unit.currentHealth;
+    }
+
+    public int GetTurretLevel()
+    {
+        return turretCount;
+    }
+
+    public int GetMissleLevel()
+    {
+        return missleCount;
+    }
+
+    public int GetOrbiterLevel()
+    {
+        return orbiterCount;
     }
 
 }

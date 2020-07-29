@@ -11,6 +11,11 @@ static class Utility
     
     public static float collisionDamageDelay;
 
+    public static string keyPlayerHealth;
+    public static string keyTurretLevel;
+    public static string keyMissleLevel;
+    public static string keyOrbiterLevel;
+
     static Utility()
     {
         cam = Camera.main;
@@ -18,5 +23,10 @@ static class Utility
         screenWidth = (cam.aspect * (screenHeight * 2f)) / 2;
 
         collisionDamageDelay = 1;
+
+        keyPlayerHealth = "PlayerHealth";
+        keyTurretLevel = "TurretLevel";
+        keyMissleLevel = "MissleLevel";
+        keyOrbiterLevel = "OrbiterLevel";
     }
 }
