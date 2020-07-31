@@ -5,7 +5,6 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     public float speed;
-    
 
     public enum effects
     {

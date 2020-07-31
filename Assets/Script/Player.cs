@@ -138,4 +138,9 @@ public class Player : MonoBehaviour
         return orbiterCount;
     }
 
+    public int GetFirepowerIndex()
+    {
+        return orbiterCount + missleCount + turretCount;
+    }
+
 }

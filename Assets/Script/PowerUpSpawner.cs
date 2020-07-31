@@ -35,6 +35,25 @@ public class PowerUpSpawner : MonoBehaviour
         }
     }
 
+    public void SpawnOffensivePowerup()
+    {
+        int r = Random.Range(0, 3);
+        switch (r)
+        {
+            case 0:
+                SpawnTurretUpgrade();
+                break;
+            case 1:
+                SpawnMissleUpgrade();
+                break;
+            case 2:
+                SpawnOrbiterUpgrade();
+                break;
+            default:
+                break;
+        }
+    }
+
     public void SpawnTurretUpgrade()
     {
         Instantiate(turretUpgrade, spawnPoint, Quaternion.identity);

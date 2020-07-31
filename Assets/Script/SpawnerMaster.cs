@@ -68,6 +68,13 @@ public class SpawnerMaster : MonoBehaviour
     public EnemyTypes[] secondLayerEnemy;
     public EnemyTypes[] thirdLayerEnemy;
 
+    [Space]
+    [Header("Come back")]
+    public int minComebackThreshold = 2;
+    public int advancedCombackThreshold = 7;
+    public int retriesBeforeComeback = 0;
+    public float combackDelay = 0.5f;
+
     int currentWave;
 
     PowerUpSpawner powerUpSpawner;
@@ -94,11 +101,44 @@ public class SpawnerMaster : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
+        int currentLevel = PlayerPrefs.GetInt(Utility.keyCurrentLevel, 1);
+        int retryCount = PlayerPrefs.GetInt(Utility.keyRetryCount, 0);
+
+        if (currentLevel > minComebackThreshold && retryCount > retriesBeforeComeback) 
+        {
+            powerUpSpawner.SpawnTurretUpgrade();
+        }
+
+        if (currentLevel > advancedCombackThreshold && retryCount > retriesBeforeComeback)
+        {
+            yield return new WaitForSeconds(combackDelay);
+
+            powerUpSpawner.SpawnOrbiterUpgrade();
+        }
+
         for (currentWave = 0; currentWave < waveCount; currentWave++)
         {
             yield return StartCoroutine("SpawnCurrentWave");
 
-            powerUpSpawner.SpawnRandomPowerup();
+            if (currentWave == waveCount -1)
+            {
+                powerUpSpawner.SpawnHealUpgrade();
+            }
+            else
+            {
+                Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+                if (player.GetFirepowerIndex() < 3)
+                {
+                    powerUpSpawner.SpawnOffensivePowerup();
+                }
+                else
+                {
+                    powerUpSpawner.SpawnRandomPowerup();
+                }
+            }
+
+            
         }
 
         if (OnPlayerWin != null)

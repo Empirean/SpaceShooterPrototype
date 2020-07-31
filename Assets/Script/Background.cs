@@ -11,7 +11,6 @@ public class Background : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
-
     }
 
     void Update()

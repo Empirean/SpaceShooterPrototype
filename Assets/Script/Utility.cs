@@ -15,6 +15,8 @@ static class Utility
     public static string keyTurretLevel;
     public static string keyMissleLevel;
     public static string keyOrbiterLevel;
+    public static string keyCurrentLevel;
+    public static string keyRetryCount;
 
     static Utility()
     {
@@ -28,5 +30,7 @@ static class Utility
         keyTurretLevel = "TurretLevel";
         keyMissleLevel = "MissleLevel";
         keyOrbiterLevel = "OrbiterLevel";
+        keyCurrentLevel = "CurrentLevel";
+        keyRetryCount = "RetryCount";
     }
 }
