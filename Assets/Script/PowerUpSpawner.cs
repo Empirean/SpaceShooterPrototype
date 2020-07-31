@@ -14,7 +14,7 @@ public class PowerUpSpawner : MonoBehaviour
 
     private void Start()
     {
-        spawnPoint = new Vector3(0, Utility.screenHeight, 0);
+        spawnPoint = new Vector3(Random.Range(-Utility.screenWidth/2, Utility.screenWidth / 2), Utility.screenHeight, 0);
     }
 
     public void SpawnRandomPowerup()

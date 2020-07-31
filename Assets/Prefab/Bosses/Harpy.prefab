@@ -1886,8 +1886,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2124971466480858460}
-  - component: {fileID: 7373806994340088522}
-  - component: {fileID: 6277295116107971776}
+  - component: {fileID: 7760741173634217662}
+  - component: {fileID: 5784087187575620411}
+  - component: {fileID: 872095471628447071}
   m_Layer: 0
   m_Name: BulletSpawn
   m_TagString: Untagged
@@ -1909,7 +1910,7 @@ Transform:
   m_Father: {fileID: 2039184603325481865}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7373806994340088522
+--- !u!114 &7760741173634217662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1927,7 +1928,7 @@ MonoBehaviour:
   damage: 1
   damageTag: Player
   maxRange: 15
---- !u!114 &6277295116107971776
+--- !u!114 &5784087187575620411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1936,45 +1937,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 7750445134307077832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5edda8ebe957a438a2315fb66bfd4a, type: 3}
+  m_Script: {fileID: 11500000, guid: 89f86e80a7b97ed46b8917cfa1029d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layers: 2
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 0.1
+  primaryTurretCount: 10
+  primaryRateOfFire: 1.5
+  secondaryRateOfFire: 0.05
+  startSpeed: 7
+  endSpeed: 7
+  offset: 0
+  boostDelay: 0.2
   initialDelay: 1
-  bulletCount: 1e00000014000000
-  startSpread:
-  - -90
-  - 90
-  endSpread:
-  - 90
-  - -90
-  startSpeed1:
-  - 5
-  - 1
-  startSpeed2:
-  - 5
-  - 1
-  endSpeed1:
-  - 1
-  - 5
-  endSpeed2:
-  - 1
-  - 5
-  startOffset:
-  - 0
-  - 0
-  endOffset:
-  - 0
-  - 0
-  startBoostDelay:
-  - 0
-  - 0
-  endBoostDelay:
-  - 0
-  - 0
   isInverted: 1
+--- !u!114 &872095471628447071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7750445134307077832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987978bbd371cdd4bb46f0a7bb2df1e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnType: {fileID: 2641837007015002911, guid: bacbfdeb8c2a6a848bb6984b34d444fd,
+    type: 3}
+  spawnPoint: {fileID: 2124971466480858460}
+  initialDelay: 1
+  spawnRate: 4
+  nextSpawnInterval: 0.4
+  numberOfSpawn: 4
 --- !u!1 &8605617454391919883
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,7 +2074,7 @@ GameObject:
   - component: {fileID: 7201235000630507851}
   - component: {fileID: 5816129802602218624}
   m_Layer: 0
-  m_Name: Hydra
+  m_Name: Harpy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2130,10 +2123,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  maxHealth: 110
+  maxHealth: 200
   speed: 1
   armor: 0
   currentHealth: 0
+  isDestructible: 1
   damageTag: Player
   collisionDamage: 1
 --- !u!114 &7201235000630507851

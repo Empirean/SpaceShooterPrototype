@@ -449,7 +449,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6900086958356423289}
   - component: {fileID: 261268818}
-  - component: {fileID: 261268819}
   m_Layer: 0
   m_Name: RightBulletSpawn
   m_TagString: Untagged
@@ -489,29 +488,6 @@ MonoBehaviour:
   damage: 1
   damageTag: Player
   maxRange: 15
---- !u!114 &261268819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3160161784579720368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 18
-  secondaryTurretCount: 1
-  primaryRateOfFire: 1.2
-  secondaryRateOfFire: 0.1
-  spread: 20
-  startSpeed: 1
-  endSpeed: 7
-  offset: 0
-  boostDelay: 0
-  initialDelay: 1.5
-  isInverted: 1
 --- !u!1 &3924766157521252250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,7 +1200,6 @@ GameObject:
   m_Component:
   - component: {fileID: 715967348736117541}
   - component: {fileID: 5744522335416994821}
-  - component: {fileID: 5744522335416994820}
   m_Layer: 0
   m_Name: LeftBulletSpawn
   m_TagString: Untagged
@@ -1264,29 +1239,6 @@ MonoBehaviour:
   damage: 1
   damageTag: Player
   maxRange: 15
---- !u!114 &5744522335416994820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7491446052357454388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 18
-  secondaryTurretCount: 1
-  primaryRateOfFire: 1.2
-  secondaryRateOfFire: 0.1
-  spread: 20
-  startSpeed: 1
-  endSpeed: 7
-  offset: 0
-  boostDelay: 0
-  initialDelay: 1
-  isInverted: 1
 --- !u!1 &7750445134307077832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,7 +1249,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2124971466480858460}
   - component: {fileID: 6078210010848241756}
-  - component: {fileID: 4792842429634170707}
   m_Layer: 0
   m_Name: BulletSpawn
   m_TagString: Untagged
@@ -1337,54 +1288,6 @@ MonoBehaviour:
   damage: 1
   damageTag: Player
   maxRange: 15
---- !u!114 &4792842429634170707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750445134307077832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layers: 2
-  primaryRateOfFire: 10
-  secondaryRateOfFire: 0.1
-  initialDelay: 5
-  bulletCount: 4600000046000000
-  startSpread:
-  - 0
-  - 0
-  endSpread:
-  - 0
-  - 0
-  startSpeed1:
-  - 7
-  - 7
-  startSpeed2:
-  - 7
-  - 7
-  endSpeed1:
-  - 7
-  - 7
-  endSpeed2:
-  - 7
-  - 7
-  startOffset:
-  - -1.3
-  - 1.3
-  endOffset:
-  - -1.3
-  - 1.3
-  startBoostDelay:
-  - 0
-  - 0
-  endBoostDelay:
-  - 0
-  - 0
-  isInverted: 1
 --- !u!1 &8063070598355664931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,7 +1536,7 @@ GameObject:
   - component: {fileID: 7201235000630507851}
   - component: {fileID: 5816129802602218624}
   m_Layer: 0
-  m_Name: Cyclops
+  m_Name: Argus
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

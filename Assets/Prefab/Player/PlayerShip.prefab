@@ -1029,15 +1029,17 @@ MonoBehaviour:
   - {fileID: 4860719165105393701}
   healAmount: 5
   dirWeapon: {fileID: 4917174359864558369}
-  maxWeaponUpgrade: 2
-  primaryTurretUpgrade: 0200000003000000
-  secondaryTurretUpgrade: 0200000002000000
+  maxWeaponUpgrade: 3
+  primaryTurretUpgrade: 020000000300000004000000
+  secondaryTurretUpgrade: 020000000200000002000000
   offsetUpgrade:
   - 0.4
   - 0
+  - 0
   spreadUpgrade:
   - 0
-  - 5
+  - 10
+  - 10
   misWeapon: {fileID: 7007762985741243233}
   maxMissleUpgrade: 2
   missleUpgrade: 0100000002000000

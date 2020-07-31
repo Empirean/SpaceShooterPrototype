@@ -531,14 +531,20 @@ MonoBehaviour:
     type: 3}
   demigodType: {fileID: 7466792812589667057, guid: be0a1e06ed7efdc418b5e5c2800ba9b7,
     type: 3}
+  harpyType: {fileID: 7466792812589667057, guid: 128361e830b881e41b7426d67ca61c6c,
+    type: 3}
   nextWaveDelay: 1.5
   waveCount: 4
   firstLayerCount: 06000000030000000500000001000000
   secondLayerCount: 02000000020000000300000000000000
   thirdLayerCount: 03000000040000000200000000000000
-  firstLayerEnemy: 0700000009000000040000000a000000
+  firstLayerEnemy: 0700000009000000040000000f000000
   secondLayerEnemy: 06000000030000000800000000000000
   thirdLayerEnemy: 08000000010000000200000000000000
+  minComebackThreshold: 2
+  advancedCombackThreshold: 7
+  retriesBeforeComeback: 0
+  combackDelay: 0.5
 --- !u!114 &442404314
 MonoBehaviour:
   m_ObjectHideFlags: 0

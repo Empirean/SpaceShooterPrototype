@@ -2130,10 +2130,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  maxHealth: 110
+  maxHealth: 150
   speed: 1
   armor: 0
   currentHealth: 0
+  isDestructible: 1
   damageTag: Player
   collisionDamage: 1
 --- !u!114 &7201235000630507851

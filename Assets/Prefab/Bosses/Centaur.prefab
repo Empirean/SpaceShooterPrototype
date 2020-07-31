@@ -379,7 +379,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 4812649700835372022}
   initialDelay: 5
   spawnRate: 7
-  spawnInterval: 1
+  nextSpawnInterval: 0
   numberOfSpawn: 1
 --- !u!1 &4369230885376372144
 GameObject:
@@ -1014,7 +1014,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 4812649700835372022}
   initialDelay: 5
   spawnRate: 7
-  spawnInterval: 1
+  nextSpawnInterval: 0
   numberOfSpawn: 1
 --- !u!1 &8380423262896462122
 GameObject:
@@ -1200,10 +1200,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  maxHealth: 130
+  maxHealth: 170
   speed: 1
   armor: 0
   currentHealth: 0
+  isDestructible: 1
   damageTag: Player
   collisionDamage: 1
 --- !u!114 &7201235000630507851
