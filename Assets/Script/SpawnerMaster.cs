@@ -32,6 +32,7 @@ public class SpawnerMaster : MonoBehaviour
     public Unit manticoreType;
     public Unit demigodType;
     public Unit harpyType;
+    public Unit argusType;
 
     [Space]
     public float nextWaveDelay = 1.5f;
@@ -61,7 +62,8 @@ public class SpawnerMaster : MonoBehaviour
         centaur,
         manticore,
         demigod,
-        harpy
+        harpy,
+        argus
     }
 
     [Space]
@@ -232,6 +234,9 @@ public class SpawnerMaster : MonoBehaviour
             case EnemyTypes.harpy:
                 SpawnHarpy();
                 break;
+            case EnemyTypes.argus:
+                SpawnArgus();
+                break;
             default:
                 break;
         }
@@ -314,6 +319,19 @@ public class SpawnerMaster : MonoBehaviour
 
         Unit hydra = Instantiate(harpyType, v, Quaternion.identity);
         hydra.OnBossDeath += OnBossDestroy;
+    }
+
+    void SpawnArgus()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, Utility.screenHeight / 2, 0);
+
+        if (OnBossSpawn != null) OnBossSpawn();
+
+        Unit cyclops = Instantiate(argusType, v, Quaternion.identity);
+        cyclops.OnBossDeath += OnBossDestroy;
     }
 
     void SpawnPinger()

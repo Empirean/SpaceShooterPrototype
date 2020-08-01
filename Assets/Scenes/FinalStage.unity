@@ -433,6 +433,8 @@ MonoBehaviour:
     type: 3}
   harpyType: {fileID: 7466792812589667057, guid: 128361e830b881e41b7426d67ca61c6c,
     type: 3}
+  argusType: {fileID: 7466792812589667057, guid: faa7dd759dface849bcc4ba7d65495cf,
+    type: 3}
   nextWaveDelay: 1.5
   waveCount: 4
   firstLayerCount: 05000000050000000600000001000000
