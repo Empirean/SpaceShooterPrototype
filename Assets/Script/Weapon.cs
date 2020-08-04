@@ -25,11 +25,16 @@ public class Weapon : MonoBehaviour
 
     public void Shoot(Vector3 in_Target, float in_Offset, float in_StartSpeed, float in_EndSpeed, float in_BoostDelay)
     {
+        Shoot(in_Target, 0, in_Offset, in_StartSpeed, in_EndSpeed, in_BoostDelay);
+    }
+
+    public void Shoot(Vector3 in_Target, float in_Spread, float in_Offset, float in_StartSpeed, float in_EndSpeed, float in_BoostDelay)
+    {
         Vector3 t_newOffset = spawnPoint.position + new Vector3(in_Offset, 0, 0);
         Projectile bullet = Instantiate(projectile, t_newOffset, Quaternion.identity) as Projectile;
 
         bullet.transform.LookAt(in_Target);
-        bullet.transform.eulerAngles = new Vector3(bullet.transform.eulerAngles.x + 90, bullet.transform.eulerAngles.y, bullet.transform.eulerAngles.z);
+        bullet.transform.eulerAngles = new Vector3(bullet.transform.eulerAngles.x + 90 + in_Spread, bullet.transform.eulerAngles.y, bullet.transform.eulerAngles.z);
 
         SetProjectileProperty(ref bullet, in_StartSpeed, in_EndSpeed, in_BoostDelay);
     }
@@ -66,21 +71,28 @@ public class Weapon : MonoBehaviour
         return GetPlayerPosition(ref v);
     }
 
-    public float GetStartingAngle(int in_TurretCount, float in_spread)
+    public float GetStartingAngle(int in_TurretCount, float in_Spread)
     {
         float in_startAngle = 0;
 
         for (int i = 0; i < in_TurretCount / 2; i++)
         {
-            in_startAngle -= in_spread;
+            in_startAngle -= in_Spread;
         }
 
         if (in_TurretCount % 2 == 0)
         {
-            in_startAngle += in_spread / 2;
+            in_startAngle += in_Spread / 2;
         }
 
         return in_startAngle;
+    }
+
+    public float GetStartingAngle(Vector3 in_TargetPosition, int in_TurretCount, float in_Spread)
+    {
+        float t_angle = Vector3.SignedAngle(gameObject.transform.position, in_TargetPosition, Vector3.up);
+
+        return t_angle;
     }
 
     public float GetStartingOffset(int in_TurretCount, float in_offset)

@@ -32,6 +32,9 @@ public class Player : MonoBehaviour
     public int maxMissleUpgrade = 2;
     public List<int> missleUpgrade;
 
+    [Header("Test Mode")]
+    public bool isTestMode = false;
+
     Unit unit;
 
     int orbiterCount = 0;
@@ -43,7 +46,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         unit = GetComponent<Unit>();
-        LoadPlayerUpgrades();
+        if (!isTestMode)
+            LoadPlayerUpgrades();
     }
 
     void LoadPlayerUpgrades()

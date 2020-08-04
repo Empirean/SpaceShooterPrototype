@@ -179,7 +179,7 @@ RectTransform:
   m_Children:
   - {fileID: 450049304101340295}
   m_Father: {fileID: 4398911978933775257}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -256,7 +256,6 @@ GameObject:
   m_Component:
   - component: {fileID: 450049303515480879}
   - component: {fileID: 1717251398830501299}
-  - component: {fileID: 5540607849845695070}
   m_Layer: 0
   m_Name: Main_Weapon
   m_TagString: Untagged
@@ -296,127 +295,6 @@ MonoBehaviour:
   damage: 1
   damageTag: Enemy
   maxRange: 15
---- !u!114 &5540607849845695070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450049305291364948}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 2
-  secondaryTurretCount: 2
-  primaryRateOfFire: 1
-  secondaryRateOfFire: 0.1
-  spread: 0
-  startSpeed: 7
-  endSpeed: 7
-  offset: 0.2
-  boostDelay: 0
-  initialDelay: 1
-  isInverted: 0
---- !u!1 &956632613607876006
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3341139280101935826}
-  - component: {fileID: 2866560504004610909}
-  - component: {fileID: 613112977241907412}
-  m_Layer: 0
-  m_Name: Secondary_Weapon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3341139280101935826
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956632613607876006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.074, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4398911978933775257}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2866560504004610909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956632613607876006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
-    type: 3}
-  spawnPoint: {fileID: 3341139280101935826}
-  damage: 1
-  damageTag: Enemy
-  maxRange: 15
---- !u!114 &613112977241907412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956632613607876006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5edda8ebe957a438a2315fb66bfd4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layers: 2
-  primaryRateOfFire: 5
-  secondaryRateOfFire: 0.1
-  initialDelay: 1
-  bulletCount: 0f0000000f000000
-  startSpread:
-  - -90
-  - 90
-  endSpread:
-  - 90
-  - -90
-  startSpeed1:
-  - 7
-  - 7
-  startSpeed2:
-  - 7
-  - 7
-  endSpeed1:
-  - 7
-  - 7
-  endSpeed2:
-  - 7
-  - 7
-  startOffset:
-  - -0.2
-  - 0.2
-  endOffset:
-  - -0.2
-  - 0.2
-  startBoostDelay:
-  - 0
-  - 0
-  endBoostDelay:
-  - 0
-  - 0
-  isInverted: 0
 --- !u!1 &4335848771093364372
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,7 +408,6 @@ Transform:
   m_Children:
   - {fileID: 4000558432073027609}
   - {fileID: 450049303515480879}
-  - {fileID: 3341139280101935826}
   - {fileID: 450049304767306861}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -577,7 +454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b060de67dc40d24ca17f261302c9d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  z: 0
 --- !u!114 &4398911978933775270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,6 +466,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 072d9090360847c4f8b4ff48db8ab5b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxOrbiters: 2
+  orbiterType: {fileID: 0}
+  orbiterSlots: []
+  healAmount: 5
+  dirWeapon: {fileID: 0}
+  maxWeaponUpgrade: 3
+  primaryTurretUpgrade: 
+  secondaryTurretUpgrade: 
+  offsetUpgrade: []
+  spreadUpgrade: []
+  misWeapon: {fileID: 0}
+  maxMissleUpgrade: 2
+  missleUpgrade: 
 --- !u!114 &4398911978933775269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,6 +508,7 @@ MonoBehaviour:
   speed: 7
   armor: 0
   currentHealth: 0
+  isDestructible: 1
   damageTag: Enemy
   collisionDamage: 1
 --- !u!1 &4612449384801766968
