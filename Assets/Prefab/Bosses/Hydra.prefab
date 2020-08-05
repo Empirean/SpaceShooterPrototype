@@ -1,5 +1,93 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &715151717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715151718}
+  - component: {fileID: 715151720}
+  - component: {fileID: 715151721}
+  m_Layer: 0
+  m_Name: HeavyShellSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &715151718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715151717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.89, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2039184603325481865}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &715151720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715151717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+    type: 3}
+  spawnPoint: {fileID: 715151718}
+  damage: 1
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &715151721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715151717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5edda8ebe957a438a2315fb66bfd4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers: 1
+  primaryRateOfFire: 3
+  secondaryRateOfFire: 0.1
+  initialDelay: 1
+  bulletCount: 14000000
+  startSpread:
+  - 90
+  endSpread:
+  - -90
+  startSpeed1:
+  - 1
+  startSpeed2:
+  - 1
+  endSpeed1:
+  - 5
+  endSpeed2:
+  - 5
+  startOffset:
+  - 0
+  endOffset:
+  - 0
+  startBoostDelay:
+  - 0
+  endBoostDelay:
+  - 0
+  isInverted: 1
 --- !u!1 &1249998575856915140
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +838,7 @@ Transform:
   - {fileID: 2663749817965854023}
   - {fileID: 8865834035241376486}
   m_Father: {fileID: 2039184603325481865}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5190040685750813556
 GameObject:
@@ -1543,8 +1631,9 @@ GameObject:
   - component: {fileID: 2124971466480858460}
   - component: {fileID: 7373806994340088522}
   - component: {fileID: 6277295116107971776}
+  - component: {fileID: 1181587725}
   m_Layer: 0
-  m_Name: BulletSpawn
+  m_Name: NormalShellSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1589,7 +1678,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7750445134307077832}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e5edda8ebe957a438a2315fb66bfd4a, type: 3}
   m_Name: 
@@ -1628,6 +1717,44 @@ MonoBehaviour:
   - 0
   endBoostDelay:
   - 0
+  - 0
+  isInverted: 1
+--- !u!114 &1181587725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7750445134307077832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5edda8ebe957a438a2315fb66bfd4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers: 1
+  primaryRateOfFire: 3
+  secondaryRateOfFire: 0.1
+  initialDelay: 1
+  bulletCount: 1e000000
+  startSpread:
+  - -90
+  endSpread:
+  - 90
+  startSpeed1:
+  - 5
+  startSpeed2:
+  - 5
+  endSpeed1:
+  - 1
+  endSpeed2:
+  - 1
+  startOffset:
+  - 0
+  endOffset:
+  - 0
+  startBoostDelay:
+  - 0
+  endBoostDelay:
   - 0
   isInverted: 1
 --- !u!1 &8173472896735769196
@@ -1740,6 +1867,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2124971466480858460}
+  - {fileID: 715151718}
   - {fileID: 4269260753984242607}
   m_Father: {fileID: 0}
   m_RootOrder: 0

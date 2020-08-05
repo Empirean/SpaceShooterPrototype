@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 2641837007015002910}
   - component: {fileID: 2641837007015002911}
   - component: {fileID: 4496660118142370845}
-  - component: {fileID: 4673442045400111255}
+  - component: {fileID: 1763233562226430157}
   m_Layer: 0
   m_Name: Emitter
   m_TagString: Enemy
@@ -574,7 +574,7 @@ MonoBehaviour:
   damage: 1
   damageTag: Player
   maxRange: 15
---- !u!114 &4673442045400111255
+--- !u!114 &1763233562226430157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -583,15 +583,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2641837007015002908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f86e80a7b97ed46b8917cfa1029d34, type: 3}
+  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 70
+  primaryTurretCount: 1
+  secondaryTurretCount: 70
   primaryRateOfFire: 90
   secondaryRateOfFire: 0.1
   startSpeed: 7
   endSpeed: 7
-  offset: 0
+  spread: 0
   boostDelay: 0.2
   initialDelay: 2
   isInverted: 1

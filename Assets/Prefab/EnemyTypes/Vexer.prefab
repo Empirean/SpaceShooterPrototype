@@ -214,8 +214,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2150419511273794013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.4, z: 0.2}
+  m_LocalPosition: {x: 0, y: -0.1247, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.52464, z: 0.2}
   m_Children: []
   m_Father: {fileID: 8130353789515482827}
   m_RootOrder: 0
@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 5889990703219563125}
   - component: {fileID: 5889990703219563126}
   - component: {fileID: 5889990703219563127}
-  - component: {fileID: 5889990703219563128}
+  - component: {fileID: 7308833828521630800}
   m_Layer: 0
   m_Name: Vexer
   m_TagString: Enemy
@@ -676,7 +676,7 @@ MonoBehaviour:
   damage: 1
   damageTag: Player
   maxRange: 15
---- !u!114 &5889990703219563128
+--- !u!114 &7308833828521630800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -685,15 +685,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5889990703219563129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89f86e80a7b97ed46b8917cfa1029d34, type: 3}
+  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 2
+  primaryTurretCount: 3
+  secondaryTurretCount: 2
   primaryRateOfFire: 2
   secondaryRateOfFire: 0.2
   startSpeed: 6
   endSpeed: 1
-  offset: 0
+  spread: 20
   boostDelay: 0
   initialDelay: 2
   isInverted: 1
