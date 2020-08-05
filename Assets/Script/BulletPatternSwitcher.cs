@@ -27,7 +27,6 @@ public class BulletPatternSwitcher : MonoBehaviour
 
     }
 
-
     void Update()
     {
         if (Time.time > patternCounter)

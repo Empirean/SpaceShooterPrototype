@@ -48,6 +48,11 @@ public class BarrageWeapons : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        fireCounter = Time.time + primaryRateOfFire;
+    }
+
     IEnumerator BarrageController()
     {
         

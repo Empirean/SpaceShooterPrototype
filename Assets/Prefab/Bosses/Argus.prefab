@@ -1,5 +1,149 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &211183701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 211183702}
+  - component: {fileID: 211183704}
+  - component: {fileID: 211183703}
+  m_Layer: 0
+  m_Name: LeftAuxillary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &211183702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211183701}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3470001, y: -0.5580001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2039184603325481865}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &211183704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211183701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+    type: 3}
+  spawnPoint: {fileID: 211183702}
+  damage: 1
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &211183703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211183701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 25
+  secondaryTurretCount: 7
+  primaryRateOfFire: 2.5
+  secondaryRateOfFire: 0.1
+  startSpeed: 7
+  endSpeed: 7
+  spread: 14.4
+  boostDelay: 0
+  initialDelay: 0
+  isInverted: 1
+--- !u!1 &865320716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 865320717}
+  - component: {fileID: 865320719}
+  - component: {fileID: 865320718}
+  m_Layer: 0
+  m_Name: RightAuxillary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &865320717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865320716}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.347, y: -0.5580001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2039184603325481865}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &865320719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865320716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+    type: 3}
+  spawnPoint: {fileID: 865320717}
+  damage: 1
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &865320718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865320716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 25
+  secondaryTurretCount: 7
+  primaryRateOfFire: 2.5
+  secondaryRateOfFire: 0.1
+  startSpeed: 7
+  endSpeed: 7
+  spread: 14.4
+  boostDelay: 0
+  initialDelay: 0
+  isInverted: 1
 --- !u!1 &1525124517294348037
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +261,7 @@ Transform:
   - {fileID: 1966992718212363810}
   - {fileID: 5108395008124099318}
   m_Father: {fileID: 2039184603325481865}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2575778700567279055
 GameObject:
@@ -509,6 +653,79 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &5381919980931381945
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5354719004385014825}
+  - component: {fileID: 3009203155260262880}
+  - component: {fileID: 3673418803358394170}
+  m_Layer: 0
+  m_Name: MainGun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5354719004385014825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5381919980931381945}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.5939999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2039184603325481865}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3009203155260262880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5381919980931381945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
+    type: 3}
+  spawnPoint: {fileID: 5354719004385014825}
+  damage: 1
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &3673418803358394170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5381919980931381945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 10
+  secondaryTurretCount: 1
+  primaryRateOfFire: 0.5
+  secondaryRateOfFire: 0.75
+  spread: 15
+  startSpeed: 7
+  endSpeed: 1
+  offset: 0
+  boostDelay: 0
+  initialDelay: 0
+  isInverted: 1
 --- !u!1 &6327264532251878785
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,55 +960,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &7750445134307077832
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2124971466480858460}
-  - component: {fileID: 6078210010848241756}
-  m_Layer: 0
-  m_Name: BulletSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2124971466480858460
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750445134307077832}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.56, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2039184603325481865}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6078210010848241756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750445134307077832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
-    type: 3}
-  spawnPoint: {fileID: 2124971466480858460}
-  damage: 1
-  damageTag: Player
-  maxRange: 15
 --- !u!1 &7856471478268241039
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,6 +1129,7 @@ GameObject:
   - component: {fileID: 7466792812589667057}
   - component: {fileID: 7201235000630507851}
   - component: {fileID: 5816129802602218624}
+  - component: {fileID: 340833139916464155}
   m_Layer: 0
   m_Name: Argus
   m_TagString: Enemy
@@ -979,7 +1148,9 @@ Transform:
   m_LocalPosition: {x: -1.4547677, y: -3.5671024, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2124971466480858460}
+  - {fileID: 211183702}
+  - {fileID: 865320717}
+  - {fileID: 5354719004385014825}
   - {fileID: 8512680991178679093}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1012,7 +1183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   maxHealth: 210
-  speed: 2
+  speed: 0.5
   armor: 0
   currentHealth: 0
   isDestructible: 1
@@ -1052,3 +1223,37 @@ MonoBehaviour:
   permanentSwitch: 0
   primaryBehavior: 2
   secondaryBehavior: 0
+--- !u!114 &340833139916464155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864870526059961215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83ed0994e37aa94b8a2be428ed4f898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patternCount: 8
+  initialDelay: 1
+  patternDuration:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  patternGroupCount: 3
+  patternIndex: 0000000001000000020000000300000004000000050000000600000007000000
+  bulletSource:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

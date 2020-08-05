@@ -42,6 +42,11 @@ public class DirectedBarrage : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        fireCounter = Time.time + primaryRateOfFire;
+    }
+
     IEnumerator ShootingController()
     {
 
