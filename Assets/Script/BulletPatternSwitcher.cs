@@ -42,15 +42,12 @@ public class BulletPatternSwitcher : MonoBehaviour
     {
         for (int i = 0; i < patternGroupCount; i++)
         {
-            if(patternIndex[i] == in_index)
-            {
-                bulletSource[i].SetActive(in_enabled);
-            }
-            else
-            {
-                bulletSource[i].SetActive(false);
-            }
+
+            bulletSource[i].SetActive(false);
+
         }
+
+        bulletSource[in_index].SetActive(in_enabled);
     }
     
 }

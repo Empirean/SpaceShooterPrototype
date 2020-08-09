@@ -1,5 +1,78 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &552684376228397428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2013156761460538097}
+  - component: {fileID: 6290371363409150929}
+  - component: {fileID: 2421217157674486151}
+  m_Layer: 0
+  m_Name: LeftBulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2013156761460538097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552684376228397428}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3499999, y: -1.5299997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8444279640032417300}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6290371363409150929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552684376228397428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
+    type: 3}
+  spawnPoint: {fileID: 2013156761460538097}
+  damage: 2
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &2421217157674486151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552684376228397428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 1
+  secondaryTurretCount: 30
+  primaryRateOfFire: 3
+  secondaryRateOfFire: 0.1
+  spread: 0
+  startSpeed: 7
+  endSpeed: 7
+  offset: 0
+  boostDelay: 0
+  initialDelay: 1
+  isInverted: 1
 --- !u!1 &1105491589132191618
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +307,38 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &2409066123379209180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2306681913849037211}
+  m_Layer: 0
+  m_Name: Pattern1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2306681913849037211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2409066123379209180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6900086958356423289}
+  - {fileID: 715967348736117541}
+  m_Father: {fileID: 2039184603325481865}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2419053969679991340
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +540,40 @@ Transform:
   - {fileID: 3199617099224400393}
   - {fileID: 1594664889079570562}
   m_Father: {fileID: 2039184603325481865}
-  m_RootOrder: 3
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2613581549445667567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8444279640032417300}
+  m_Layer: 0
+  m_Name: Pattern2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8444279640032417300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2613581549445667567}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2294151005619372407}
+  - {fileID: 5196314031501313078}
+  - {fileID: 2013156761460538097}
+  m_Father: {fileID: 2039184603325481865}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3160161784579720368
 GameObject:
@@ -447,7 +585,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6900086958356423289}
   - component: {fileID: 261268818}
-  - component: {fileID: 261268819}
+  - component: {fileID: 1541872260}
   m_Layer: 0
   m_Name: RightBulletSpawn
   m_TagString: Untagged
@@ -462,12 +600,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3160161784579720368}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.35, y: -1.53, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.35, y: -1.5299997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2039184603325481865}
-  m_RootOrder: 1
+  m_Father: {fileID: 2306681913849037211}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &261268818
 MonoBehaviour:
@@ -481,13 +619,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+  projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
     type: 3}
   spawnPoint: {fileID: 6900086958356423289}
-  damage: 1
+  damage: 2
   damageTag: Player
   maxRange: 15
---- !u!114 &261268819
+--- !u!114 &1541872260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -496,19 +634,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 3160161784579720368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 18
-  secondaryTurretCount: 1
-  primaryRateOfFire: 1.5
+  layers: 2
+  primaryRateOfFire: 0.8
   secondaryRateOfFire: 0.1
-  spread: 20
-  startSpeed: 3
-  endSpeed: 3
-  offset: 0
-  boostDelay: 0
-  initialDelay: 1.5
+  initialDelay: 1
+  bulletCount: 0800000008000000
+  startSpread:
+  - 0
+  - 180
+  endSpread:
+  - 180
+  - 360
+  startSpeed1:
+  - 3
+  - 3
+  startSpeed2:
+  - 3
+  - 3
+  endSpeed1:
+  - 3
+  - 3
+  endSpeed2:
+  - 3
+  - 3
+  startOffset:
+  - 0
+  - 0
+  endOffset:
+  - 0
+  - 0
+  startBoostDelay:
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
   isInverted: 1
 --- !u!1 &3585398096386324425
 GameObject:
@@ -666,6 +829,78 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &5047937453467317330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2294151005619372407}
+  - component: {fileID: 7974281580175950587}
+  - component: {fileID: 1886228823329669811}
+  m_Layer: 0
+  m_Name: CenterBulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2294151005619372407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5047937453467317330}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.3010001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8444279640032417300}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7974281580175950587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5047937453467317330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+    type: 3}
+  spawnPoint: {fileID: 2294151005619372407}
+  damage: 1
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &1886228823329669811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5047937453467317330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 9
+  secondaryTurretCount: 1
+  primaryRateOfFire: 0.5
+  secondaryRateOfFire: 0.1
+  startSpeed: 3
+  endSpeed: 7
+  spread: 30
+  boostDelay: 0
+  initialDelay: 1
+  isInverted: 1
 --- !u!1 &5267332092323717976
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,6 +1213,79 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &5881547664712892621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5196314031501313078}
+  - component: {fileID: 4581671630135495365}
+  - component: {fileID: 5603351908228478687}
+  m_Layer: 0
+  m_Name: RightBulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5196314031501313078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881547664712892621}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.35, y: -1.5299997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8444279640032417300}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4581671630135495365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881547664712892621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
+    type: 3}
+  spawnPoint: {fileID: 5196314031501313078}
+  damage: 2
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &5603351908228478687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5881547664712892621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 1
+  secondaryTurretCount: 30
+  primaryRateOfFire: 3
+  secondaryRateOfFire: 0.1
+  spread: 0
+  startSpeed: 7
+  endSpeed: 7
+  offset: 0
+  boostDelay: 0
+  initialDelay: 1
+  isInverted: 1
 --- !u!1 &7491446052357454388
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,7 +1296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 715967348736117541}
   - component: {fileID: 5744522335416994821}
-  - component: {fileID: 5744522335416994820}
+  - component: {fileID: 870192846}
   m_Layer: 0
   m_Name: LeftBulletSpawn
   m_TagString: Untagged
@@ -1003,12 +1311,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7491446052357454388}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.35, y: -1.53, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.3499999, y: -1.5299997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2039184603325481865}
-  m_RootOrder: 2
+  m_Father: {fileID: 2306681913849037211}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5744522335416994821
 MonoBehaviour:
@@ -1022,13 +1330,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+  projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
     type: 3}
   spawnPoint: {fileID: 715967348736117541}
-  damage: 1
+  damage: 2
   damageTag: Player
   maxRange: 15
---- !u!114 &5744522335416994820
+--- !u!114 &870192846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1037,19 +1345,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 7491446052357454388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 18
-  secondaryTurretCount: 1
-  primaryRateOfFire: 1.3
+  layers: 2
+  primaryRateOfFire: 0.8
   secondaryRateOfFire: 0.1
-  spread: 20
-  startSpeed: 3
-  endSpeed: 3
-  offset: 0
-  boostDelay: 0
   initialDelay: 1
+  bulletCount: 0800000008000000
+  startSpread:
+  - 0
+  - 180
+  endSpread:
+  - 180
+  - 360
+  startSpeed1:
+  - 3
+  - 3
+  startSpeed2:
+  - 3
+  - 3
+  endSpeed1:
+  - 3
+  - 3
+  endSpeed2:
+  - 3
+  - 3
+  startOffset:
+  - 0
+  - 0
+  endOffset:
+  - 0
+  - 0
+  startBoostDelay:
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
   isInverted: 1
 --- !u!1 &7497500376588924843
 GameObject:
@@ -1129,104 +1462,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &7750445134307077832
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2124971466480858460}
-  - component: {fileID: 6078210010848241756}
-  - component: {fileID: 4792842429634170707}
-  m_Layer: 0
-  m_Name: BulletSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2124971466480858460
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750445134307077832}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.53, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2039184603325481865}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6078210010848241756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750445134307077832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
-    type: 3}
-  spawnPoint: {fileID: 2124971466480858460}
-  damage: 1
-  damageTag: Player
-  maxRange: 15
---- !u!114 &4792842429634170707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750445134307077832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layers: 2
-  primaryRateOfFire: 10
-  secondaryRateOfFire: 0.1
-  initialDelay: 5
-  bulletCount: 4600000046000000
-  startSpread:
-  - 0
-  - 0
-  endSpread:
-  - 0
-  - 0
-  startSpeed1:
-  - 7
-  - 7
-  startSpeed2:
-  - 7
-  - 7
-  endSpeed1:
-  - 7
-  - 7
-  endSpeed2:
-  - 7
-  - 7
-  startOffset:
-  - -1.3
-  - 1.3
-  endOffset:
-  - -1.3
-  - 1.3
-  startBoostDelay:
-  - 0
-  - 0
-  endBoostDelay:
-  - 0
-  - 0
-  isInverted: 1
 --- !u!1 &7820200478207863910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,7 +1789,7 @@ GameObject:
   - component: {fileID: 5816129802602218624}
   - component: {fileID: 1474792718881399064}
   m_Layer: 0
-  m_Name: Cyclops
+  m_Name: Cyclops-2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1571,10 +1806,9 @@ Transform:
   m_LocalPosition: {x: -1.4547677, y: -3.5671024, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2124971466480858460}
-  - {fileID: 6900086958356423289}
-  - {fileID: 715967348736117541}
   - {fileID: 8512680991178679093}
+  - {fileID: 2306681913849037211}
+  - {fileID: 8444279640032417300}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1611,7 +1845,7 @@ MonoBehaviour:
   currentHealth: 0
   isDestructible: 1
   damageTag: Player
-  collisionDamage: 1
+  collisionDamage: 5
 --- !u!114 &7201235000630507851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1640,8 +1874,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   primaryBehaviorDelay: 0.5
   secondaryBehaviorDelay: 1
-  primaryBehaviorDuration: 5
-  secondaryBehaviorDuration: 10
+  primaryBehaviorDuration: 10
+  secondaryBehaviorDuration: 15
   behaviorSwitch: 1
   permanentSwitch: 0
   primaryBehavior: 2
@@ -1662,11 +1896,12 @@ MonoBehaviour:
   initialDelay: 1
   patternDuration:
   - 10
-  - 5
-  patternIndex: 0000000000000000
-  patternScripts:
-  - {fileID: 0}
-  - {fileID: 0}
+  - 15
+  patternGroupCount: 2
+  patternIndex: 0000000001000000
+  bulletSource:
+  - {fileID: 2409066123379209180}
+  - {fileID: 2613581549445667567}
 --- !u!1 &8995963849437191012
 GameObject:
   m_ObjectHideFlags: 0

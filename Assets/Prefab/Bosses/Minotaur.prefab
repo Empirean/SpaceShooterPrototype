@@ -234,6 +234,156 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &1751299584194099801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2206514258704564096}
+  - component: {fileID: 7151022250630842773}
+  - component: {fileID: 894916623423044815}
+  m_Layer: 0
+  m_Name: CenterBulletSpawn1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2206514258704564096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751299584194099801}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.10500002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4587300872396562138}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7151022250630842773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751299584194099801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+    type: 3}
+  spawnPoint: {fileID: 2206514258704564096}
+  damage: 1
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &894916623423044815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751299584194099801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers: 4
+  primaryRateOfFire: 1.8
+  secondaryRateOfFire: 0.2
+  initialDelay: 0
+  bulletCount: 16000000160000001600000016000000
+  startSpread:
+  - 0
+  - 0
+  - 0
+  - 0
+  endSpread:
+  - -360
+  - -360
+  - -360
+  - -360
+  startSpeed1:
+  - 3
+  - 4
+  - 5
+  - 6
+  startSpeed2:
+  - 3
+  - 4
+  - 5
+  - 6
+  endSpeed1:
+  - 3
+  - 4
+  - 5
+  - 6
+  endSpeed2:
+  - 3
+  - 4
+  - 5
+  - 6
+  startOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  endOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  startBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  isInverted: 0
+--- !u!1 &2211233002482996230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5393229100415830997}
+  m_Layer: 0
+  m_Name: Pattern2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5393229100415830997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211233002482996230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8445475753013013859}
+  - {fileID: 1061618623232267890}
+  m_Father: {fileID: 2039184603325481865}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2321308520233157975
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +462,38 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &2499328795038697366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4587300872396562138}
+  m_Layer: 0
+  m_Name: Pattern4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4587300872396562138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2499328795038697366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2206514258704564096}
+  - {fileID: 3346577008853087268}
+  m_Father: {fileID: 2039184603325481865}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2540593432331637617
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,8 +533,146 @@ Transform:
   - {fileID: 1768782193625485681}
   - {fileID: 4266166196309299357}
   m_Father: {fileID: 2039184603325481865}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3000304274008564090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1061618623232267890}
+  - component: {fileID: 7811274421315322484}
+  - component: {fileID: 1522422914854651332}
+  m_Layer: 0
+  m_Name: CenterBulletSpawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1061618623232267890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000304274008564090}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.10500002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5393229100415830997}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7811274421315322484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000304274008564090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+    type: 3}
+  spawnPoint: {fileID: 1061618623232267890}
+  damage: 1
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &1522422914854651332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000304274008564090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers: 6
+  primaryRateOfFire: 1
+  secondaryRateOfFire: 0.1
+  initialDelay: 1
+  bulletCount: 080000000800000008000000050000000500000005000000
+  startSpread:
+  - 0
+  - 120
+  - 240
+  - 0
+  - 120
+  - 240
+  endSpread:
+  - -120
+  - 0
+  - 120
+  - 120
+  - 240
+  - 360
+  startSpeed1:
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  startSpeed2:
+  - 3
+  - 3
+  - 3
+  - 5
+  - 5
+  - 5
+  endSpeed1:
+  - 3
+  - 3
+  - 3
+  - 5
+  - 5
+  - 5
+  endSpeed2:
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  startOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  startBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  isInverted: 0
 --- !u!1 &3160161784579720368
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6900086958356423289}
   - component: {fileID: 261268818}
+  - component: {fileID: 6660979084475533620}
   m_Layer: 0
   m_Name: RightBulletSpawn
   m_TagString: Untagged
@@ -377,12 +698,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3160161784579720368}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.35, y: -1.53, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5, y: -1.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2039184603325481865}
-  m_RootOrder: 1
+  m_Father: {fileID: 7385223579465360173}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &261268818
 MonoBehaviour:
@@ -396,12 +717,122 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+  projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
     type: 3}
   spawnPoint: {fileID: 6900086958356423289}
-  damage: 1
+  damage: 2
   damageTag: Player
   maxRange: 15
+--- !u!114 &6660979084475533620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3160161784579720368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers: 5
+  primaryRateOfFire: 4
+  secondaryRateOfFire: 0.5
+  initialDelay: 1
+  bulletCount: 0800000008000000080000000800000008000000
+  startSpread:
+  - 60
+  - 60
+  - 60
+  - 60
+  - 60
+  endSpread:
+  - -75
+  - -75
+  - -75
+  - -75
+  - -75
+  startSpeed1:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  startSpeed2:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  endSpeed1:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  endSpeed2:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  startOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  startBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  isInverted: 1
+--- !u!1 &3169490972850995259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7351342161648822164}
+  m_Layer: 0
+  m_Name: Pattern3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7351342161648822164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169490972850995259}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5229338917547181067}
+  - {fileID: 4462325750949073096}
+  m_Father: {fileID: 2039184603325481865}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3291379662738837217
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +911,221 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &3737428369930231701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8445475753013013859}
+  - component: {fileID: 5369517247992672654}
+  - component: {fileID: 3980339690292623860}
+  - component: {fileID: 7419727203376994419}
+  m_Layer: 0
+  m_Name: CenterBulletSpawn1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8445475753013013859
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3737428369930231701}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.10500002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5393229100415830997}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5369517247992672654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3737428369930231701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
+    type: 3}
+  spawnPoint: {fileID: 8445475753013013859}
+  damage: 2
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &3980339690292623860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3737428369930231701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 18
+  secondaryTurretCount: 3
+  primaryRateOfFire: 2
+  secondaryRateOfFire: 0.1
+  spread: 20
+  startSpeed: 5
+  endSpeed: 3
+  offset: 0
+  boostDelay: 0
+  initialDelay: 2
+  isInverted: 1
+--- !u!114 &7419727203376994419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3737428369930231701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 17
+  secondaryTurretCount: 3
+  primaryRateOfFire: 2
+  secondaryRateOfFire: 0.1
+  spread: 21.17
+  startSpeed: 5
+  endSpeed: 3
+  offset: 0
+  boostDelay: 0
+  initialDelay: 1
+  isInverted: 1
+--- !u!1 &3968227765841281146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4462325750949073096}
+  - component: {fileID: 8150938352205242743}
+  - component: {fileID: 1799990561101641088}
+  m_Layer: 0
+  m_Name: CenterBulletSpawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4462325750949073096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3968227765841281146}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.10500002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7351342161648822164}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8150938352205242743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3968227765841281146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+    type: 3}
+  spawnPoint: {fileID: 4462325750949073096}
+  damage: 1
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &1799990561101641088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3968227765841281146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers: 4
+  primaryRateOfFire: 1
+  secondaryRateOfFire: 0.1
+  initialDelay: 0
+  bulletCount: 0f0000000f0000000f0000000f000000
+  startSpread:
+  - 0
+  - 0
+  - 0
+  - 0
+  endSpread:
+  - 360
+  - 360
+  - 360
+  - 360
+  startSpeed1:
+  - 3
+  - 4
+  - 5
+  - 6
+  startSpeed2:
+  - 3
+  - 4
+  - 5
+  - 6
+  endSpeed1:
+  - 3
+  - 4
+  - 5
+  - 6
+  endSpeed2:
+  - 3
+  - 4
+  - 5
+  - 6
+  startOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  endOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  startBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  isInverted: 0
 --- !u!1 &3968342273721302564
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,6 +1282,134 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &4789593195421187289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3346577008853087268}
+  - component: {fileID: 16462842350263284}
+  - component: {fileID: 856749518673543209}
+  m_Layer: 0
+  m_Name: CenterBulletSpawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3346577008853087268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4789593195421187289}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.10500002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4587300872396562138}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &16462842350263284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4789593195421187289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
+    type: 3}
+  spawnPoint: {fileID: 3346577008853087268}
+  damage: 2
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &856749518673543209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4789593195421187289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers: 5
+  primaryRateOfFire: 4.5
+  secondaryRateOfFire: 0.3
+  initialDelay: 0
+  bulletCount: 0f0000000f0000000f0000000f0000000f000000
+  startSpread:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endSpread:
+  - 360
+  - 360
+  - 360
+  - 360
+  - 360
+  startSpeed1:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  startSpeed2:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  endSpeed1:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  endSpeed2:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  startOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  startBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  isInverted: 0
 --- !u!1 &4977834949671437665
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +1654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 715967348736117541}
   - component: {fileID: 5744522335416994821}
+  - component: {fileID: 4938304257647541493}
   m_Layer: 0
   m_Name: LeftBulletSpawn
   m_TagString: Untagged
@@ -894,12 +1669,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7491446052357454388}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.35, y: -1.53, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5, y: -1.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2039184603325481865}
-  m_RootOrder: 2
+  m_Father: {fileID: 7385223579465360173}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5744522335416994821
 MonoBehaviour:
@@ -913,61 +1688,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+  projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
     type: 3}
   spawnPoint: {fileID: 715967348736117541}
-  damage: 1
+  damage: 2
   damageTag: Player
   maxRange: 15
---- !u!1 &7750445134307077832
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2124971466480858460}
-  - component: {fileID: 6078210010848241756}
-  m_Layer: 0
-  m_Name: BulletSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2124971466480858460
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750445134307077832}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.53, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2039184603325481865}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6078210010848241756
+--- !u!114 &4938304257647541493
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750445134307077832}
+  m_GameObject: {fileID: 7491446052357454388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
-    type: 3}
-  spawnPoint: {fileID: 2124971466480858460}
-  damage: 1
-  damageTag: Player
-  maxRange: 15
+  layers: 5
+  primaryRateOfFire: 4
+  secondaryRateOfFire: 0.5
+  initialDelay: 1
+  bulletCount: 0800000008000000080000000800000008000000
+  startSpread:
+  - -60
+  - -60
+  - -60
+  - -60
+  - -60
+  endSpread:
+  - 75
+  - 75
+  - 75
+  - 75
+  - 75
+  startSpeed1:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  startSpeed2:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  endSpeed1:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  endSpeed2:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  startOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endOffset:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  startBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  isInverted: 1
 --- !u!1 &8495887003981306815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,6 +1863,7 @@ GameObject:
   - component: {fileID: 7466792812589667057}
   - component: {fileID: 7201235000630507851}
   - component: {fileID: 5816129802602218624}
+  - component: {fileID: 6411935635345509527}
   m_Layer: 0
   m_Name: Minotaur
   m_TagString: Enemy
@@ -1077,10 +1882,11 @@ Transform:
   m_LocalPosition: {x: -1.4547677, y: -3.5671024, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2124971466480858460}
-  - {fileID: 6900086958356423289}
-  - {fileID: 715967348736117541}
   - {fileID: 8512680991178679093}
+  - {fileID: 7385223579465360173}
+  - {fileID: 5393229100415830997}
+  - {fileID: 7351342161648822164}
+  - {fileID: 4587300872396562138}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1117,7 +1923,7 @@ MonoBehaviour:
   currentHealth: 0
   isDestructible: 1
   damageTag: Player
-  collisionDamage: 1
+  collisionDamage: 5
 --- !u!114 &7201235000630507851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,10 +1951,144 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   primaryBehaviorDelay: 0.5
-  secondaryBehaviorDelay: 1
-  primaryBehaviorDuration: 5
+  secondaryBehaviorDelay: 0
+  primaryBehaviorDuration: 20
   secondaryBehaviorDuration: 10
-  behaviorSwitch: 1
+  behaviorSwitch: 0
   permanentSwitch: 0
   primaryBehavior: 2
   secondaryBehavior: 0
+--- !u!114 &6411935635345509527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864870526059961215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83ed0994e37aa94b8a2be428ed4f898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patternCount: 6
+  initialDelay: 1
+  patternDuration:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  patternGroupCount: 6
+  patternIndex: 000000000100000002000000030000000400000005000000
+  bulletSource:
+  - {fileID: 9150220828290409427}
+  - {fileID: 2211233002482996230}
+  - {fileID: 9150220828290409427}
+  - {fileID: 3169490972850995259}
+  - {fileID: 9150220828290409427}
+  - {fileID: 2499328795038697366}
+--- !u!1 &9115910123438290566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5229338917547181067}
+  - component: {fileID: 7049302960310023179}
+  - component: {fileID: 5047811086618225612}
+  m_Layer: 0
+  m_Name: CenterBulletSpawn1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5229338917547181067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9115910123438290566}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.10500002, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7351342161648822164}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7049302960310023179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9115910123438290566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
+    type: 3}
+  spawnPoint: {fileID: 5229338917547181067}
+  damage: 2
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &5047811086618225612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9115910123438290566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 17
+  secondaryTurretCount: 1
+  primaryRateOfFire: 0.75
+  secondaryRateOfFire: 0.1
+  startSpeed: 3
+  endSpeed: 3
+  spread: 21
+  boostDelay: 0
+  initialDelay: 1
+  isInverted: 1
+--- !u!1 &9150220828290409427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7385223579465360173}
+  m_Layer: 0
+  m_Name: Pattern1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7385223579465360173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9150220828290409427}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6900086958356423289}
+  - {fileID: 715967348736117541}
+  m_Father: {fileID: 2039184603325481865}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

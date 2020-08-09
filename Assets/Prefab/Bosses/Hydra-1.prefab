@@ -1630,7 +1630,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2124971466480858460}
   - component: {fileID: 7373806994340088522}
-  - component: {fileID: 6277295116107971776}
   - component: {fileID: 1181587725}
   m_Layer: 0
   m_Name: NormalShellSpawn
@@ -1671,54 +1670,6 @@ MonoBehaviour:
   damage: 1
   damageTag: Player
   maxRange: 15
---- !u!114 &6277295116107971776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750445134307077832}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5edda8ebe957a438a2315fb66bfd4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layers: 2
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 0.1
-  initialDelay: 1
-  bulletCount: 1e00000014000000
-  startSpread:
-  - -90
-  - 90
-  endSpread:
-  - 90
-  - -90
-  startSpeed1:
-  - 5
-  - 1
-  startSpeed2:
-  - 5
-  - 1
-  endSpeed1:
-  - 1
-  - 5
-  endSpeed2:
-  - 1
-  - 5
-  startOffset:
-  - 0
-  - 0
-  endOffset:
-  - 0
-  - 0
-  startBoostDelay:
-  - 0
-  - 0
-  endBoostDelay:
-  - 0
-  - 0
-  isInverted: 1
 --- !u!114 &1181587725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1905,7 +1856,7 @@ MonoBehaviour:
   currentHealth: 0
   isDestructible: 1
   damageTag: Player
-  collisionDamage: 1
+  collisionDamage: 5
 --- !u!114 &7201235000630507851
 MonoBehaviour:
   m_ObjectHideFlags: 0

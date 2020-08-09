@@ -44,7 +44,7 @@ public class DirectedBarrage : MonoBehaviour
 
     private void OnEnable()
     {
-        fireCounter = Time.time + primaryRateOfFire;
+        fireCounter = Time.time + initialDelay;
     }
 
     IEnumerator ShootingController()
@@ -60,7 +60,7 @@ public class DirectedBarrage : MonoBehaviour
             for (int j = 0; j < primaryTurretCount; j++)
             {
 
-                if (isPlayer)
+                if (isPlayer && v.x != transform.position.x)
                 {
                     weapon.Shoot(v, temp_angle, 0, startSpeed, endSpeed, boostDelay);
                 }

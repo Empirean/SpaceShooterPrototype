@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 1041741609788077353}
   - component: {fileID: 8696004546441991669}
   m_Layer: 0
-  m_Name: LeftBulletSpawn
+  m_Name: LeftHatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
   initialDelay: 5
   spawnRate: 5
   nextSpawnInterval: 0.1
-  numberOfSpawn: 2
+  numberOfSpawn: 1
 --- !u!1 &4578775574195472233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,7 +1357,7 @@ GameObject:
   - component: {fileID: 3910511833240454277}
   - component: {fileID: 3260937442889625430}
   m_Layer: 0
-  m_Name: BulletSpawn
+  m_Name: MainGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1389,10 +1389,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+  projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
     type: 3}
   spawnPoint: {fileID: 2124971466480858460}
-  damage: 1
+  damage: 2
   damageTag: Player
   maxRange: 15
 --- !u!114 &3260937442889625430
@@ -1411,7 +1411,7 @@ MonoBehaviour:
   primaryRateOfFire: 10
   secondaryRateOfFire: 0.1
   initialDelay: 1
-  bulletCount: 28000000280000002800000028000000
+  bulletCount: 1e0000001e0000001e0000001e000000
   startSpread:
   - 120
   - 120
@@ -1475,7 +1475,7 @@ GameObject:
   - component: {fileID: 1712945977950812478}
   - component: {fileID: 3544895292496975693}
   m_Layer: 0
-  m_Name: RightBulletSpawn
+  m_Name: RightHatch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1531,7 +1531,7 @@ MonoBehaviour:
   initialDelay: 5
   spawnRate: 5
   nextSpawnInterval: 0.1
-  numberOfSpawn: 2
+  numberOfSpawn: 1
 --- !u!1 &8321491189034154413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,7 +1802,7 @@ MonoBehaviour:
   currentHealth: 0
   isDestructible: 1
   damageTag: Player
-  collisionDamage: 1
+  collisionDamage: 5
 --- !u!114 &7201235000630507851
 MonoBehaviour:
   m_ObjectHideFlags: 0
