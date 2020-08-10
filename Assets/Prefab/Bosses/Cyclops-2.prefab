@@ -1839,7 +1839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  maxHealth: 160
+  maxHealth: 250
   speed: 1
   armor: 0
   currentHealth: 0

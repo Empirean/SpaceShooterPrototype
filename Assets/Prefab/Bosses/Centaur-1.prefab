@@ -1743,7 +1743,7 @@ GameObject:
   - component: {fileID: 7201235000630507851}
   - component: {fileID: 5816129802602218624}
   m_Layer: 0
-  m_Name: Centaur
+  m_Name: Centaur-1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1796,7 +1796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  maxHealth: 170
+  maxHealth: 200
   speed: 1
   armor: 0
   currentHealth: 0

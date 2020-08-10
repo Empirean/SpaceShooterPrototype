@@ -1492,7 +1492,7 @@ GameObject:
   - component: {fileID: 5816129802602218624}
   - component: {fileID: 8906333698554722741}
   m_Layer: 0
-  m_Name: Manticore
+  m_Name: Manticore-3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1543,7 +1543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  maxHealth: 180
+  maxHealth: 260
   speed: 1
   armor: 0
   currentHealth: 0

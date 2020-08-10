@@ -1865,7 +1865,7 @@ GameObject:
   - component: {fileID: 5816129802602218624}
   - component: {fileID: 6411935635345509527}
   m_Layer: 0
-  m_Name: Minotaur
+  m_Name: Minotaur-4
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1917,7 +1917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  maxHealth: 160
+  maxHealth: 400
   speed: 1
   armor: 0
   currentHealth: 0
@@ -1973,11 +1973,11 @@ MonoBehaviour:
   patternCount: 6
   initialDelay: 1
   patternDuration:
+  - 12
   - 10
+  - 12
   - 10
-  - 10
-  - 10
-  - 10
+  - 12
   - 10
   patternGroupCount: 6
   patternIndex: 000000000100000002000000030000000400000005000000

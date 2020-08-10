@@ -1800,7 +1800,7 @@ GameObject:
   - component: {fileID: 7201235000630507851}
   - component: {fileID: 5816129802602218624}
   m_Layer: 0
-  m_Name: Hydra
+  m_Name: Hydra-1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1850,7 +1850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  maxHealth: 150
+  maxHealth: 210
   speed: 1
   armor: 0
   currentHealth: 0

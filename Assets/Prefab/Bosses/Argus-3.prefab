@@ -174,6 +174,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3483995245473230146}
+  - {fileID: 3299917548675524493}
   m_Father: {fileID: 2039184603325481865}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -274,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 2
+  primaryTurretCount: 3
   secondaryTurretCount: 1
   primaryRateOfFire: 2.5
   secondaryRateOfFire: 0.1
@@ -296,7 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 2
+  primaryTurretCount: 3
   secondaryTurretCount: 1
   primaryRateOfFire: 2.5
   secondaryRateOfFire: 0.1
@@ -318,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 2
+  primaryTurretCount: 3
   secondaryTurretCount: 1
   primaryRateOfFire: 2.5
   secondaryRateOfFire: 0.1
@@ -691,7 +692,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7557827156998716500}
   - component: {fileID: 7641184060167063358}
-  - component: {fileID: 8237389082113888143}
+  - component: {fileID: 6067904662742415028}
+  - component: {fileID: 4942767539986474780}
   m_Layer: 0
   m_Name: MainGun
   m_TagString: Untagged
@@ -731,7 +733,7 @@ MonoBehaviour:
   damage: 2
   damageTag: Player
   maxRange: 15
---- !u!114 &8237389082113888143
+--- !u!114 &6067904662742415028
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -740,18 +742,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 3434695328606900653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
+  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 4
-  secondaryTurretCount: 3
+  primaryTurretCount: 5
+  secondaryTurretCount: 7
   primaryRateOfFire: 2
-  secondaryRateOfFire: 0.2
+  secondaryRateOfFire: 0.1
+  spread: 72
   startSpeed: 7
-  endSpeed: 1
-  spread: 30
+  endSpeed: 3
+  offset: 0
   boostDelay: 0
   initialDelay: 1
+  isInverted: 0
+--- !u!114 &4942767539986474780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3434695328606900653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 5
+  secondaryTurretCount: 7
+  primaryRateOfFire: 2
+  secondaryRateOfFire: 0.1
+  spread: 72
+  startSpeed: 7
+  endSpeed: 3
+  offset: 0
+  boostDelay: 0
+  initialDelay: 2
   isInverted: 1
 --- !u!1 &4130824662733580845
 GameObject:
@@ -953,6 +979,7 @@ GameObject:
   - component: {fileID: 5354719004385014825}
   - component: {fileID: 3009203155260262880}
   - component: {fileID: 1050212462}
+  - component: {fileID: 7986729219610661489}
   m_Layer: 0
   m_Name: MainGun
   m_TagString: Untagged
@@ -1005,14 +1032,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   primaryTurretCount: 12
-  secondaryTurretCount: 3
-  primaryRateOfFire: 2.5
+  secondaryTurretCount: 1
+  primaryRateOfFire: 1
   secondaryRateOfFire: 0.2
   startSpeed: 3
   endSpeed: 5
   spread: 30
   boostDelay: 0
-  initialDelay: 2
+  initialDelay: 1
+  isInverted: 1
+--- !u!114 &7986729219610661489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5381919980931381945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 11
+  secondaryTurretCount: 1
+  primaryRateOfFire: 1
+  secondaryRateOfFire: 0.2
+  startSpeed: 3
+  endSpeed: 5
+  spread: 30
+  boostDelay: 0
+  initialDelay: 1.5
   isInverted: 1
 --- !u!1 &5952689178847745076
 GameObject:
@@ -1025,8 +1074,9 @@ GameObject:
   - component: {fileID: 3483995245473230146}
   - component: {fileID: 5630053307796124643}
   - component: {fileID: 6727873243385540338}
+  - component: {fileID: 4165187506621018530}
   m_Layer: 0
-  m_Name: MainGun
+  m_Name: MainGun1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1077,14 +1127,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   primaryTurretCount: 9
-  secondaryTurretCount: 2
-  primaryRateOfFire: 1.2
-  secondaryRateOfFire: 0.7
-  startSpeed: 2
-  endSpeed: 2
+  secondaryTurretCount: 3
+  primaryRateOfFire: 2
+  secondaryRateOfFire: 0.1
+  startSpeed: 6
+  endSpeed: 3
   spread: 30
   boostDelay: 0
   initialDelay: 1
+  isInverted: 1
+--- !u!114 &4165187506621018530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5952689178847745076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryTurretCount: 10
+  secondaryTurretCount: 3
+  primaryRateOfFire: 2
+  secondaryRateOfFire: 0.1
+  startSpeed: 6
+  endSpeed: 3
+  spread: 30
+  boostDelay: 0
+  initialDelay: 1.5
   isInverted: 1
 --- !u!1 &6327264532251878785
 GameObject:
@@ -1242,6 +1314,134 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &7214950765503267088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3299917548675524493}
+  - component: {fileID: 4439335612787568474}
+  - component: {fileID: 5521301494244653387}
+  m_Layer: 0
+  m_Name: MainGun2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3299917548675524493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214950765503267088}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3876270020757987862}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4439335612787568474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214950765503267088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
+    type: 3}
+  spawnPoint: {fileID: 3299917548675524493}
+  damage: 1
+  damageTag: Player
+  maxRange: 15
+--- !u!114 &5521301494244653387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214950765503267088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers: 5
+  primaryRateOfFire: 2
+  secondaryRateOfFire: 0.25
+  initialDelay: 2
+  bulletCount: 0500000005000000050000000500000005000000
+  startSpread:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endSpread:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  startSpeed1:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  startSpeed2:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  endSpeed1:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  endSpeed2:
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  startOffset:
+  - -5
+  - -5
+  - -5
+  - -5
+  - -5
+  endOffset:
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  startBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  isInverted: 1
 --- !u!1 &7671973692949106212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,7 +1740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 2
+  primaryTurretCount: 3
   secondaryTurretCount: 1
   primaryRateOfFire: 2.5
   secondaryRateOfFire: 0.1
@@ -1562,7 +1762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 2
+  primaryTurretCount: 3
   secondaryTurretCount: 1
   primaryRateOfFire: 2.5
   secondaryRateOfFire: 0.1
@@ -1584,7 +1784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 2
+  primaryTurretCount: 3
   secondaryTurretCount: 1
   primaryRateOfFire: 2.5
   secondaryRateOfFire: 0.1
@@ -1660,7 +1860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  maxHealth: 210
+  maxHealth: 280
   speed: 0.5
   armor: 0
   currentHealth: 0
@@ -1708,7 +1908,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8864870526059961215}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d83ed0994e37aa94b8a2be428ed4f898, type: 3}
   m_Name: 
@@ -1716,9 +1916,9 @@ MonoBehaviour:
   patternCount: 3
   initialDelay: 1
   patternDuration:
-  - 8
   - 10
-  - 5
+  - 10
+  - 10
   patternGroupCount: 3
   patternIndex: 000000000100000002000000
   bulletSource:

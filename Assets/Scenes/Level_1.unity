@@ -535,12 +535,18 @@ MonoBehaviour:
     type: 3}
   argusType: {fileID: 7466792812589667057, guid: faa7dd759dface849bcc4ba7d65495cf,
     type: 3}
+  gorgonType: {fileID: 7466792812589667057, guid: 2a7d4306b5240ac4d8fe4106918cc1b1,
+    type: 3}
+  cerberusType: {fileID: 7466792812589667057, guid: 46cd01fbe3b23d64f9d88d2f54eea68c,
+    type: 3}
+  minotaurType: {fileID: 7466792812589667057, guid: ea1b7fa85cfed4741a3c62bf6fa3182b,
+    type: 3}
   nextWaveDelay: 1.5
   waveCount: 4
   firstLayerCount: 03000000030000000300000001000000
   secondLayerCount: 01000000020000000300000000000000
   thirdLayerCount: 03000000030000000300000000000000
-  firstLayerEnemy: 0400000004000000040000000a000000
+  firstLayerEnemy: 0400000004000000040000000c000000
   secondLayerEnemy: 03000000050000000100000000000000
   thirdLayerEnemy: 04000000040000000400000000000000
   minComebackThreshold: 2

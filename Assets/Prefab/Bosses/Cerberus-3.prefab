@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6292524322154739569
 Transform:
   m_ObjectHideFlags: 0
@@ -27,11 +27,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4007898387901948324}
-  - {fileID: 8709694500116813757}
   - {fileID: 736369078023862996}
-  - {fileID: 136191676435627319}
-  - {fileID: 5335799201962715244}
   m_Father: {fileID: 2039184603325481865}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -128,7 +124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4238881150541670680
 Transform:
   m_ObjectHideFlags: 0
@@ -142,7 +138,6 @@ Transform:
   m_Children:
   - {fileID: 4563054473020468943}
   - {fileID: 715967348736117541}
-  - {fileID: 2124971466480858460}
   - {fileID: 8697961375341075386}
   - {fileID: 6900086958356423289}
   m_Father: {fileID: 2039184603325481865}
@@ -330,11 +325,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 18
+  primaryTurretCount: 24
   secondaryTurretCount: 1
   primaryRateOfFire: 2
   secondaryRateOfFire: 0.1
-  spread: 20
+  spread: 15
   startSpeed: 5
   endSpeed: 1
   offset: 0
@@ -449,7 +444,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4238881150541670680}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8736268002531106944
 MonoBehaviour:
@@ -481,13 +476,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 18
+  primaryTurretCount: 24
   secondaryTurretCount: 1
   primaryRateOfFire: 2
   secondaryRateOfFire: 0.1
-  spread: 20
-  startSpeed: 3
-  endSpeed: 3
+  spread: 15
+  startSpeed: 5
+  endSpeed: 1
   offset: 0
   boostDelay: 0
   initialDelay: 1.6
@@ -522,7 +517,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4238881150541670680}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &261268818
 MonoBehaviour:
@@ -554,134 +549,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 18
+  primaryTurretCount: 24
   secondaryTurretCount: 1
   primaryRateOfFire: 2
   secondaryRateOfFire: 0.1
-  spread: 20
+  spread: 15
   startSpeed: 5
   endSpeed: 1
   offset: 0
   boostDelay: 0
   initialDelay: 1.8
-  isInverted: 1
---- !u!1 &3294963094745632034
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 136191676435627319}
-  - component: {fileID: 5941222607688539594}
-  - component: {fileID: 3032420235752077359}
-  - component: {fileID: 8836360803517754623}
-  - component: {fileID: 3793642456112837801}
-  m_Layer: 0
-  m_Name: RightTurreet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &136191676435627319
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3294963094745632034}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.726, y: -0.41499996, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6292524322154739569}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5941222607688539594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3294963094745632034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
-    type: 3}
-  spawnPoint: {fileID: 136191676435627319}
-  damage: 1
-  damageTag: Player
-  maxRange: 15
---- !u!114 &3032420235752077359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3294963094745632034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 3
-  secondaryTurretCount: 1
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 1
-  startSpeed: 3
-  endSpeed: 1
-  spread: 5
-  boostDelay: 0
-  initialDelay: 1.4
-  isInverted: 1
---- !u!114 &8836360803517754623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3294963094745632034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 2
-  secondaryTurretCount: 1
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 1
-  startSpeed: 4
-  endSpeed: 1
-  spread: 5
-  boostDelay: 0
-  initialDelay: 1.4
-  isInverted: 1
---- !u!114 &3793642456112837801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3294963094745632034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 1
-  secondaryTurretCount: 1
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 1
-  startSpeed: 5
-  endSpeed: 1
-  spread: 5
-  boostDelay: 0
-  initialDelay: 1.4
   isInverted: 1
 --- !u!1 &3992134978846562926
 GameObject:
@@ -693,7 +570,8 @@ GameObject:
   m_Component:
   - component: {fileID: 736369078023862996}
   - component: {fileID: 7429696557833138112}
-  - component: {fileID: 8987765384953661094}
+  - component: {fileID: 1777058746074833059}
+  - component: {fileID: 79789904519521775}
   m_Layer: 0
   m_Name: MainGun
   m_TagString: Untagged
@@ -709,11 +587,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3992134978846562926}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.671, z: 0}
+  m_LocalPosition: {x: 0, y: 1.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6292524322154739569}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7429696557833138112
 MonoBehaviour:
@@ -727,13 +605,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
+  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
     type: 3}
   spawnPoint: {fileID: 736369078023862996}
-  damage: 2
+  damage: 1
   damageTag: Player
   maxRange: 15
---- !u!114 &8987765384953661094
+--- !u!114 &1777058746074833059
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -742,19 +620,112 @@ MonoBehaviour:
   m_GameObject: {fileID: 3992134978846562926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 18
-  secondaryTurretCount: 1
-  primaryRateOfFire: 2
+  layers: 3
+  primaryRateOfFire: 1
   secondaryRateOfFire: 0.1
-  spread: 20
-  startSpeed: 3
-  endSpeed: 1
-  offset: 0
-  boostDelay: 0
   initialDelay: 1
+  bulletCount: 050000000500000005000000
+  startSpread:
+  - 15
+  - 15
+  - 15
+  endSpread:
+  - 15
+  - 15
+  - 15
+  startSpeed1:
+  - 7
+  - 6
+  - 5
+  startSpeed2:
+  - 7
+  - 6
+  - 5
+  endSpeed1:
+  - 7
+  - 6
+  - 5
+  endSpeed2:
+  - 7
+  - 6
+  - 5
+  startOffset:
+  - -5
+  - -5
+  - -5
+  endOffset:
+  - 5
+  - 5
+  - 5
+  startBoostDelay:
+  - 0
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
+  - 0
+  isInverted: 1
+--- !u!114 &79789904519521775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3992134978846562926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4ee0996a7d9094c84817aae1120610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers: 3
+  primaryRateOfFire: 1
+  secondaryRateOfFire: 0.1
+  initialDelay: 1
+  bulletCount: 050000000500000005000000
+  startSpread:
+  - -15
+  - -15
+  - -15
+  endSpread:
+  - -15
+  - -15
+  - -15
+  startSpeed1:
+  - 7
+  - 6
+  - 5
+  startSpeed2:
+  - 7
+  - 6
+  - 5
+  endSpeed1:
+  - 7
+  - 6
+  - 5
+  endSpeed2:
+  - 7
+  - 6
+  - 5
+  startOffset:
+  - 5
+  - 5
+  - 5
+  endOffset:
+  - -5
+  - -5
+  - -5
+  startBoostDelay:
+  - 0
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
+  - 0
   isInverted: 1
 --- !u!1 &4368434061106366655
 GameObject:
@@ -834,79 +805,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &4904559580246154892
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5655637020157478445}
-  - component: {fileID: 7649665894666623662}
-  - component: {fileID: 1380702094253360919}
-  m_Layer: 0
-  m_Name: RightMostTurret
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5655637020157478445
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4904559580246154892}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.235, y: -0.5430002, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4655230371482430543}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7649665894666623662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4904559580246154892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
-    type: 3}
-  spawnPoint: {fileID: 5655637020157478445}
-  damage: 1
-  damageTag: Player
-  maxRange: 15
---- !u!114 &1380702094253360919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4904559580246154892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 5
-  secondaryTurretCount: 1
-  primaryRateOfFire: 2
-  secondaryRateOfFire: 0.1
-  spread: 0
-  startSpeed: 7
-  endSpeed: 1
-  offset: 0.2
-  boostDelay: 0
-  initialDelay: 2
-  isInverted: 1
 --- !u!1 &5576000079139636102
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4655230371482430543
 Transform:
   m_ObjectHideFlags: 0
@@ -934,9 +832,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4615295109251984808}
   - {fileID: 1607943986464836332}
-  - {fileID: 5655637020157478445}
   m_Father: {fileID: 2039184603325481865}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1018,360 +914,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &6053046947570212007
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5335799201962715244}
-  - component: {fileID: 5218744854007415557}
-  - component: {fileID: 6919799789940547776}
-  - component: {fileID: 5649746357992370335}
-  - component: {fileID: 5119727889163177134}
-  m_Layer: 0
-  m_Name: RightMostTurret
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5335799201962715244
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6053046947570212007}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.235, y: -0.5430002, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6292524322154739569}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5218744854007415557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6053046947570212007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
-    type: 3}
-  spawnPoint: {fileID: 5335799201962715244}
-  damage: 1
-  damageTag: Player
-  maxRange: 15
---- !u!114 &6919799789940547776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6053046947570212007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 3
-  secondaryTurretCount: 1
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 1
-  startSpeed: 3
-  endSpeed: 1
-  spread: 5
-  boostDelay: 0
-  initialDelay: 1.6
-  isInverted: 1
---- !u!114 &5649746357992370335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6053046947570212007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 2
-  secondaryTurretCount: 1
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 1
-  startSpeed: 4
-  endSpeed: 1
-  spread: 5
-  boostDelay: 0
-  initialDelay: 1.6
-  isInverted: 1
---- !u!114 &5119727889163177134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6053046947570212007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 1
-  secondaryTurretCount: 1
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 1
-  startSpeed: 5
-  endSpeed: 1
-  spread: 5
-  boostDelay: 0
-  initialDelay: 1.6
-  isInverted: 1
---- !u!1 &6563768948117611409
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4007898387901948324}
-  - component: {fileID: 4088323401700560468}
-  - component: {fileID: 1507553926285670282}
-  - component: {fileID: 7290090871906238797}
-  - component: {fileID: 8658230531098763120}
-  m_Layer: 0
-  m_Name: LeftMostTurret
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4007898387901948324
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6563768948117611409}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2350001, y: -0.5430002, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6292524322154739569}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4088323401700560468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6563768948117611409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
-    type: 3}
-  spawnPoint: {fileID: 4007898387901948324}
-  damage: 1
-  damageTag: Player
-  maxRange: 15
---- !u!114 &1507553926285670282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6563768948117611409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 3
-  secondaryTurretCount: 1
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 1
-  startSpeed: 3
-  endSpeed: 1
-  spread: 5
-  boostDelay: 0
-  initialDelay: 1
-  isInverted: 1
---- !u!114 &7290090871906238797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6563768948117611409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 2
-  secondaryTurretCount: 1
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 1
-  startSpeed: 4
-  endSpeed: 1
-  spread: 5
-  boostDelay: 0
-  initialDelay: 1
-  isInverted: 1
---- !u!114 &8658230531098763120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6563768948117611409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 1
-  secondaryTurretCount: 1
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 1
-  startSpeed: 5
-  endSpeed: 1
-  spread: 5
-  boostDelay: 0
-  initialDelay: 1
-  isInverted: 1
---- !u!1 &6850562468524643868
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8709694500116813757}
-  - component: {fileID: 3624639567510095384}
-  - component: {fileID: 2709617088507818176}
-  - component: {fileID: 3926143193101516803}
-  - component: {fileID: 5641733191416249191}
-  m_Layer: 0
-  m_Name: LeftTurret
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8709694500116813757
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6850562468524643868}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7260001, y: -0.41499996, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6292524322154739569}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3624639567510095384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6850562468524643868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
-    type: 3}
-  spawnPoint: {fileID: 8709694500116813757}
-  damage: 1
-  damageTag: Player
-  maxRange: 15
---- !u!114 &2709617088507818176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6850562468524643868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 3
-  secondaryTurretCount: 1
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 1
-  startSpeed: 3
-  endSpeed: 1
-  spread: 5
-  boostDelay: 0
-  initialDelay: 1.2
-  isInverted: 1
---- !u!114 &3926143193101516803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6850562468524643868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 2
-  secondaryTurretCount: 1
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 1
-  startSpeed: 4
-  endSpeed: 1
-  spread: 5
-  boostDelay: 0
-  initialDelay: 1.2
-  isInverted: 1
---- !u!114 &5641733191416249191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6850562468524643868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3a7097f5e2aa0347b26e56263cb5187, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 1
-  secondaryTurretCount: 1
-  primaryRateOfFire: 3
-  secondaryRateOfFire: 1
-  startSpeed: 5
-  endSpeed: 1
-  spread: 5
-  boostDelay: 0
-  initialDelay: 1.2
-  isInverted: 1
 --- !u!1 &6955554782153114252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1682,13 +1224,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 18
+  primaryTurretCount: 24
   secondaryTurretCount: 1
   primaryRateOfFire: 2
   secondaryRateOfFire: 0.1
-  spread: 20
-  startSpeed: 3
-  endSpeed: 3
+  spread: 15
+  startSpeed: 5
+  endSpeed: 1
   offset: 0
   boostDelay: 0
   initialDelay: 1.2
@@ -1863,79 +1405,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &7750445134307077832
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2124971466480858460}
-  - component: {fileID: 6078210010848241756}
-  - component: {fileID: 7817509259407656256}
-  m_Layer: 0
-  m_Name: MainGun
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2124971466480858460
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750445134307077832}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.671, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4238881150541670680}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6078210010848241756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750445134307077832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
-    type: 3}
-  spawnPoint: {fileID: 2124971466480858460}
-  damage: 2
-  damageTag: Player
-  maxRange: 15
---- !u!114 &7817509259407656256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7750445134307077832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 18
-  secondaryTurretCount: 1
-  primaryRateOfFire: 2
-  secondaryRateOfFire: 0.1
-  spread: 20
-  startSpeed: 1
-  endSpeed: 5
-  offset: 0
-  boostDelay: 0
-  initialDelay: 1.4
-  isInverted: 1
 --- !u!1 &8719484808119585162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,7 +1493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1607943986464836332}
   - component: {fileID: 9084953987553295546}
-  - component: {fileID: 2219217792119805678}
+  - component: {fileID: 7353874041196250947}
   m_Layer: 0
   m_Name: MainGun
   m_TagString: Untagged
@@ -2044,7 +1513,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4655230371482430543}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9084953987553295546
 MonoBehaviour:
@@ -2064,7 +1533,7 @@ MonoBehaviour:
   damage: 2
   damageTag: Player
   maxRange: 15
---- !u!114 &2219217792119805678
+--- !u!114 &7353874041196250947
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2073,20 +1542,55 @@ MonoBehaviour:
   m_GameObject: {fileID: 8744462862962463173}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e5edda8ebe957a438a2315fb66bfd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryTurretCount: 5
-  secondaryTurretCount: 1
-  primaryRateOfFire: 2
-  secondaryRateOfFire: 0.1
-  spread: 0
-  startSpeed: 5
-  endSpeed: 1
-  offset: 0.2
-  boostDelay: 0
+  layers: 3
+  primaryRateOfFire: 4
+  secondaryRateOfFire: 0.07
   initialDelay: 1
-  isInverted: 1
+  bulletCount: 320000003200000032000000
+  startSpread:
+  - 0
+  - 120
+  - 240
+  endSpread:
+  - 360
+  - 480
+  - 600
+  startSpeed1:
+  - 3
+  - 3
+  - 3
+  startSpeed2:
+  - 3
+  - 3
+  - 3
+  endSpeed1:
+  - 3
+  - 3
+  - 3
+  endSpeed2:
+  - 3
+  - 3
+  - 3
+  startOffset:
+  - 0
+  - 0
+  - 0
+  endOffset:
+  - 0
+  - 0
+  - 0
+  startBoostDelay:
+  - 0
+  - 0
+  - 0
+  endBoostDelay:
+  - 0
+  - 0
+  - 0
+  isInverted: 0
 --- !u!1 &8864870526059961215
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,7 +1606,7 @@ GameObject:
   - component: {fileID: 5816129802602218624}
   - component: {fileID: 2135231808197045316}
   m_Layer: 0
-  m_Name: Cerberus
+  m_Name: Cerberus-3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2153,8 +1657,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
-  maxHealth: 160
-  speed: 2
+  maxHealth: 270
+  speed: 0.5
   armor: 0
   currentHealth: 0
   isDestructible: 1
@@ -2190,7 +1694,7 @@ MonoBehaviour:
   secondaryBehaviorDelay: 0
   primaryBehaviorDuration: 20
   secondaryBehaviorDuration: 10
-  behaviorSwitch: 1
+  behaviorSwitch: 0
   permanentSwitch: 0
   primaryBehavior: 2
   secondaryBehavior: 0
@@ -2211,7 +1715,7 @@ MonoBehaviour:
   patternDuration:
   - 10
   - 10
-  - 10
+  - 12
   patternGroupCount: 3
   patternIndex: 000000000100000002000000
   bulletSource:
@@ -2296,76 +1800,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &9044979457099146209
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4615295109251984808}
-  - component: {fileID: 4324205806164377743}
-  - component: {fileID: 5799819082530334121}
-  m_Layer: 0
-  m_Name: LeftMostTurret
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4615295109251984808
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9044979457099146209}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2350001, y: -0.5430002, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4655230371482430543}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4324205806164377743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9044979457099146209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33c20b77684f5aa48a31a354937ecacb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
-    type: 3}
-  spawnPoint: {fileID: 4615295109251984808}
-  damage: 1
-  damageTag: Player
-  maxRange: 15
---- !u!114 &5799819082530334121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9044979457099146209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a00ed0dddd9f29d40b5403fe093d26b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryTurretCount: 5
-  secondaryTurretCount: 1
-  primaryRateOfFire: 2
-  secondaryRateOfFire: 0.1
-  spread: 0
-  startSpeed: 7
-  endSpeed: 1
-  offset: 0.2
-  boostDelay: 0
-  initialDelay: 2
-  isInverted: 1

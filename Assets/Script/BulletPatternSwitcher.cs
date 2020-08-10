@@ -42,9 +42,7 @@ public class BulletPatternSwitcher : MonoBehaviour
     {
         for (int i = 0; i < patternGroupCount; i++)
         {
-
             bulletSource[i].SetActive(false);
-
         }
 
         bulletSource[in_index].SetActive(in_enabled);

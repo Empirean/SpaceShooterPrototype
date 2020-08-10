@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Weapon))]
-public class DirectedBarrage : MonoBehaviour
+public class HomingWeapon : MonoBehaviour
 {
 
     [Space]

@@ -33,6 +33,9 @@ public class SpawnerMaster : MonoBehaviour
     public Unit demigodType;
     public Unit harpyType;
     public Unit argusType;
+    public Unit gorgonType;
+    public Unit cerberusType;
+    public Unit minotaurType;
 
     [Space]
     public float nextWaveDelay = 1.5f;
@@ -63,7 +66,10 @@ public class SpawnerMaster : MonoBehaviour
         manticore,
         demigod,
         harpy,
-        argus
+        argus,
+        gorgon,
+        cerberus,
+        minotaur
     }
 
     [Space]
@@ -237,6 +243,15 @@ public class SpawnerMaster : MonoBehaviour
             case EnemyTypes.argus:
                 SpawnArgus();
                 break;
+            case EnemyTypes.gorgon:
+                SpawnGorgon();
+                break;
+            case EnemyTypes.cerberus:
+                SpawnCerberus();
+                break;
+            case EnemyTypes.minotaur:
+                SpawnMinotaur();
+                break;
             default:
                 break;
         }
@@ -252,6 +267,45 @@ public class SpawnerMaster : MonoBehaviour
         if (OnBossSpawn != null) OnBossSpawn();
 
         Unit hydra  = Instantiate(hydraType, v, Quaternion.identity);
+        hydra.OnBossDeath += OnBossDestroy;
+    }
+
+    void SpawnGorgon()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
+
+        if (OnBossSpawn != null) OnBossSpawn();
+
+        Unit hydra = Instantiate(gorgonType, v, Quaternion.identity);
+        hydra.OnBossDeath += OnBossDestroy;
+    }
+
+    void SpawnCerberus()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
+
+        if (OnBossSpawn != null) OnBossSpawn();
+
+        Unit hydra = Instantiate(cerberusType, v, Quaternion.identity);
+        hydra.OnBossDeath += OnBossDestroy;
+    }
+
+    void SpawnMinotaur()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
+
+        if (OnBossSpawn != null) OnBossSpawn();
+
+        Unit hydra = Instantiate(minotaurType, v, Quaternion.identity);
         hydra.OnBossDeath += OnBossDestroy;
     }
 
