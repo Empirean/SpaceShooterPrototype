@@ -13,7 +13,6 @@ public class SpawnerMaster : MonoBehaviour
     public event Action OnBossDeath;
 
     [Space]
-    public float nextWaveDelay = 1.5f;
     public int waveCount;
 
 
@@ -139,7 +138,7 @@ public class SpawnerMaster : MonoBehaviour
 
             SpawnChooser(firstLayerEnemy[currentWave]);
             
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(Utility.layerDelay);
         }
 
 
@@ -147,7 +146,7 @@ public class SpawnerMaster : MonoBehaviour
         {
             SpawnChooser(secondLayerEnemy[currentWave]);
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(Utility.layerDelay);
         }
 
 
@@ -155,7 +154,7 @@ public class SpawnerMaster : MonoBehaviour
         {
             SpawnChooser(thirdLayerEnemy[currentWave]);
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(Utility.layerDelay);
         }
 
         while (CurrentEnemyCount() > 0)
@@ -163,7 +162,7 @@ public class SpawnerMaster : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(nextWaveDelay);
+        yield return new WaitForSeconds(Utility.waveDelay);
     }
 
     void SpawnChooser(EnemyTypes in_type)

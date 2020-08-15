@@ -12,6 +12,10 @@ static class Utility
     // Collision Damage
     public static float collisionDamageDelay;
 
+    // Spawn
+    public static float waveDelay;
+    public static float layerDelay;
+
     // Key Values
     public static string keyPlayerHealth;
     public static string keyTurretLevel;
@@ -60,6 +64,10 @@ static class Utility
 
         // Collision
         collisionDamageDelay = 1;
+
+        // Spawn
+        waveDelay = 1.5f;
+        layerDelay = 1f;
 
         // Key value
         keyPlayerHealth = "PlayerHealth";
