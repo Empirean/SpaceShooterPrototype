@@ -46,12 +46,7 @@ public class Unit : MonoBehaviour
 
         healthBar.fillAmount = (float) currentHealth / maxHealth;
 
-        if (healthBar.fillAmount >= 0.7f)
-            healthBar.color = Color.green;
-        else if (healthBar.fillAmount >= 0.30f && healthBar.fillAmount < 0.7f)
-            healthBar.color = Color.yellow;
-        else if (healthBar.fillAmount < 0.30f)
-            healthBar.color = Color.red; 
+        healthBar.color = Color.Lerp(Color.red, Color.yellow, healthBar.fillAmount); 
 
 
         if (currentHealth <= 0.0f && !isDead)
@@ -83,7 +78,7 @@ public class Unit : MonoBehaviour
 
         if (isBoss)
         {
-            explosionEffectType = Utility.ExplosionBig;
+            explosionEffectType = Utility.explosionBig;
 
             if (OnBossDeath != null)
             {
@@ -92,11 +87,11 @@ public class Unit : MonoBehaviour
         }
         else
         {
-            explosionEffectType = Utility.ExplosionSmall;
-
+            explosionEffectType = Utility.explosionSmall;
         }
+
         GameObject effects = Instantiate(explosionEffectType, gameObject.transform.position, Quaternion.identity) as GameObject;
-        Destroy(effects, 1);
+        Destroy(effects, Utility.effectDuration);
 
         Destroy(gameObject);
     }

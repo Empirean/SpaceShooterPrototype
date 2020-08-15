@@ -12,31 +12,6 @@ public class SpawnerMaster : MonoBehaviour
     public event Action OnBossSpawn;
     public event Action OnBossDeath;
 
-    [Header("Enemy Prefabs")]
-    public Unit pingerType;
-    public Unit chaserType;
-    public Unit pulserType;
-    public Unit trailerType;
-    public Unit vexerType;
-    public Unit dividerType;
-    public Unit breakerType;
-    public Unit emitterType;
-    public Unit defenderType;
-
-
-    [Space]
-    [Header("Bosses")]
-    public Unit hydraType;
-    public Unit cyclopsType;
-    public Unit centaurType;
-    public Unit manticoreType;
-    public Unit demigodType;
-    public Unit harpyType;
-    public Unit argusType;
-    public Unit gorgonType;
-    public Unit cerberusType;
-    public Unit minotaurType;
-
     [Space]
     public float nextWaveDelay = 1.5f;
     public int waveCount;
@@ -266,7 +241,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit hydra  = Instantiate(hydraType, v, Quaternion.identity);
+        Unit hydra  = Instantiate(Utility.hydraType, v, Quaternion.identity);
         hydra.OnBossDeath += OnBossDestroy;
     }
 
@@ -279,7 +254,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit hydra = Instantiate(gorgonType, v, Quaternion.identity);
+        Unit hydra = Instantiate(Utility.gorgonType, v, Quaternion.identity);
         hydra.OnBossDeath += OnBossDestroy;
     }
 
@@ -292,7 +267,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit hydra = Instantiate(cerberusType, v, Quaternion.identity);
+        Unit hydra = Instantiate(Utility.cerberusType, v, Quaternion.identity);
         hydra.OnBossDeath += OnBossDestroy;
     }
 
@@ -305,7 +280,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit hydra = Instantiate(minotaurType, v, Quaternion.identity);
+        Unit hydra = Instantiate(Utility.minotaurType, v, Quaternion.identity);
         hydra.OnBossDeath += OnBossDestroy;
     }
 
@@ -318,7 +293,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit cyclops = Instantiate(cyclopsType, v, Quaternion.identity);
+        Unit cyclops = Instantiate(Utility.cyclopsType, v, Quaternion.identity);
         cyclops.OnBossDeath += OnBossDestroy;
     }
 
@@ -331,7 +306,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit centaur = Instantiate(centaurType, v, Quaternion.identity);
+        Unit centaur = Instantiate(Utility.centaurType, v, Quaternion.identity);
         centaur.OnBossDeath += OnBossDestroy;
     }
 
@@ -344,7 +319,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit manticore = Instantiate(manticoreType, v, Quaternion.identity);
+        Unit manticore = Instantiate(Utility.manticoreType, v, Quaternion.identity);
         manticore.OnBossDeath += OnBossDestroy;
     }
 
@@ -357,7 +332,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit demigod = Instantiate(demigodType, v, Quaternion.identity);
+        Unit demigod = Instantiate(Utility.demigodType, v, Quaternion.identity);
         demigod.OnBossDeath += OnBossDestroy;
 
     }
@@ -371,7 +346,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit hydra = Instantiate(harpyType, v, Quaternion.identity);
+        Unit hydra = Instantiate(Utility.harpyType, v, Quaternion.identity);
         hydra.OnBossDeath += OnBossDestroy;
     }
 
@@ -384,7 +359,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit cyclops = Instantiate(argusType, v, Quaternion.identity);
+        Unit cyclops = Instantiate(Utility.argusType, v, Quaternion.identity);
         cyclops.OnBossDeath += OnBossDestroy;
     }
 
@@ -395,7 +370,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
 
-        Instantiate(pingerType, v, Quaternion.identity);
+        Instantiate(Utility.pingerType, v, Quaternion.identity);
     }
 
     void SpawnBreaker()
@@ -405,7 +380,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
 
-        Instantiate(breakerType, v, Quaternion.identity);
+        Instantiate(Utility.breakerType, v, Quaternion.identity);
     }
 
     void SpawnVexer()
@@ -415,7 +390,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
 
-        Instantiate(vexerType, v, Quaternion.identity);
+        Instantiate(Utility.vexerType, v, Quaternion.identity);
     }
 
     void SpawnChaser()
@@ -425,7 +400,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2,  Utility.screenHeight - 1), 0);
 
-        Instantiate(chaserType, v, Quaternion.identity);
+        Instantiate(Utility.chaserType, v, Quaternion.identity);
     }
 
     void SpawnEmitter()
@@ -435,7 +410,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight - 1), 0);
 
-        Instantiate(emitterType, v, Quaternion.identity);
+        Instantiate(Utility.emitterType, v, Quaternion.identity);
     }
 
     void SpawnPulser()
@@ -443,7 +418,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = UnityEngine.Random.Range( -Utility.screenWidth / 2, Utility.screenWidth / 2);
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
 
-        Instantiate(pulserType, v, Quaternion.identity);
+        Instantiate(Utility.pulserType, v, Quaternion.identity);
     }
 
     void SpawnTrailer()
@@ -451,7 +426,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = UnityEngine.Random.Range(-Utility.screenWidth, Utility.screenWidth);
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
 
-        Instantiate(trailerType, v, Quaternion.identity);
+        Instantiate(Utility.trailerType, v, Quaternion.identity);
     }
 
     void SpawnDivider()
@@ -459,7 +434,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = UnityEngine.Random.Range(-Utility.screenWidth /2 , Utility.screenWidth /2);
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
 
-        Instantiate(dividerType, v, Quaternion.identity);
+        Instantiate(Utility.dividerType, v, Quaternion.identity);
     }
 
     void SpawnDefender()
@@ -467,7 +442,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = UnityEngine.Random.Range(-Utility.screenWidth / 2, Utility.screenWidth / 2);
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
 
-        Instantiate(defenderType, v, Quaternion.identity);
+        Instantiate(Utility.defenderType, v, Quaternion.identity);
     }
 
     int CurrentEnemyCount()

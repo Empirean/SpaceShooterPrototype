@@ -9,7 +9,7 @@ public class TesterBeta : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(Utility.ExplosionBig, Vector3.zero, Quaternion.identity);
+            Instantiate(Utility.explosionBig, Vector3.zero, Quaternion.identity);
         }
     }
 
