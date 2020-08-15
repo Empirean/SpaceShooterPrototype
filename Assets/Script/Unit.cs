@@ -79,13 +79,25 @@ public class Unit : MonoBehaviour
 
     private void OnDeath()
     {
+        GameObject explosionEffectType;
+
         if (isBoss)
         {
+            explosionEffectType = Utility.ExplosionBig;
+
             if (OnBossDeath != null)
             {
                 OnBossDeath();
             }
         }
+        else
+        {
+            explosionEffectType = Utility.ExplosionSmall;
+
+        }
+        GameObject effects = Instantiate(explosionEffectType, gameObject.transform.position, Quaternion.identity) as GameObject;
+        Destroy(effects, 1);
+
         Destroy(gameObject);
     }
 

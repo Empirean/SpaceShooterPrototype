@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour
     {
         Vector3 t_newOffset = spawnPoint.position + new Vector3(in_Offset, 0, 0);
         Projectile bullet = Instantiate(projectile, t_newOffset, Quaternion.identity) as Projectile;
-
+        
         bullet.transform.LookAt(in_Target);
         bullet.transform.eulerAngles = new Vector3(bullet.transform.eulerAngles.x + 90 + in_Spread, bullet.transform.eulerAngles.y, bullet.transform.eulerAngles.z);
 

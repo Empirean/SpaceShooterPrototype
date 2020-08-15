@@ -18,6 +18,12 @@ static class Utility
     public static string keyCurrentLevel;
     public static string keyRetryCount;
 
+    public static GameObject ExplosionBig;
+    public static GameObject ExplosionSmall;
+    public static GameObject HitNormal;
+    public static GameObject HitPiercing;
+    public static GameObject Hitheavy;
+    
     static Utility()
     {
         cam = Camera.main;
@@ -32,5 +38,12 @@ static class Utility
         keyOrbiterLevel = "OrbiterLevel";
         keyCurrentLevel = "CurrentLevel";
         keyRetryCount = "RetryCount";
+
+        ExplosionBig = Resources.Load<GameObject>("Prefab/Effects/ExplosionBig");
+        ExplosionSmall = Resources.Load<GameObject>("Prefab/Effects/ExplosionSmall");
+        HitNormal = Resources.Load<GameObject>("Prefab/Effects/NormalHit");
+        HitPiercing = Resources.Load<GameObject>("Prefab/Effects/PiercingHit");
+        Hitheavy = Resources.Load<GameObject>("Prefab/Effects/HeavyHit");
+
     }
 }
