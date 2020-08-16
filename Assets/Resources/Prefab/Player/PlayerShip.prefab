@@ -378,7 +378,7 @@ MonoBehaviour:
   projectile: {fileID: 72809522625094595, guid: 4f9e262b82af0854cb6c4f70fc597c81,
     type: 3}
   spawnPoint: {fileID: 450049303515480879}
-  weaponType: 1
+  weaponType: 0
   damage: 1
   damageTag: Enemy
   maxRange: 15
