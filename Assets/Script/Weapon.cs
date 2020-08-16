@@ -8,6 +8,14 @@ public class Weapon : MonoBehaviour
     public Projectile projectile;
     public Transform spawnPoint;
     
+    public enum WeaponTypes
+    {
+        normal,
+        piercing,
+        heavy
+    };
+    public WeaponTypes weaponType;
+
     [Space]
     [Header("Weapon Properties")]
     public float damage = 1;
@@ -20,7 +28,7 @@ public class Weapon : MonoBehaviour
 
         Projectile bullet = Instantiate(projectile, t_newOffset, Quaternion.Euler(0, 0, in_Spread)) as Projectile;
 
-        SetProjectileProperty(ref bullet, in_StartSpeed, in_EndSpeed, in_BoostDelay);
+        SetProjectileProperty(ref bullet, in_StartSpeed, in_EndSpeed, in_BoostDelay, weaponType);
     }
 
     public void Shoot(Vector3 in_Target, float in_Offset, float in_StartSpeed, float in_EndSpeed, float in_BoostDelay)
@@ -36,10 +44,10 @@ public class Weapon : MonoBehaviour
         bullet.transform.LookAt(in_Target);
         bullet.transform.eulerAngles = new Vector3(bullet.transform.eulerAngles.x + 90 + in_Spread, bullet.transform.eulerAngles.y, bullet.transform.eulerAngles.z);
 
-        SetProjectileProperty(ref bullet, in_StartSpeed, in_EndSpeed, in_BoostDelay);
+        SetProjectileProperty(ref bullet, in_StartSpeed, in_EndSpeed, in_BoostDelay, weaponType);
     }
 
-    private void SetProjectileProperty(ref Projectile in_Projectile, float in_StartSpeed, float in_EndSpeed, float in_BoostDelay)
+    private void SetProjectileProperty(ref Projectile in_Projectile, float in_StartSpeed, float in_EndSpeed, float in_BoostDelay, Weapon.WeaponTypes in_damageType)
     {
         in_Projectile.SetStartSpeed(in_StartSpeed);
         in_Projectile.SetEndSpeed(in_EndSpeed);
@@ -47,6 +55,7 @@ public class Weapon : MonoBehaviour
         in_Projectile.SetDamageTag(damageTag);
         in_Projectile.SetMaxRange(maxRange);
         in_Projectile.SetBoostDelay(in_BoostDelay);
+        in_Projectile.SetDamageType(in_damageType);
     }
 
     public bool GetPlayerPosition(ref Vector3 in_position)

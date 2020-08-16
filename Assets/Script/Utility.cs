@@ -17,43 +17,58 @@ static class Utility
     public static float layerDelay;
 
     // Key Values
-    public static string keyPlayerHealth;
-    public static string keyTurretLevel;
-    public static string keyMissleLevel;
-    public static string keyOrbiterLevel;
-    public static string keyCurrentLevel;
-    public static string keyRetryCount;
+    public static string key_PlayerHealth;
+    public static string key_TurretLevel;
+    public static string key_MissleLevel;
+    public static string key_OrbiterLevel;
+    public static string key_CurrentLevel;
+    public static string key_RetryCount;
+
+    // Damage Tag
+    public static string tagPlayer;
+    public static string tagEnemy;
+
+    // Damage vs Armor
+    public static float dmg_normalVNormal;
+    public static float dmg_normalVMedium;
+    public static float dmg_normalVHeavy;
+    public static float dmg_pierceVNormal;
+    public static float dmg_pierceVMedium;
+    public static float dmg_pierceVHeavy;
+    public static float dmg_heavyVNormal;
+    public static float dmg_heavyVMedium;
+    public static float dmg_heavyVHeavy;
 
     // Special Effects
-    public static float effectDuration;
-    public static GameObject explosionBig;
-    public static GameObject explosionSmall;
-    public static GameObject hitNormal;
-    public static GameObject hitPiercing;
-    public static GameObject hitheavy;
+    public static float vfx_effectDuration;
+    public static GameObject vfx_explosionBig;
+    public static GameObject vfx_explosionSmall;
+    public static GameObject vfx_hitNormal;
+    public static GameObject vfx_hitPiercing;
+    public static GameObject vfx_hitheavy;
 
     // Enemy Types
-    public static Unit breakerType;
-    public static Unit chaserType;
-    public static Unit defenderType;
-    public static Unit dividerType;
-    public static Unit emitterType;
-    public static Unit pingerType;
-    public static Unit pulserType;
-    public static Unit trailerType;
-    public static Unit vexerType;
+    public static Unit únit_breakerType;
+    public static Unit unit_chaserType;
+    public static Unit unit_defenderType;
+    public static Unit unit_dividerType;
+    public static Unit unit_emitterType;
+    public static Unit unit_pingerType;
+    public static Unit unit_pulserType;
+    public static Unit unit_trailerType;
+    public static Unit unit_vexerType;
 
     // Boss Types
-    public static Unit argusType;
-    public static Unit centaurType;
-    public static Unit cerberusType;
-    public static Unit cyclopsType;
-    public static Unit demigodType;
-    public static Unit gorgonType;
-    public static Unit harpyType;
-    public static Unit hydraType;
-    public static Unit manticoreType;
-    public static Unit minotaurType;
+    public static Unit boss_argusType;
+    public static Unit boss_centaurType;
+    public static Unit boss_cerberusType;
+    public static Unit boss_cyclopsType;
+    public static Unit boss_demigodType;
+    public static Unit boss_gorgonType;
+    public static Unit boss_harpyType;
+    public static Unit boss_hydraType;
+    public static Unit boss_manticoreType;
+    public static Unit boss_minotaurType;
     
     static Utility()
     {
@@ -70,42 +85,57 @@ static class Utility
         layerDelay = 1f;
 
         // Key value
-        keyPlayerHealth = "PlayerHealth";
-        keyTurretLevel = "TurretLevel";
-        keyMissleLevel = "MissleLevel";
-        keyOrbiterLevel = "OrbiterLevel";
-        keyCurrentLevel = "CurrentLevel";
-        keyRetryCount = "RetryCount";
+        key_PlayerHealth = "PlayerHealth";
+        key_TurretLevel = "TurretLevel";
+        key_MissleLevel = "MissleLevel";
+        key_OrbiterLevel = "OrbiterLevel";
+        key_CurrentLevel = "CurrentLevel";
+        key_RetryCount = "RetryCount";
 
+        // Damage tag
+        tagEnemy = "Enemy";
+        tagPlayer = "Player";
+
+        // Damage v Armor
+        dmg_normalVNormal = 1f;
+        dmg_normalVMedium = .5f;
+        dmg_normalVHeavy = .3f;
+        dmg_pierceVNormal = .3f;
+        dmg_pierceVMedium = 1f;
+        dmg_pierceVHeavy = .5f;
+        dmg_heavyVNormal = .5f;
+        dmg_heavyVMedium = .3f;
+        dmg_heavyVHeavy = 1f;
+        
         // Special Effects
-        effectDuration = 1f;
-        explosionBig = Resources.Load<GameObject>("Prefab/Effects/ExplosionBig");
-        explosionSmall = Resources.Load<GameObject>("Prefab/Effects/ExplosionSmall");
-        hitNormal = Resources.Load<GameObject>("Prefab/Effects/NormalHit");
-        hitPiercing = Resources.Load<GameObject>("Prefab/Effects/PiercingHit");
-        hitheavy = Resources.Load<GameObject>("Prefab/Effects/HeavyHit");
+        vfx_effectDuration = 1f;
+        vfx_explosionBig = Resources.Load<GameObject>("Prefab/Effects/ExplosionBig");
+        vfx_explosionSmall = Resources.Load<GameObject>("Prefab/Effects/ExplosionSmall");
+        vfx_hitNormal = Resources.Load<GameObject>("Prefab/Effects/NormalHit");
+        vfx_hitPiercing = Resources.Load<GameObject>("Prefab/Effects/PiercingHit");
+        vfx_hitheavy = Resources.Load<GameObject>("Prefab/Effects/HeavyHit");
 
         // Enemy Types
-        breakerType  = Resources.Load<Unit>("Prefab/EnemyTypes/Breaker");
-        chaserType = Resources.Load<Unit>("Prefab/EnemyTypes/Chaser");
-        defenderType = Resources.Load<Unit>("Prefab/EnemyTypes/Defender");
-        dividerType = Resources.Load<Unit>("Prefab/EnemyTypes/Divider");
-        emitterType = Resources.Load<Unit>("Prefab/EnemyTypes/Emitter");
-        pingerType = Resources.Load<Unit>("Prefab/EnemyTypes/Pinger");
-        pulserType = Resources.Load<Unit>("Prefab/EnemyTypes/Pulser");
-        trailerType = Resources.Load<Unit>("Prefab/EnemyTypes/Trailer");
-        vexerType = Resources.Load<Unit>("Prefab/EnemyTypes/Vexer");
+        únit_breakerType  = Resources.Load<Unit>("Prefab/EnemyTypes/Breaker");
+        unit_chaserType = Resources.Load<Unit>("Prefab/EnemyTypes/Chaser");
+        unit_defenderType = Resources.Load<Unit>("Prefab/EnemyTypes/Defender");
+        unit_dividerType = Resources.Load<Unit>("Prefab/EnemyTypes/Divider");
+        unit_emitterType = Resources.Load<Unit>("Prefab/EnemyTypes/Emitter");
+        unit_pingerType = Resources.Load<Unit>("Prefab/EnemyTypes/Pinger");
+        unit_pulserType = Resources.Load<Unit>("Prefab/EnemyTypes/Pulser");
+        unit_trailerType = Resources.Load<Unit>("Prefab/EnemyTypes/Trailer");
+        unit_vexerType = Resources.Load<Unit>("Prefab/EnemyTypes/Vexer");
 
         // Boss Types
-        argusType = Resources.Load<Unit>("Prefab/Bosses/Argus");
-        centaurType = Resources.Load<Unit>("Prefab/Bosses/Centaur");
-        cerberusType = Resources.Load<Unit>("Prefab/Bosses/Cerberus");
-        cyclopsType = Resources.Load<Unit>("Prefab/Bosses/Cyclops");
-        demigodType = Resources.Load<Unit>("Prefab/Bosses/Demigod");
-        gorgonType = Resources.Load<Unit>("Prefab/Bosses/Gorgon");
-        harpyType = Resources.Load<Unit>("Prefab/Bosses/Harpy");
-        hydraType = Resources.Load<Unit>("Prefab/Bosses/Hydra");
-        manticoreType = Resources.Load<Unit>("Prefab/Bosses/Manticore");
-        minotaurType = Resources.Load<Unit>("Prefab/Bosses/Minotaur");
+        boss_argusType = Resources.Load<Unit>("Prefab/Bosses/Argus");
+        boss_centaurType = Resources.Load<Unit>("Prefab/Bosses/Centaur");
+        boss_cerberusType = Resources.Load<Unit>("Prefab/Bosses/Cerberus");
+        boss_cyclopsType = Resources.Load<Unit>("Prefab/Bosses/Cyclops");
+        boss_demigodType = Resources.Load<Unit>("Prefab/Bosses/Demigod");
+        boss_gorgonType = Resources.Load<Unit>("Prefab/Bosses/Gorgon");
+        boss_harpyType = Resources.Load<Unit>("Prefab/Bosses/Harpy");
+        boss_hydraType = Resources.Load<Unit>("Prefab/Bosses/Hydra");
+        boss_manticoreType = Resources.Load<Unit>("Prefab/Bosses/Manticore");
+        boss_minotaurType = Resources.Load<Unit>("Prefab/Bosses/Minotaur");
     }
 }

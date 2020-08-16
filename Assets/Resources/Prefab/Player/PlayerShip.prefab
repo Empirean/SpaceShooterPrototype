@@ -378,6 +378,7 @@ MonoBehaviour:
   projectile: {fileID: 72809522625094595, guid: 4f9e262b82af0854cb6c4f70fc597c81,
     type: 3}
   spawnPoint: {fileID: 450049303515480879}
+  weaponType: 1
   damage: 1
   damageTag: Enemy
   maxRange: 15
@@ -1099,6 +1100,7 @@ MonoBehaviour:
   armor: 0
   currentHealth: 0
   isDestructible: 1
+  armorType: 0
   damageTag: Enemy
   collisionDamage: 1
 --- !u!1 &4417108403380256374
@@ -1714,6 +1716,7 @@ MonoBehaviour:
   projectile: {fileID: 72809522625094595, guid: 784cd029697e58a44a1fb2b2b50e9a89,
     type: 3}
   spawnPoint: {fileID: 450049303515480879}
+  weaponType: 0
   damage: 3
   damageTag: Enemy
   maxRange: 15

@@ -52,19 +52,19 @@ public class Player : MonoBehaviour
 
     void LoadPlayerUpgrades()
     {
-        unit.SetHealth(PlayerPrefs.GetFloat(Utility.keyPlayerHealth, unit.maxHealth), unit.maxHealth);
+        unit.SetHealth(PlayerPrefs.GetFloat(Utility.key_PlayerHealth, unit.maxHealth), unit.maxHealth);
 
-        for (int i = 0; i < PlayerPrefs.GetInt(Utility.keyTurretLevel,0); i++)
+        for (int i = 0; i < PlayerPrefs.GetInt(Utility.key_TurretLevel,0); i++)
         {
             WeaponUpgrade();
         }
 
-        for (int i = 0; i < PlayerPrefs.GetInt(Utility.keyMissleLevel, 0); i++)
+        for (int i = 0; i < PlayerPrefs.GetInt(Utility.key_MissleLevel, 0); i++)
         {
             MissleUpgrade();
         }
 
-        for (int i = 0; i < PlayerPrefs.GetInt(Utility.keyOrbiterLevel, 0); i++)
+        for (int i = 0; i < PlayerPrefs.GetInt(Utility.key_OrbiterLevel, 0); i++)
         {
             SpawnOrbiters();
         }

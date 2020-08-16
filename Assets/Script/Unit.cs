@@ -18,6 +18,14 @@ public class Unit : MonoBehaviour
     public float currentHealth;
     public bool isDestructible = true;
 
+    public enum ArmorTypes
+    {
+        normal,
+        medium,
+        heavy
+    };
+    public ArmorTypes armorType;
+
     [Space]
     [Header("Collision")]
     public string damageTag;
@@ -43,9 +51,7 @@ public class Unit : MonoBehaviour
 
     private void Update()
     {
-
         healthBar.fillAmount = (float) currentHealth / maxHealth;
-
         healthBar.color = Color.Lerp(Color.red, Color.yellow, healthBar.fillAmount); 
 
 
@@ -59,6 +65,51 @@ public class Unit : MonoBehaviour
     public void Damage(float in_damage)
     {
         if (isDestructible) currentHealth -= in_damage;
+    }
+
+    public void Damage(float in_damage, Weapon.WeaponTypes in_damageType)
+    {
+        float damageMultiplier = 1;
+        
+        if (in_damageType == Weapon.WeaponTypes.normal && armorType == ArmorTypes.normal)
+        {
+            damageMultiplier = Utility.dmg_normalVNormal;
+        }
+        else if (in_damageType == Weapon.WeaponTypes.normal && armorType == ArmorTypes.medium)
+        {
+            damageMultiplier = Utility.dmg_normalVMedium;
+        }
+        else if (in_damageType == Weapon.WeaponTypes.normal && armorType == ArmorTypes.heavy)
+        {
+            damageMultiplier = Utility.dmg_normalVHeavy;
+        }
+        else if (in_damageType == Weapon.WeaponTypes.piercing && armorType == ArmorTypes.normal)
+        {
+            damageMultiplier = Utility.dmg_pierceVNormal;
+        }
+        else if (in_damageType == Weapon.WeaponTypes.piercing && armorType == ArmorTypes.medium)
+        {
+            damageMultiplier = Utility.dmg_pierceVMedium;
+        }
+        else if (in_damageType == Weapon.WeaponTypes.piercing && armorType == ArmorTypes.heavy)
+        {
+            damageMultiplier = Utility.dmg_pierceVHeavy;
+        }
+        else if (in_damageType == Weapon.WeaponTypes.heavy && armorType == ArmorTypes.normal)
+        {
+            damageMultiplier = Utility.dmg_heavyVNormal;
+        }
+        else if (in_damageType == Weapon.WeaponTypes.heavy && armorType == ArmorTypes.medium)
+        {
+            damageMultiplier = Utility.dmg_heavyVMedium;
+        }
+        else if (in_damageType == Weapon.WeaponTypes.heavy && armorType == ArmorTypes.heavy)
+        {
+            damageMultiplier = Utility.dmg_heavyVHeavy;
+        }
+
+        if (isDestructible) currentHealth -= in_damage * damageMultiplier;
+
     }
 
     public void Heal(float in_health)
@@ -78,7 +129,7 @@ public class Unit : MonoBehaviour
 
         if (isBoss)
         {
-            explosionEffectType = Utility.explosionBig;
+            explosionEffectType = Utility.vfx_explosionBig;
 
             if (OnBossDeath != null)
             {
@@ -87,11 +138,11 @@ public class Unit : MonoBehaviour
         }
         else
         {
-            explosionEffectType = Utility.explosionSmall;
+            explosionEffectType = Utility.vfx_explosionSmall;
         }
 
         GameObject effects = Instantiate(explosionEffectType, gameObject.transform.position, Quaternion.identity) as GameObject;
-        Destroy(effects, Utility.effectDuration);
+        Destroy(effects, Utility.vfx_effectDuration);
 
         Destroy(gameObject);
     }

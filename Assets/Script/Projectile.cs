@@ -11,8 +11,13 @@ public class Projectile : MonoBehaviour
     float maxRange = 10;
     float currentRange = 0;
     float boostDelay = 0;
-    string damageTag = "Enemy";
     float boostCounter;
+
+    bool isPenetrating = false;
+
+    string damageTag = "Enemy";
+
+    Weapon.WeaponTypes damageType;
 
     private void Start()
     {
@@ -60,6 +65,13 @@ public class Projectile : MonoBehaviour
         
     }
 
+    public void SetDamageType(Weapon.WeaponTypes in_damageType)
+    {
+        damageType = in_damageType;
+        if (in_damageType == Weapon.WeaponTypes.piercing)
+            isPenetrating = true;
+    }
+
     void Move()
     {
         transform.Translate(Vector3.up * Mathf.Lerp(startSpeed, endSpeed, currentRange/maxRange) * Time.deltaTime);
@@ -79,9 +91,38 @@ public class Projectile : MonoBehaviour
     {
         if (other.gameObject.tag == damageTag)
         {
-            Destroy(gameObject);
+            if (isPenetrating)
+                isPenetrating = false;
+            else
+                Destroy(gameObject);
+
+            GameObject explosionEffectType;
+            if (damageType == Weapon.WeaponTypes.normal)
+            {
+                explosionEffectType = Utility.vfx_hitNormal;
+            }
+            else if (damageType == Weapon.WeaponTypes.piercing)
+            {
+                explosionEffectType = Utility.vfx_hitPiercing;
+            }
+            else if (damageType == Weapon.WeaponTypes.heavy)
+            {
+                float chance = .5f;
+                
+                if (Random.Range(0f, 100f) >= chance) damage = damage * 2;
+
+                explosionEffectType = Utility.vfx_hitheavy;
+            }
+            else
+            {
+                explosionEffectType = Utility.vfx_hitNormal;
+            }
+
             Unit unit = other.GetComponent<Unit>();
-            unit.Damage(damage);
+            unit.Damage(damage, damageType);
+
+            GameObject effects = Instantiate(explosionEffectType, gameObject.transform.position, Quaternion.identity) as GameObject;
+            Destroy(effects, Utility.vfx_effectDuration);
         }
     }
 }

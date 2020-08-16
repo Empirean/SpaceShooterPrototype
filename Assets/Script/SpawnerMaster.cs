@@ -85,8 +85,8 @@ public class SpawnerMaster : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        int currentLevel = PlayerPrefs.GetInt(Utility.keyCurrentLevel, 1);
-        int retryCount = PlayerPrefs.GetInt(Utility.keyRetryCount, 0);
+        int currentLevel = PlayerPrefs.GetInt(Utility.key_CurrentLevel, 1);
+        int retryCount = PlayerPrefs.GetInt(Utility.key_RetryCount, 0);
 
         if (currentLevel > minComebackThreshold && retryCount > retriesBeforeComeback) 
         {
@@ -240,7 +240,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit hydra  = Instantiate(Utility.hydraType, v, Quaternion.identity);
+        Unit hydra  = Instantiate(Utility.boss_hydraType, v, Quaternion.identity);
         hydra.OnBossDeath += OnBossDestroy;
     }
 
@@ -253,7 +253,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit hydra = Instantiate(Utility.gorgonType, v, Quaternion.identity);
+        Unit hydra = Instantiate(Utility.boss_gorgonType, v, Quaternion.identity);
         hydra.OnBossDeath += OnBossDestroy;
     }
 
@@ -266,7 +266,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit hydra = Instantiate(Utility.cerberusType, v, Quaternion.identity);
+        Unit hydra = Instantiate(Utility.boss_cerberusType, v, Quaternion.identity);
         hydra.OnBossDeath += OnBossDestroy;
     }
 
@@ -279,7 +279,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit hydra = Instantiate(Utility.minotaurType, v, Quaternion.identity);
+        Unit hydra = Instantiate(Utility.boss_minotaurType, v, Quaternion.identity);
         hydra.OnBossDeath += OnBossDestroy;
     }
 
@@ -292,7 +292,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit cyclops = Instantiate(Utility.cyclopsType, v, Quaternion.identity);
+        Unit cyclops = Instantiate(Utility.boss_cyclopsType, v, Quaternion.identity);
         cyclops.OnBossDeath += OnBossDestroy;
     }
 
@@ -305,7 +305,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit centaur = Instantiate(Utility.centaurType, v, Quaternion.identity);
+        Unit centaur = Instantiate(Utility.boss_centaurType, v, Quaternion.identity);
         centaur.OnBossDeath += OnBossDestroy;
     }
 
@@ -318,7 +318,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit manticore = Instantiate(Utility.manticoreType, v, Quaternion.identity);
+        Unit manticore = Instantiate(Utility.boss_manticoreType, v, Quaternion.identity);
         manticore.OnBossDeath += OnBossDestroy;
     }
 
@@ -331,7 +331,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit demigod = Instantiate(Utility.demigodType, v, Quaternion.identity);
+        Unit demigod = Instantiate(Utility.boss_demigodType, v, Quaternion.identity);
         demigod.OnBossDeath += OnBossDestroy;
 
     }
@@ -345,7 +345,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit hydra = Instantiate(Utility.harpyType, v, Quaternion.identity);
+        Unit hydra = Instantiate(Utility.boss_harpyType, v, Quaternion.identity);
         hydra.OnBossDeath += OnBossDestroy;
     }
 
@@ -358,7 +358,7 @@ public class SpawnerMaster : MonoBehaviour
 
         if (OnBossSpawn != null) OnBossSpawn();
 
-        Unit cyclops = Instantiate(Utility.argusType, v, Quaternion.identity);
+        Unit cyclops = Instantiate(Utility.boss_argusType, v, Quaternion.identity);
         cyclops.OnBossDeath += OnBossDestroy;
     }
 
@@ -369,7 +369,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
 
-        Instantiate(Utility.pingerType, v, Quaternion.identity);
+        Instantiate(Utility.unit_pingerType, v, Quaternion.identity);
     }
 
     void SpawnBreaker()
@@ -379,7 +379,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
 
-        Instantiate(Utility.breakerType, v, Quaternion.identity);
+        Instantiate(Utility.únit_breakerType, v, Quaternion.identity);
     }
 
     void SpawnVexer()
@@ -389,7 +389,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight), 0);
 
-        Instantiate(Utility.vexerType, v, Quaternion.identity);
+        Instantiate(Utility.unit_vexerType, v, Quaternion.identity);
     }
 
     void SpawnChaser()
@@ -399,7 +399,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2,  Utility.screenHeight - 1), 0);
 
-        Instantiate(Utility.chaserType, v, Quaternion.identity);
+        Instantiate(Utility.unit_chaserType, v, Quaternion.identity);
     }
 
     void SpawnEmitter()
@@ -409,7 +409,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
         Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight - 1), 0);
 
-        Instantiate(Utility.emitterType, v, Quaternion.identity);
+        Instantiate(Utility.unit_emitterType, v, Quaternion.identity);
     }
 
     void SpawnPulser()
@@ -417,7 +417,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = UnityEngine.Random.Range( -Utility.screenWidth / 2, Utility.screenWidth / 2);
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
 
-        Instantiate(Utility.pulserType, v, Quaternion.identity);
+        Instantiate(Utility.unit_pulserType, v, Quaternion.identity);
     }
 
     void SpawnTrailer()
@@ -425,7 +425,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = UnityEngine.Random.Range(-Utility.screenWidth, Utility.screenWidth);
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
 
-        Instantiate(Utility.trailerType, v, Quaternion.identity);
+        Instantiate(Utility.unit_trailerType, v, Quaternion.identity);
     }
 
     void SpawnDivider()
@@ -433,7 +433,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = UnityEngine.Random.Range(-Utility.screenWidth /2 , Utility.screenWidth /2);
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
 
-        Instantiate(Utility.dividerType, v, Quaternion.identity);
+        Instantiate(Utility.unit_dividerType, v, Quaternion.identity);
     }
 
     void SpawnDefender()
@@ -441,7 +441,7 @@ public class SpawnerMaster : MonoBehaviour
         float xSpawn = UnityEngine.Random.Range(-Utility.screenWidth / 2, Utility.screenWidth / 2);
         Vector3 v = new Vector3(xSpawn, Utility.screenHeight, 0);
 
-        Instantiate(Utility.defenderType, v, Quaternion.identity);
+        Instantiate(Utility.unit_defenderType, v, Quaternion.identity);
     }
 
     int CurrentEnemyCount()

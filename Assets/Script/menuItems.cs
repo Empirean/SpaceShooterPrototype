@@ -8,8 +8,8 @@ public class MenuItems : MonoBehaviour
     public void btn_play()
     {
         SceneManager.LoadScene("Level_1");
-        PlayerPrefs.SetInt(Utility.keyCurrentLevel, 1);
-        PlayerPrefs.SetInt(Utility.keyRetryCount, 0);
+        PlayerPrefs.SetInt(Utility.key_CurrentLevel, 1);
+        PlayerPrefs.SetInt(Utility.key_RetryCount, 0);
         ResetPlayer();
     }
 
@@ -24,12 +24,12 @@ public class MenuItems : MonoBehaviour
         
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         
-        PlayerPrefs.SetFloat(Utility.keyPlayerHealth, player.GetPlayerHealth());
-        PlayerPrefs.SetInt(Utility.keyTurretLevel, player.GetTurretLevel());
-        PlayerPrefs.SetInt(Utility.keyMissleLevel, player.GetMissleLevel());
-        PlayerPrefs.SetInt(Utility.keyOrbiterLevel, player.GetOrbiterLevel());
-        PlayerPrefs.SetInt(Utility.keyCurrentLevel, PlayerPrefs.GetInt(Utility.keyCurrentLevel, 1) + 1);
-        PlayerPrefs.SetInt(Utility.keyRetryCount, 0);
+        PlayerPrefs.SetFloat(Utility.key_PlayerHealth, player.GetPlayerHealth());
+        PlayerPrefs.SetInt(Utility.key_TurretLevel, player.GetTurretLevel());
+        PlayerPrefs.SetInt(Utility.key_MissleLevel, player.GetMissleLevel());
+        PlayerPrefs.SetInt(Utility.key_OrbiterLevel, player.GetOrbiterLevel());
+        PlayerPrefs.SetInt(Utility.key_CurrentLevel, PlayerPrefs.GetInt(Utility.key_CurrentLevel, 1) + 1);
+        PlayerPrefs.SetInt(Utility.key_RetryCount, 0);
         PlayerPrefs.Save();
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -39,16 +39,16 @@ public class MenuItems : MonoBehaviour
     public void btn_retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        PlayerPrefs.SetInt(Utility.keyRetryCount, PlayerPrefs.GetInt(Utility.keyRetryCount,0) + 1);
+        PlayerPrefs.SetInt(Utility.key_RetryCount, PlayerPrefs.GetInt(Utility.key_RetryCount,0) + 1);
         ResetPlayer();
     }
 
     void ResetPlayer()
     {
-        PlayerPrefs.DeleteKey(Utility.keyPlayerHealth);
-        PlayerPrefs.DeleteKey(Utility.keyTurretLevel);
-        PlayerPrefs.DeleteKey(Utility.keyMissleLevel);
-        PlayerPrefs.DeleteKey(Utility.keyOrbiterLevel);
+        PlayerPrefs.DeleteKey(Utility.key_PlayerHealth);
+        PlayerPrefs.DeleteKey(Utility.key_TurretLevel);
+        PlayerPrefs.DeleteKey(Utility.key_MissleLevel);
+        PlayerPrefs.DeleteKey(Utility.key_OrbiterLevel);
         PlayerPrefs.Save();
     }
 }
