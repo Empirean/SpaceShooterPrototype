@@ -52,8 +52,13 @@ public class Unit : MonoBehaviour
     private void Update()
     {
         healthBar.fillAmount = (float) currentHealth / maxHealth;
-        healthBar.color = Color.Lerp(Color.red, Color.yellow, healthBar.fillAmount); 
 
+        if (healthBar.fillAmount >= 0.7f) 
+            healthBar.color = Color.green;
+        else if (healthBar.fillAmount >= 0.30f && healthBar.fillAmount < 0.7f)
+            healthBar.color = Color.yellow;
+        else if (healthBar.fillAmount < 0.30f)
+            healthBar.color = Color.red;
 
         if (currentHealth <= 0.0f && !isDead)
         {
