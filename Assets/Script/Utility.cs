@@ -4,8 +4,11 @@ using UnityEngine;
 
 static class Utility
 {
+    // Build Number
+    public static int build_number;
+
     // Camera
-    public static Camera cam ;
+    public static Camera cam;
     public static float screenHeight;
     public static float screenWidth;
 
@@ -18,11 +21,12 @@ static class Utility
 
     // Key Values
     public static string key_PlayerHealth;
-    public static string key_TurretLevel;
-    public static string key_MissleLevel;
-    public static string key_OrbiterLevel;
     public static string key_CurrentLevel;
+    public static string key_MainGunlevel;
+    public static string key_AuxillaryGunLevel;
+    public static string key_Barragelevel;
     public static string key_RetryCount;
+    public static string key_StoredBuild;
 
     // Damage Tag
     public static string tagPlayer;
@@ -69,9 +73,23 @@ static class Utility
     public static Unit boss_hydraType;
     public static Unit boss_manticoreType;
     public static Unit boss_minotaurType;
-    
+
+    // PowerUp Types
+    public static PowerUp pow_mainGunUpgrade;
+    public static PowerUp pow_auxillaryGunUpgrade;
+    public static PowerUp pow_barrageUpgrade;
+    public static PowerUp pow_healUpgrade;
+
+    // Comeback mechanics
+    public static int cb_retriesBeforeComeback;
+    public static int cb_basicComebackLevel;
+    public static int cb_advancedComebackLevel;
+
     static Utility()
     {
+        // Build Number
+        build_number = 1;
+
         // Camera
         cam = Camera.main;
         screenHeight = cam.orthographicSize;
@@ -86,11 +104,12 @@ static class Utility
 
         // Key value
         key_PlayerHealth = "PlayerHealth";
-        key_TurretLevel = "TurretLevel";
-        key_MissleLevel = "MissleLevel";
-        key_OrbiterLevel = "OrbiterLevel";
         key_CurrentLevel = "CurrentLevel";
         key_RetryCount = "RetryCount";
+        key_MainGunlevel = "MainGunLevel";
+        key_AuxillaryGunLevel = "AuxillaryGunLevel";
+        key_Barragelevel = "BarrageLevel";
+        key_StoredBuild = "StoredBuild";
 
         // Damage tag
         tagEnemy = "Enemy";
@@ -106,7 +125,7 @@ static class Utility
         dmg_heavyVNormal = .5f;
         dmg_heavyVMedium = .3f;
         dmg_heavyVHeavy = 1f;
-        
+
         // Special Effects
         vfx_effectDuration = 1f;
         vfx_explosionBig = Resources.Load<GameObject>("Prefab/Effects/ExplosionBig");
@@ -116,7 +135,7 @@ static class Utility
         vfx_hitheavy = Resources.Load<GameObject>("Prefab/Effects/HeavyHit");
 
         // Enemy Types
-        únit_breakerType  = Resources.Load<Unit>("Prefab/EnemyTypes/Breaker");
+        únit_breakerType = Resources.Load<Unit>("Prefab/EnemyTypes/Breaker");
         unit_chaserType = Resources.Load<Unit>("Prefab/EnemyTypes/Chaser");
         unit_defenderType = Resources.Load<Unit>("Prefab/EnemyTypes/Defender");
         unit_dividerType = Resources.Load<Unit>("Prefab/EnemyTypes/Divider");
@@ -137,5 +156,16 @@ static class Utility
         boss_hydraType = Resources.Load<Unit>("Prefab/Bosses/Hydra");
         boss_manticoreType = Resources.Load<Unit>("Prefab/Bosses/Manticore");
         boss_minotaurType = Resources.Load<Unit>("Prefab/Bosses/Minotaur");
+
+        // PowerUp Types
+        pow_mainGunUpgrade = Resources.Load<PowerUp>("Prefab/PowerUps/MainGunUpgrade");
+        pow_auxillaryGunUpgrade = Resources.Load<PowerUp>("Prefab/PowerUps/AuxillaryGunUpdate");
+        pow_barrageUpgrade = Resources.Load<PowerUp>("Prefab/PowerUps/BarrageUpgrade");
+        pow_healUpgrade = Resources.Load<PowerUp>("Prefab/PowerUps/HealUpgrade");
+
+        // Comeback Mechanics
+        cb_retriesBeforeComeback = 0;
+        cb_basicComebackLevel = 3;
+        cb_advancedComebackLevel = 7;
     }
 }

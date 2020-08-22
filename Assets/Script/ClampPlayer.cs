@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class ClampPlayer : MonoBehaviour
 {
+    public float heightPad;
+    public float widthPad;
+
     float screenHeight;
     float screenWidth;
 
     void Start()
     {
-        screenWidth = Utility.screenWidth;
-        screenHeight = Utility.screenHeight;
+        screenWidth = Utility.screenWidth + heightPad;
+        screenHeight = Utility.screenHeight + widthPad;
     }
 
     void Update()

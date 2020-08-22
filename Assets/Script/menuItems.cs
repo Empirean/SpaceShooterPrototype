@@ -7,10 +7,15 @@ public class MenuItems : MonoBehaviour
 {
     public void btn_play()
     {
-        SceneManager.LoadScene("Level_1");
+        if (Utility.build_number != PlayerPrefs.GetInt(Utility.key_StoredBuild,0))
+        {
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.SetInt(Utility.key_StoredBuild, Utility.build_number);
+        }
         PlayerPrefs.SetInt(Utility.key_CurrentLevel, 1);
         PlayerPrefs.SetInt(Utility.key_RetryCount, 0);
         ResetPlayer();
+        SceneManager.LoadScene("Level_1");
     }
 
     public void btn_back()
@@ -20,14 +25,12 @@ public class MenuItems : MonoBehaviour
 
     public void btn_continue()
     {
-        
-        
-        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        
-        PlayerPrefs.SetFloat(Utility.key_PlayerHealth, player.GetPlayerHealth());
-        PlayerPrefs.SetInt(Utility.key_TurretLevel, player.GetTurretLevel());
-        PlayerPrefs.SetInt(Utility.key_MissleLevel, player.GetMissleLevel());
-        PlayerPrefs.SetInt(Utility.key_OrbiterLevel, player.GetOrbiterLevel());
+
+        Upgradeable unit = GameObject.FindGameObjectWithTag("Player").GetComponent<Upgradeable>();
+        PlayerPrefs.SetFloat(Utility.key_PlayerHealth, unit.GetPlayerHealth());
+        PlayerPrefs.SetInt(Utility.key_MainGunlevel, unit.GetMainGunCurrentLevel());
+        PlayerPrefs.SetInt(Utility.key_AuxillaryGunLevel, unit.GetAuxillaryGunCurrentLevel());
+        PlayerPrefs.SetInt(Utility.key_Barragelevel, unit.GetBarrageCurrentLevel());
         PlayerPrefs.SetInt(Utility.key_CurrentLevel, PlayerPrefs.GetInt(Utility.key_CurrentLevel, 1) + 1);
         PlayerPrefs.SetInt(Utility.key_RetryCount, 0);
         PlayerPrefs.Save();
@@ -46,9 +49,9 @@ public class MenuItems : MonoBehaviour
     void ResetPlayer()
     {
         PlayerPrefs.DeleteKey(Utility.key_PlayerHealth);
-        PlayerPrefs.DeleteKey(Utility.key_TurretLevel);
-        PlayerPrefs.DeleteKey(Utility.key_MissleLevel);
-        PlayerPrefs.DeleteKey(Utility.key_OrbiterLevel);
+        PlayerPrefs.DeleteKey(Utility.key_MainGunlevel);
+        PlayerPrefs.DeleteKey(Utility.key_AuxillaryGunLevel);
+        PlayerPrefs.DeleteKey(Utility.key_Barragelevel);
         PlayerPrefs.Save();
     }
 }

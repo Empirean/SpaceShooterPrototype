@@ -14,13 +14,13 @@ public class Weapon : MonoBehaviour
         piercing,
         heavy
     };
-    public WeaponTypes weaponType;
 
     [Space]
     [Header("Weapon Properties")]
     public float damage = 1;
     public string damageTag = "Enemy";
     public float maxRange = 15;
+    public WeaponTypes weaponType;
 
     public void Shoot(float in_Spread, float in_Offset, float in_StartSpeed, float in_EndSpeed, float in_BoostDelay)
     {

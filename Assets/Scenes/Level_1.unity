@@ -493,10 +493,6 @@ MonoBehaviour:
   firstLayerEnemy: 0400000004000000040000000c000000
   secondLayerEnemy: 03000000050000000100000000000000
   thirdLayerEnemy: 04000000040000000400000000000000
-  minComebackThreshold: 2
-  advancedCombackThreshold: 7
-  retriesBeforeComeback: 0
-  combackDelay: 0.5
 --- !u!114 &442404314
 MonoBehaviour:
   m_ObjectHideFlags: 0

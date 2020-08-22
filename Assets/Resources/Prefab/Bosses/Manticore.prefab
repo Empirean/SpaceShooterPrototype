@@ -54,6 +54,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -78,6 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1008042604676544576
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +135,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -156,6 +161,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1594948395758065835
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +209,7 @@ MonoBehaviour:
   projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
     type: 3}
   spawnPoint: {fileID: 8729106959159465920}
+  weaponType: 0
   damage: 1
   damageTag: Player
   maxRange: 15
@@ -301,6 +308,7 @@ MonoBehaviour:
   projectile: {fileID: 72809522625094595, guid: 64d719c5eb8e4414da3b8382b67fb70c,
     type: 3}
   spawnPoint: {fileID: 1714966197388627034}
+  weaponType: 0
   damage: 1
   damageTag: Player
   maxRange: 15
@@ -381,6 +389,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -405,6 +415,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3291691845544203082
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,6 +470,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -483,6 +496,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3635595001961819570
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +576,7 @@ MonoBehaviour:
   projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
     type: 3}
   spawnPoint: {fileID: 5128394978736509154}
+  weaponType: 0
   damage: 2
   damageTag: Player
   maxRange: 15
@@ -767,6 +782,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -791,6 +808,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &4357658592046400140
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +894,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -900,6 +920,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5394231437629984665
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +1015,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1018,6 +1041,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5840740257473168098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,6 +1096,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1096,6 +1122,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7159131078359099277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,6 +1171,7 @@ MonoBehaviour:
   projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
     type: 3}
   spawnPoint: {fileID: 7998596494841936642}
+  weaponType: 0
   damage: 2
   damageTag: Player
   maxRange: 15
@@ -1238,6 +1266,7 @@ MonoBehaviour:
   projectile: {fileID: 72809522625094595, guid: 2749e59d6288fad419baff100e239e13,
     type: 3}
   spawnPoint: {fileID: 2124971466480858460}
+  weaponType: 0
   damage: 2
   damageTag: Player
   maxRange: 15
@@ -1343,6 +1372,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1367,6 +1398,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8436099080393490549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,6 +1485,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1477,6 +1511,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8864870526059961215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,7 +1527,7 @@ GameObject:
   - component: {fileID: 5816129802602218624}
   - component: {fileID: 8906333698554722741}
   m_Layer: 0
-  m_Name: Manticore-3
+  m_Name: Manticore
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1548,6 +1583,7 @@ MonoBehaviour:
   armor: 0
   currentHealth: 0
   isDestructible: 1
+  armorType: 2
   damageTag: Player
   collisionDamage: 5
 --- !u!114 &7201235000630507851

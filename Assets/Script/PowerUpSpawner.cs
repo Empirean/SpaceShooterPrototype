@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class PowerUpSpawner : MonoBehaviour
 {
-
-    public PowerUp turretUpgrade;
-    public PowerUp orbiterUpgrade;
-    public PowerUp missleUpgrade;
-    public PowerUp healUpgrade;
-
-    Vector3 spawnPoint;
+    SpawnerMaster spawnMaster;
+    Upgradeable unit;
+    int spawnCounter = 0;
 
     private void Start()
     {
-        spawnPoint = new Vector3(Random.Range(-Utility.screenWidth/2, Utility.screenWidth / 2), Utility.screenHeight, 0);
+        spawnMaster = GetComponent<SpawnerMaster>();
+        spawnMaster.OnWaveEnd += OnWaveEnd;
+        spawnMaster.OnWaveStart += OnWaveStart;
+
+        unit = GameObject.FindGameObjectWithTag("Player").GetComponent<Upgradeable>();
     }
 
     public void SpawnRandomPowerup()
@@ -22,11 +22,11 @@ public class PowerUpSpawner : MonoBehaviour
         int r = Random.Range(0, 4);
         switch(r)
         {
-            case 0: SpawnTurretUpgrade();
+            case 0: SpawnMainGunUpgrade();
                 break;
-            case 1: SpawnMissleUpgrade();
+            case 1: SpawnAuxillaryGunUpgrade();
                 break;
-            case 2: SpawnOrbiterUpgrade();
+            case 2: SpawnBarrageUpgrade();
                 break;
             case 3: SpawnHealUpgrade();
                 break;
@@ -41,36 +41,72 @@ public class PowerUpSpawner : MonoBehaviour
         switch (r)
         {
             case 0:
-                SpawnTurretUpgrade();
+                SpawnMainGunUpgrade();
                 break;
             case 1:
-                SpawnMissleUpgrade();
+                SpawnAuxillaryGunUpgrade();
                 break;
             case 2:
-                SpawnOrbiterUpgrade();
+                SpawnBarrageUpgrade();
                 break;
             default:
                 break;
         }
     }
 
-    public void SpawnTurretUpgrade()
+    void SpawnMainGunUpgrade()
     {
-        Instantiate(turretUpgrade, spawnPoint, Quaternion.identity);
+        Vector3 spawnPoint = spawnPoint = new Vector3(Random.Range(-Utility.screenWidth / 2, Utility.screenWidth / 2), Utility.screenHeight, 0);
+        Instantiate(Utility.pow_mainGunUpgrade, spawnPoint, Quaternion.identity);
     }
 
-    public void SpawnMissleUpgrade()
+    void SpawnAuxillaryGunUpgrade()
     {
-        Instantiate(missleUpgrade, spawnPoint, Quaternion.identity);
+        Vector3 spawnPoint = new Vector3(Random.Range(-Utility.screenWidth / 2, Utility.screenWidth / 2), Utility.screenHeight, 0);
+        Instantiate(Utility.pow_auxillaryGunUpgrade, spawnPoint, Quaternion.identity);
     }
 
-    public void SpawnOrbiterUpgrade()
+    void SpawnBarrageUpgrade()
     {
-        Instantiate(orbiterUpgrade, spawnPoint, Quaternion.identity);
+        Vector3 spawnPoint = new Vector3(Random.Range(-Utility.screenWidth / 2, Utility.screenWidth / 2), Utility.screenHeight, 0);
+        Instantiate(Utility.pow_barrageUpgrade, spawnPoint, Quaternion.identity);
     }
 
-    public void SpawnHealUpgrade()
+    void SpawnHealUpgrade()
     {
-        Instantiate(healUpgrade, spawnPoint, Quaternion.identity);
+        Vector3 spawnPoint = new Vector3(Random.Range(-Utility.screenWidth / 2, Utility.screenWidth / 2), Utility.screenHeight, 0);
+        Instantiate(Utility.pow_healUpgrade, spawnPoint, Quaternion.identity);
+    }
+
+    void OnWaveEnd()
+    {
+        if (spawnCounter < 3)
+        {
+            if (unit.GetCurrentFirepowerIndex() < 2)
+                SpawnOffensivePowerup();
+            else
+                SpawnRandomPowerup();
+        }
+        else
+        {
+            SpawnHealUpgrade();
+        }
+        spawnCounter++;
+    }
+
+    void OnWaveStart()
+    {
+        int t_currentLevel = PlayerPrefs.GetInt(Utility.key_CurrentLevel, 1);
+        int t_retryCount = PlayerPrefs.GetInt(Utility.key_RetryCount, 0);
+
+        if (t_currentLevel >= Utility.cb_basicComebackLevel && t_retryCount > Utility.cb_retriesBeforeComeback)
+        {
+            SpawnMainGunUpgrade();
+        }
+
+        if (t_currentLevel >= Utility.cb_advancedComebackLevel && t_retryCount > Utility.cb_retriesBeforeComeback)
+        {
+            SpawnBarrageUpgrade();
+        }
     }
 }

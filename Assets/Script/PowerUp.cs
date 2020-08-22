@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
@@ -11,7 +9,10 @@ public class PowerUp : MonoBehaviour
         turretUpgrade,
         missleUpgrade,
         orbiterUpgrade,
-        heal
+        heal,
+        mainGunUpgrade,
+        auxillaryGunUprade,
+        barrageUpgrade
     };
 
     public effects effect;
@@ -21,22 +22,22 @@ public class PowerUp : MonoBehaviour
         transform.Translate(Vector3.down * speed * Time.deltaTime);
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Player player = other.GetComponent<Player>();
+            Upgradeable player = other.GetComponent<Upgradeable>();
 
             switch (effect)
             {
-                case effects.turretUpgrade:
-                    player.WeaponUpgrade();
+                case effects.mainGunUpgrade:
+                    player.MainGunUpgrade();
                     break;
-                case effects.missleUpgrade:
-                    player.MissleUpgrade();
+                case effects.auxillaryGunUprade:
+                    player.AuxillaryGunUpgrade();
                     break;
-                case effects.orbiterUpgrade:
-                    player.SpawnOrbiters();
+                case effects.barrageUpgrade:
+                    player.BarrageUpgrade();
                     break;
                 case effects.heal:
                     player.Heal();
@@ -44,8 +45,8 @@ public class PowerUp : MonoBehaviour
                 default:
                     break;
             }
+
             Destroy(gameObject);
         }
-        
     }
 }

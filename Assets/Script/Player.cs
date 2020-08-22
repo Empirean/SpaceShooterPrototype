@@ -8,66 +8,11 @@ public class Player : MonoBehaviour
 {
     public event Action OnPlayerDeath;
 
-    [Space]
-    [Header("Upgrades")]
-
-    [Header("Orbiters")]
-    public int maxOrbiters = 2;
-    public Transform orbiterType;
-    public List<Transform> orbiterSlots;
-
-    [Header("Heal")]
-    public float healAmount = 5;
-
-    [Header("Turret Upgrades")]
-    public DirectionalWeapon dirWeapon;
-    public int maxWeaponUpgrade = 3;
-    public List<int> primaryTurretUpgrade;
-    public List<int> secondaryTurretUpgrade;
-    public List<float> offsetUpgrade;
-    public List<float> spreadUpgrade;
-
-    [Header("Missle Upgrade")]
-    public DirectionalWeapon misWeapon;
-    public int maxMissleUpgrade = 2;
-    public List<int> missleUpgrade;
-
-    [Header("Test Mode")]
-    public bool isTestMode = false;
-
     Unit unit;
-
-    int orbiterCount = 0;
-    int turretCount = 0;
-    int missleCount = 0;
-
-
     
     void Start()
     {
         unit = GetComponent<Unit>();
-        if (!isTestMode)
-            LoadPlayerUpgrades();
-    }
-
-    void LoadPlayerUpgrades()
-    {
-        unit.SetHealth(PlayerPrefs.GetFloat(Utility.key_PlayerHealth, unit.maxHealth), unit.maxHealth);
-
-        for (int i = 0; i < PlayerPrefs.GetInt(Utility.key_TurretLevel,0); i++)
-        {
-            WeaponUpgrade();
-        }
-
-        for (int i = 0; i < PlayerPrefs.GetInt(Utility.key_MissleLevel, 0); i++)
-        {
-            MissleUpgrade();
-        }
-
-        for (int i = 0; i < PlayerPrefs.GetInt(Utility.key_OrbiterLevel, 0); i++)
-        {
-            SpawnOrbiters();
-        }
     }
 
     public void Move(Vector3 velocity)
@@ -81,70 +26,6 @@ public class Player : MonoBehaviour
         {
             if (OnPlayerDeath != null) OnPlayerDeath();
         }
-    }
-
-    public void SpawnOrbiters()
-    {
-        if (orbiterCount < maxOrbiters)
-        {
-            Transform orbiter = Instantiate(orbiterType, orbiterSlots[orbiterCount].transform.position, Quaternion.identity) as Transform;
-            orbiter.parent = orbiterSlots[orbiterCount];
-            orbiterCount = orbiterCount + 1;
-        }
-    }
-
-    public void Heal()
-    {
-        unit.Heal(healAmount);
-    }
-
-    public void WeaponUpgrade()
-    {
-        if (turretCount < maxWeaponUpgrade)
-        {
-            dirWeapon.primaryTurretCount = primaryTurretUpgrade[turretCount];
-            dirWeapon.secondaryTurretCount = secondaryTurretUpgrade[turretCount];
-            dirWeapon.offset = offsetUpgrade[turretCount];
-            dirWeapon.spread = spreadUpgrade[turretCount];
-
-            turretCount = Mathf.Clamp(turretCount + 1, 0, maxWeaponUpgrade);
-
-        }
-    }
-
-    public void MissleUpgrade()
-    {
-        if (missleCount < maxMissleUpgrade)
-        {
-            misWeapon.primaryTurretCount = missleUpgrade[missleCount];
-
-            missleCount = Mathf.Clamp(missleCount + 1, 0, maxMissleUpgrade);
-        }
-    }
-
-    public float GetPlayerHealth()
-    {
-        return unit.currentHealth;
-    }
-
-    public int GetTurretLevel()
-    {
-        return turretCount;
-    }
-
-    public int GetMissleLevel()
-    {
-        return missleCount;
-    }
-
-    public int GetOrbiterLevel()
-    {
-        return orbiterCount;
-    }
-
-    public int GetFirepowerIndex()
-    {
-        return orbiterCount + missleCount + turretCount;
     }
 
 }

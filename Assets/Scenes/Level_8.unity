@@ -493,10 +493,6 @@ MonoBehaviour:
   firstLayerEnemy: 08000000020000000900000012000000
   secondLayerEnemy: 07000000060000000800000000000000
   thirdLayerEnemy: 08000000080000000500000000000000
-  minComebackThreshold: 2
-  advancedCombackThreshold: 7
-  retriesBeforeComeback: 0
-  combackDelay: 0.5
 --- !u!114 &442404314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,14 +505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349a706298b88e94aa30be84c011dd69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretUpgrade: {fileID: 616199987997411602, guid: 62a8eaa84e3c25d4ea01d9d0cf395dc2,
-    type: 3}
-  orbiterUpgrade: {fileID: 616199987997411602, guid: d157fa2fb9b8f7943988afd3f05b44bc,
-    type: 3}
-  missleUpgrade: {fileID: 616199987997411602, guid: 84f95a47e3718bd4296ea99063cd6e0c,
-    type: 3}
-  healUpgrade: {fileID: 616199987997411602, guid: 7820d227dc8f72c41b659710cb5fe2f0,
-    type: 3}
 --- !u!1 &500093007
 GameObject:
   m_ObjectHideFlags: 0

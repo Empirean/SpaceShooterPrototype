@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[RequireComponent(typeof(PowerUpSpawner))]
 public class SpawnerMaster : MonoBehaviour
 {
     public event Action OnPlayerWin;
@@ -11,10 +10,11 @@ public class SpawnerMaster : MonoBehaviour
     public event Action OnLevelHide;
     public event Action OnBossSpawn;
     public event Action OnBossDeath;
+    public event Action OnWaveStart;
+    public event Action OnWaveEnd;
 
     [Space]
     public int waveCount;
-
 
     [Space]
     [Header("Enemy Count")]
@@ -52,77 +52,38 @@ public class SpawnerMaster : MonoBehaviour
     public EnemyTypes[] secondLayerEnemy;
     public EnemyTypes[] thirdLayerEnemy;
 
-    [Space]
-    [Header("Come back")]
-    public int minComebackThreshold = 2;
-    public int advancedCombackThreshold = 7;
-    public int retriesBeforeComeback = 0;
-    public float combackDelay = 0.5f;
-
     int currentWave;
 
-    PowerUpSpawner powerUpSpawner;
 
     private void Start()
     {
-        powerUpSpawner = GetComponent<PowerUpSpawner>();
         StartCoroutine("SpawnSequence");
     }
 
     IEnumerator SpawnSequence()
     {
-        if (OnLevelShow != null)
-        {
-            OnLevelShow();
-        }
+        if (OnLevelShow != null) OnLevelShow();
+
 
         yield return new WaitForSeconds(3);
 
-        if (OnLevelHide != null)
-        {
-            OnLevelHide();
-        }
+        if (OnLevelHide != null) OnLevelHide();
+
 
         yield return new WaitForSeconds(1);
 
-        int currentLevel = PlayerPrefs.GetInt(Utility.key_CurrentLevel, 1);
-        int retryCount = PlayerPrefs.GetInt(Utility.key_RetryCount, 0);
-
-        if (currentLevel > minComebackThreshold && retryCount > retriesBeforeComeback) 
-        {
-            powerUpSpawner.SpawnTurretUpgrade();
-        }
-
-        if (currentLevel > advancedCombackThreshold && retryCount > retriesBeforeComeback)
-        {
-            yield return new WaitForSeconds(combackDelay);
-
-            powerUpSpawner.SpawnOrbiterUpgrade();
-        }
+        if (OnWaveStart != null) OnWaveStart();
 
         for (currentWave = 0; currentWave < waveCount; currentWave++)
         {
-            yield return StartCoroutine("SpawnCurrentWave");
-
-            if (currentWave == waveCount -1)
-            {
-                powerUpSpawner.SpawnHealUpgrade();
-            }
-            else
-            {
-                Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-
-                if (player.GetFirepowerIndex() < 3)
-                {
-                    powerUpSpawner.SpawnOffensivePowerup();
-                }
-                else
-                {
-                    powerUpSpawner.SpawnRandomPowerup();
-                }
-            }
 
             
+
+            yield return StartCoroutine("SpawnCurrentWave");
+
+
+            if (OnWaveEnd != null) OnWaveEnd();
+
         }
 
         if (OnPlayerWin != null)
@@ -141,14 +102,12 @@ public class SpawnerMaster : MonoBehaviour
             yield return new WaitForSeconds(Utility.layerDelay);
         }
 
-
         for (int i = 0; i < secondLayerCount[currentWave]; i++)
         {
             SpawnChooser(secondLayerEnemy[currentWave]);
 
             yield return new WaitForSeconds(Utility.layerDelay);
         }
-
 
         for (int i = 0; i < thirdLayerCount[currentWave]; i++)
         {

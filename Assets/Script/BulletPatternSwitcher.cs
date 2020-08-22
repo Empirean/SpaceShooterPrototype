@@ -45,7 +45,8 @@ public class BulletPatternSwitcher : MonoBehaviour
             bulletSource[i].SetActive(false);
         }
 
-        bulletSource[in_index].SetActive(in_enabled);
+        if (in_index >= 0)
+            bulletSource[in_index].SetActive(in_enabled);
     }
     
 }

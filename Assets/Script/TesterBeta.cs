@@ -9,8 +9,11 @@ public class TesterBeta : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(Utility.vfx_explosionBig, Vector3.zero, Quaternion.identity);
+            Unit unit = GameObject.FindGameObjectWithTag("Player").GetComponent<Unit>();
+            unit.SetHealth(1, 15);
+
         }
+
     }
 
 
