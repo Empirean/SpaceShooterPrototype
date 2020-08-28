@@ -27,7 +27,7 @@ public class MenuItems : MonoBehaviour
     {
 
         Upgradeable unit = GameObject.FindGameObjectWithTag("Player").GetComponent<Upgradeable>();
-        PlayerPrefs.SetFloat(Utility.key_PlayerHealth, unit.GetPlayerHealth());
+        // PlayerPrefs.SetFloat(Utility.key_PlayerHealth, unit.GetPlayerHealth());
         PlayerPrefs.SetInt(Utility.key_MainGunlevel, unit.GetMainGunCurrentLevel());
         PlayerPrefs.SetInt(Utility.key_AuxillaryGunLevel, unit.GetAuxillaryGunCurrentLevel());
         PlayerPrefs.SetInt(Utility.key_Barragelevel, unit.GetBarrageCurrentLevel());

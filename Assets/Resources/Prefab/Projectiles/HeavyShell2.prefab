@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 72809522625094595}
   - component: {fileID: 3506899754335104680}
   m_Layer: 0
-  m_Name: PiercingShell2 1
-  m_TagString: Untagged
+  m_Name: HeavyShell2
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

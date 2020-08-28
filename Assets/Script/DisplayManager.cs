@@ -10,14 +10,14 @@ public class DisplayManager : MonoBehaviour
     public GameObject lvlScreen;
     public GameObject bossHealth;
 
-    Player player;
+    FleetManager fleetManager;
     SpawnerMaster spawner;
     bool isGameOver = false;
 
     private void Start()
     {
-        player = FindObjectOfType<Player>();
-        player.OnPlayerDeath += OnGameOver;
+        fleetManager = GetComponent<FleetManager>();
+        fleetManager.OnGameOver += OnGameOver;
 
         spawner = GetComponent<SpawnerMaster>();
         spawner.OnPlayerWin += OnPlayerWin;
@@ -35,7 +35,6 @@ public class DisplayManager : MonoBehaviour
     void OnBossDeath()
     {
         bossHealth.SetActive(false);
-        player.GetComponent<Unit>().isDestructible = false;
     }
 
     void OnGameOver()

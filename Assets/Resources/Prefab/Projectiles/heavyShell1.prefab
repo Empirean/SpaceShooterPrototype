@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8232114457495379288}
   - component: {fileID: 72809522625094595}
   m_Layer: 0
-  m_Name: NormalShell 1
-  m_TagString: Untagged
+  m_Name: heavyShell1
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

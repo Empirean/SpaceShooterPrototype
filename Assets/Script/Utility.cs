@@ -61,6 +61,8 @@ static class Utility
     public static Unit unit_pulserType;
     public static Unit unit_trailerType;
     public static Unit unit_vexerType;
+    public static Unit unit_cruiserType;
+    public static Unit unit_trainingShipType;
 
     // Boss Types
     public static Unit boss_argusType;
@@ -144,6 +146,9 @@ static class Utility
         unit_pulserType = Resources.Load<Unit>("Prefab/EnemyTypes/Pulser");
         unit_trailerType = Resources.Load<Unit>("Prefab/EnemyTypes/Trailer");
         unit_vexerType = Resources.Load<Unit>("Prefab/EnemyTypes/Vexer");
+        unit_cruiserType = Resources.Load<Unit>("Prefab/EnemyTypes/Cruiser");
+        unit_trainingShipType = Resources.Load<Unit>("Prefab/EnemyTypes/TrainingShip");
+
 
         // Boss Types
         boss_argusType = Resources.Load<Unit>("Prefab/Bosses/Argus");

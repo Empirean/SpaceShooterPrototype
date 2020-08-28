@@ -43,7 +43,9 @@ public class SpawnerMaster : MonoBehaviour
         argus,
         gorgon,
         cerberus,
-        minotaur
+        minotaur,
+        cruiser,
+        trainingShip
     }
 
     [Space]
@@ -76,11 +78,7 @@ public class SpawnerMaster : MonoBehaviour
 
         for (currentWave = 0; currentWave < waveCount; currentWave++)
         {
-
-            
-
             yield return StartCoroutine("SpawnCurrentWave");
-
 
             if (OnWaveEnd != null) OnWaveEnd();
 
@@ -184,6 +182,12 @@ public class SpawnerMaster : MonoBehaviour
                 break;
             case EnemyTypes.minotaur:
                 SpawnMinotaur();
+                break;
+            case EnemyTypes.cruiser:
+                SpawnCruiser();
+                break;
+            case EnemyTypes.trainingShip:
+                SpawnTrainingShip();
                 break;
             default:
                 break;
@@ -403,6 +407,24 @@ public class SpawnerMaster : MonoBehaviour
         Instantiate(Utility.unit_defenderType, v, Quaternion.identity);
     }
 
+    void SpawnCruiser()
+    {
+        float xSpawn = UnityEngine.Random.Range(-Utility.screenWidth / 2, Utility.screenWidth / 2);
+        Vector3 v = new Vector3(xSpawn, -Utility.screenHeight - 2, 0);
+
+        Instantiate(Utility.unit_cruiserType, v, Quaternion.identity);
+    }
+
+    void SpawnTrainingShip()
+    {
+        int rnd = UnityEngine.Random.Range(0, 2);
+
+        float xSpawn = rnd == 0 ? -Utility.screenWidth : Utility.screenWidth;
+        Vector3 v = new Vector3(xSpawn, UnityEngine.Random.Range(Utility.screenHeight / 2, Utility.screenHeight - 1), 0);
+
+        Instantiate(Utility.unit_trainingShipType, v, Quaternion.identity);
+    }
+
     int CurrentEnemyCount()
     {
         GameObject[] g = GameObject.FindGameObjectsWithTag("Enemy");
@@ -412,5 +434,20 @@ public class SpawnerMaster : MonoBehaviour
     void OnBossDestroy()
     {
         if (OnBossDeath != null) OnBossDeath();
+        DestroyAllEnemieAndPorjectiless();
     }
+
+    private void DestroyAllEnemieAndPorjectiless()
+    {
+        foreach (var item in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            Destroy(item);
+        }
+
+        foreach (var item in GameObject.FindGameObjectsWithTag("Projectile"))
+        {
+            Destroy(item);
+        }
+    }
+
 }
